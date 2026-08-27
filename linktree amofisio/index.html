@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Amo Fisio | Faculdade Inspirar</title>
+  
+  <!-- Metatags para Redes Sociais & Compartilhamento (WhatsApp, Instagram, etc) -->
+  <meta name="description" content="Garanta seu ingresso para as aulas e workshops do evento Amo Fisio da Faculdade Inspirar. Selecione sua unidade e inscreva-se no Sympla.">
+  <meta property="og:title" content="Amo Fisio | Faculdade Inspirar">
+  <meta property="og:description" content="O maior evento presencial de Fisioterapia da Faculdade Inspirar. Escolha sua unidade e inscreva-se!">
+  <meta property="og:image" content="amofisio_logo.png">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0A0E13">
+
+  <!-- Ícone e Estilos -->
+  <link rel="icon" type="image/png" href="amofisio_logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Elementos de Iluminação Ambiente -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+
+  <!-- Container da Aplicação -->
+  <main class="app-container">
+
+    <!-- Header & Hero -->
+    <header class="header-hero">
+      <div class="badge-event-type">
+        <span>Evento Presencial</span>
+      </div>
+
+      <div class="logo-wrapper">
+        <img src="amofisio_logo.png" alt="Amo Fisio Logo" class="logo-img" id="hero-logo">
+      </div>
+
+      <div class="institution-tag">
+        <span>FACULDADE INSPIRAR</span>
+      </div>
+
+      <p class="tagline" id="hero-tagline">
+        Selecione sua unidade abaixo para conferir a programação de aulas e garantir sua vaga.
+      </p>
+    </header>
+
+    <!-- Barra de Pesquisa Rápida -->
+    <section class="search-container" aria-label="Pesquisa de Cursos">
+      <div class="search-input-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input 
+          type="text" 
+          id="search-input" 
+          class="search-input" 
+          placeholder="Buscar curso, tema ou unidade..." 
+          autocomplete="off"
+        >
+        <button id="clear-search-btn" class="clear-search-btn" title="Limpar pesquisa" aria-label="Limpar pesquisa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- VIEW 1: SELEÇÃO DE UNIDADES -->
+    <section id="view-units" class="view-section active" aria-label="Lista de Unidades">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Escolha sua Unidade
+        </h2>
+      </div>
+
+      <div id="units-list-container" class="units-grid">
+        <!-- Renderizado dinamicamente via app.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 2: CURSOS DA UNIDADE SELECIONADA -->
+    <section id="view-courses" class="view-section" aria-label="Lista de Cursos da Unidade">
+      <div class="back-navigation-bar">
+        <button id="back-to-units-btn" class="back-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span>Todas as Unidades</span>
+        </button>
+      </div>
+
+      <div class="unit-active-header">
+        <div class="active-unit-top">
+          <h2 id="active-unit-name" class="active-unit-title">Vitória</h2>
+          <span id="active-unit-badge" class="unit-state-badge">ES</span>
+        </div>
+        <div class="active-unit-location">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span id="active-unit-address">Faculdade Inspirar Vitória</span>
+        </div>
+      </div>
+
+      <div id="courses-list-container" class="courses-list">
+        <!-- Renderizado dinamicamente via app.js -->
+      </div>
+    </section>
+
+    <!-- ESTADO VAZIO (QUANDO BUSCA NÃO ENCONTRA) -->
+    <div id="empty-state" class="empty-state" style="display: none;">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        <line x1="8" y1="11" x2="14" y2="11"></line>
+      </svg>
+      <h3>Nenhum resultado encontrado</h3>
+      <p>Tente buscar por outro termo ou limpe o campo de busca.</p>
+    </div>
+
+    <!-- Rodapé Institucional -->
+    <footer class="footer-container">
+      <div class="footer-divider"></div>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/faculdadeinspirar/" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram Oficial">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>Instagram</span>
+        </a>
+
+        <a href="https://www.inspirar.com.br" target="_blank" rel="noopener noreferrer" class="social-btn" title="Site Oficial Inspirar">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>Site Oficial</span>
+        </a>
+      </div>
+
+      <div class="footer-branding">
+        <div class="footer-brand-title">FACULDADE INSPIRAR</div>
+        <div class="footer-brand-tagline">MOVE A SUA VIDA</div>
+      </div>
+
+      <p class="footer-copyright">
+        © <span id="current-year"></span> Amo Fisio • Todos os direitos reservados.
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- Toast Notification Flutuante -->
+  <div id="toast" class="toast-notification" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toast-message">Link copiado com sucesso!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
