@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return matchUnit || matchCourse;
     });
 
+    // REGRA DE NEGÓCIO: Ordenação alfabética obrigatória das cidades (A-Z)
+    filteredUnits.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', { sensitivity: 'base' }));
+
     if (filteredUnits.length === 0) {
       unitsListContainer.style.display = 'none';
       emptyState.style.display = 'block';
