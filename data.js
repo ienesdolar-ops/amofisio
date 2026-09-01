@@ -60,6 +60,47 @@ const AMO_FISIO_DATA = {
     },
 
     {
+      id: "belem",
+      name: "Belém",
+      state: "PA",
+      fullName: "Faculdade Inspirar Belém",
+      address: "Belém - PA",
+      featured: false,
+      courses: [
+        {
+          id: "lesao-isquiotibiais-belem",
+          title: "Lesão dos Isquiotibiais - Do consultório ao retorno ao esporte",
+          category: "Fisioterapia Esportiva & Ortopedia",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-lesao-dos-isquiotibiais-do-consultorio-ao-retorno-ao-esporte/3562953",
+          status: "available",
+          description: "Diagnóstico, fases de cicatrização tecidual, dosagem de carga e critérios clínicos para o Return to Play em lesões de isquiotibiais."
+        },
+        {
+          id: "ventilacao-mecanica-belem",
+          title: "Imersão prática em ventilação mecânica invasiva e não invasiva",
+          category: "Fisioterapia Hospitalar & Terapia Intensiva",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-imersao-pratica-em-ventilacao-mecanica-invasiva-e-nao-invasiva/3562957",
+          status: "available",
+          description: "Manejo prático dos modos ventilatórios invasivos e VNI, ajustes de parâmetros, assincronias e condutas na terapia intensiva."
+        },
+        {
+          id: "disfuncoes-urinarias-belem",
+          title: "Disfunções Urinárias - do Diagnóstico Funcional ao Plano de Tratamento",
+          category: "Fisioterapia Pélvica & Uroginecologia",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-disfuncoes-urinarias-do-diagnostico-funcional-ao-plano-de-tratamento/3562962",
+          status: "available",
+          description: "Avaliação do assoalho pélvico, diagnóstico funcional das incontinências e elaboração de planos terapêuticos personalizados."
+        }
+      ]
+    },
+
+    {
       id: "campo-grande",
       name: "Campo Grande",
       state: "MS",
@@ -199,6 +240,26 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-introducao-a-disfuncao-temporomandibular/3561113",
           status: "available",
           description: "Fundamentos clínicos, diagnóstico diferencial e intervenção fisioterapêutica nas desordens da articulação temporomandibular."
+        },
+        {
+          id: "correntes-diadinamicas-curitiba",
+          title: "Correntes Diadinâmicas de Bernard na Reabilitação Musculoesquelética",
+          category: "Eletroterapia & Ortopedia",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-correntes-diadinamicas-de-bernard-na-reabilitacao-musculoesqueletica/3562993",
+          status: "available",
+          description: "Aplicações clínicas das correntes diadinâmicas para analgesia rápida, modulação inflamatória e reabilitação musculoesquelética."
+        },
+        {
+          id: "exames-laboratoriais-dermato-curitiba",
+          title: "Interpretação de Exames Laboratoriais Aplicada à Dermatofuncional",
+          category: "Dermatofuncional & Prática Clínica",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-interpretacao-de-exames-laboratoriais-aplicada-a-dermatofuncional/3563006",
+          status: "available",
+          description: "Raciocínio clínico laboratorial: leitura e interpretação de biomarcadores para potencializar e personalizar condutas em dermatofuncional."
         }
       ]
     },
