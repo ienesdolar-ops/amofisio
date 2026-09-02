@@ -55,6 +55,26 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-como-a-pbe-pode-auxiliar-o-fisioterapeuta-esportivo/3552282",
           status: "available",
           description: "Como aplicar artigos científicos de alta qualidade para fundamentar tratamentos e condutas no esporte."
+        },
+        {
+          id: "gestacao-puerperio-bauru",
+          title: "Da Gestação ao Puerpério - Avaliação e Condutas Fisioterapêuticas",
+          category: "Saúde da Mulher & Fisioterapia Obstétrica",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-da-gestacao-ao-puerperio-avaliacao-e-condutas-fisioterapeuticas/3564737",
+          status: "available",
+          description: "Avaliação biomecânica, intervenções fisioterapêuticas no pré-natal, parto e condutas essenciais no pós-parto imediato e tardio."
+        },
+        {
+          id: "sindrome-fragilidade-bauru",
+          title: "A Fisioterapia como protagonista na prevenção da Síndrome da Fragilidade",
+          category: "Gerontologia & Saúde do Idoso",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-a-fisioterapia-como-protagonista-na-prevencao-da-sindrome-da-fragilidade/3564725",
+          status: "available",
+          description: "Estratégias clínicas e exercícios preventivos para conter o avanço da fragilidade, sarcopenia e risco de quedas na pessoa idosa."
         }
       ]
     },
@@ -331,6 +351,16 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-microagulhamento-da-teoria-a-pratica/3552207",
           status: "available",
           description: "Técnica de indução percutânea de colágeno, drug delivery e protocolos para rejuvenescimento e cicatrizes."
+        },
+        {
+          id: "harmonizacao-labial-guarulhos",
+          title: "Harmonização Labial — conhecimento, prática e excelência",
+          category: "Dermatofuncional & Harmonização",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-harmonizacao-labial-conhecimento-pratica-e-excelencia/3564711",
+          status: "available",
+          description: "Conhecimento aprofundado, técnicas práticas e critérios de excelência e segurança na harmonização labial."
         }
       ]
     },
@@ -372,6 +402,37 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-introducao-a-quiropraxia/3555299",
           status: "available",
           description: "Fundamentos teóricos e princípios dos ajustes articulares quiropráticos para alinhamento vertebral."
+        }
+      ]
+    },
+
+    {
+      id: "ribeirao-preto",
+      name: "Ribeirão Preto",
+      state: "SP",
+      fullName: "Faculdade Inspirar Ribeirão Preto",
+      address: "Ribeirão Preto - SP",
+      featured: false,
+      courses: [
+        {
+          id: "analise-movimento-sentar-levantar-rp",
+          title: "Análise do movimento e intervenção no sentar e ficar em pé",
+          category: "Biomecânica & Reabilitação Funcional",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-analise-do-movimento-e-intervencao-no-sentar-e-ficar-em-pe/3564953",
+          status: "available",
+          description: "Avaliação cinemática e cinética das transferências posturais de sentar e levantar, com intervenções para ganho de mobilidade e controle motor."
+        },
+        {
+          id: "avaliacao-funcional-membros-inferiores-rp",
+          title: "Avaliação Funcional de Membros Inferiores - Testes e Aplicação Clínica",
+          category: "Ortopedia & Avaliação Funcional",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-avaliacao-funcional-de-membros-inferiores---testes-e-aplicacao-clinica/3564928",
+          status: "available",
+          description: "Bateria de testes funcionais, raciocínio clínico e aplicação prática na avaliação de membros inferiores em atletas e pacientes ortopédicos."
         }
       ]
     },
