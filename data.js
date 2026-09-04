@@ -285,6 +285,27 @@ const AMO_FISIO_DATA = {
     },
 
     {
+      id: "goiania",
+      name: "Goiânia",
+      state: "GO",
+      fullName: "Faculdade Inspirar Goiânia",
+      address: "Goiânia - GO",
+      featured: false,
+      courses: [
+        {
+          id: "reabilitacao-pos-parto-pilates-goiania",
+          title: "Reabilitação Pós-Parto e Pilates na Prática",
+          category: "Saúde da Mulher & Pilates",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-reabilitacao-pos-parto-e-pilates-na-pratica/3567347",
+          status: "available",
+          description: "Fundamentos, avaliação do puerpério e aplicação prática do método Pilates na recuperação funcional pós-parto."
+        }
+      ]
+    },
+
+    {
       id: "guarulhos",
       name: "Guarulhos",
       state: "SP",
@@ -433,6 +454,16 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-avaliacao-funcional-de-membros-inferiores---testes-e-aplicacao-clinica/3564928",
           status: "available",
           description: "Bateria de testes funcionais, raciocínio clínico e aplicação prática na avaliação de membros inferiores em atletas e pacientes ortopédicos."
+        },
+        {
+          id: "mecanica-ventilatoria-rp",
+          title: "Avaliação da mecânica ventilatória - fundamentos, parâmetros e curvas",
+          category: "Fisioterapia Respiratória & UTI",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-avaliacao-da-mecanica-ventilatoria-fundamentos-parametros-e-curvas/3567342",
+          status: "available",
+          description: "Interpretação gráfica, mecânica respiratória avançada, análise de curvas e monitorização ventilatória na prática clínica."
         }
       ]
     },
