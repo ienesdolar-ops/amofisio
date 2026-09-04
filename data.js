@@ -469,6 +469,37 @@ const AMO_FISIO_DATA = {
     },
 
     {
+      id: "rio-de-janeiro",
+      name: "Rio de Janeiro",
+      state: "RJ",
+      fullName: "Faculdade Inspirar Rio de Janeiro",
+      address: "Rio de Janeiro - RJ",
+      featured: false,
+      courses: [
+        {
+          id: "quiropraxia-especialidade-rio",
+          title: "Quiropraxia - Uma especialidade do fisioterapeuta. Como ampliar seus resultados clínicos",
+          category: "Quiropraxia & Terapia Manual",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-quiropraxia-uma-especialidade-do-fisioterapeuta-como-ampliar-seus-resultados-clinicos/3568100",
+          status: "available",
+          description: "Fundamentos, diferenciais e raciocínio clínico da Quiropraxia como especialidade para potencializar resultados na prática fisioterapêutica."
+        },
+        {
+          id: "criterios-alta-reconstrucao-lca-rio",
+          title: "Critérios de progressão e alta após a reconstrução de LCA",
+          category: "Fisioterapia Esportiva & Ortopedia",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-criterios-de-progressao-e-alta-apos-a-reconstrucao-de-lca/3568083",
+          status: "available",
+          description: "Testes funcionais, controle de carga, marcadores de segurança e critérios baseados em evidência para a progressão de fases e Return to Play no pós-LCA."
+        }
+      ]
+    },
+
+    {
       id: "sao-jose-dos-campos",
       name: "São José dos Campos",
       state: "SP",
