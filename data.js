@@ -121,6 +121,37 @@ const AMO_FISIO_DATA = {
     },
 
     {
+      id: "belo-horizonte",
+      name: "Belo Horizonte",
+      state: "MG",
+      fullName: "Faculdade Inspirar Belo Horizonte",
+      address: "Belo Horizonte - MG",
+      featured: false,
+      courses: [
+        {
+          id: "mobilizacao-articular-mmss-bh",
+          title: "Mobilização Articular MMSS (Membros Superiores)",
+          category: "Terapia Manual & Ortopedia",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmss-membros-superiores/3573015",
+          status: "available",
+          description: "Técnicas manuais de avaliação e mobilização articular aplicadas às disfunções e alívio da dor nos membros superiores."
+        },
+        {
+          id: "mobilizacao-articular-mmii-bh",
+          title: "Mobilização Articular MMII (Membros Inferiores)",
+          category: "Terapia Manual & Ortopedia",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmii-membros-inferiores/3573028",
+          status: "available",
+          description: "Prática clínica de mobilização articular direcionada às articulações de quadril, joelho e tornozelo para ganho de amplitude de movimento e função."
+        }
+      ]
+    },
+
+    {
       id: "campo-grande",
       name: "Campo Grande",
       state: "MS",
