@@ -316,6 +316,27 @@ const AMO_FISIO_DATA = {
     },
 
     {
+      id: "fortaleza",
+      name: "Fortaleza",
+      state: "CE",
+      fullName: "Faculdade Inspirar Fortaleza",
+      address: "Fortaleza - CE",
+      featured: false,
+      courses: [
+        {
+          id: "avaliacao-reabilitacao-fraturas-fortaleza",
+          title: "Avaliação e Reabilitação de Fraturas",
+          category: "Ortopedia & Traumatologia",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-avaliacao-e-reabilitacao-de-fraturas/3574421",
+          status: "available",
+          description: "Consolidação óssea, fases de reabilitação pós-fratura, controle de carga e condutas fisioterapêuticas para retorno funcional."
+        }
+      ]
+    },
+
+    {
       id: "goiania",
       name: "Goiânia",
       state: "GO",
