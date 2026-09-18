@@ -152,6 +152,27 @@ const AMO_FISIO_DATA = {
     },
 
     {
+      id: "blumenau",
+      name: "Blumenau",
+      state: "SC",
+      fullName: "Faculdade Inspirar Blumenau",
+      address: "Blumenau - SC",
+      featured: false,
+      courses: [
+        {
+          id: "quiropraxia-atencao-saude-blumenau",
+          title: "Quiropraxia na atenção à saúde",
+          category: "Quiropraxia & Terapia Manual",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-quiropraxia-na-atencao-a-saude/3583906",
+          status: "available",
+          description: "Princípios dos ajustes quiropráticos, avaliação vertebral e aplicação clínica integrada aos cuidados em saúde."
+        }
+      ]
+    },
+
+    {
       id: "campo-grande",
       name: "Campo Grande",
       state: "MS",
@@ -316,6 +337,27 @@ const AMO_FISIO_DATA = {
     },
 
     {
+      id: "florianopolis",
+      name: "Florianópolis",
+      state: "SC",
+      fullName: "Faculdade Inspirar Florianópolis",
+      address: "Florianópolis - SC",
+      featured: false,
+      courses: [
+        {
+          id: "anatomia-palpatoria-florianopolis",
+          title: "A importância da Anatomia Palpatória no raciocínio clínico",
+          category: "Terapia Manual & Anatomia",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-a-importancia-da-anatomia-palpatoria-no-raciocinio-clinico/3583921",
+          status: "available",
+          description: "Palpação precisa de estruturas musculoesqueléticas, referências anatômicas de segurança e construção do raciocínio clínico assertivo."
+        }
+      ]
+    },
+
+    {
       id: "fortaleza",
       name: "Fortaleza",
       state: "CE",
@@ -434,6 +476,16 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-harmonizacao-labial-conhecimento-pratica-e-excelencia/3564711",
           status: "available",
           description: "Conhecimento aprofundado, técnicas práticas e critérios de excelência e segurança na harmonização labial."
+        },
+        {
+          id: "cosmify-cosmetologia-guarulhos",
+          title: "CosmiFY - Entendendo como fazer da cosmetologia um potencializador dos seus resultados",
+          category: "Dermatofuncional & Cosmetologia",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-cosmify-entendendo-como-fazer-da-cosmetologia-um-potencializador-dos-seus-resultados/3583895",
+          status: "available",
+          description: "Aplicação avançada de cosmetologia e dermocosméticos para potencializar protocolos e resultados em fisioterapia dermatofuncional."
         }
       ]
     },
@@ -475,6 +527,28 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-introducao-a-quiropraxia/3555299",
           status: "available",
           description: "Fundamentos teóricos e princípios dos ajustes articulares quiropráticos para alinhamento vertebral."
+        }
+      ]
+    },
+
+    {
+      id: "porto-velho",
+      name: "Porto Velho",
+      state: "RO",
+      fullName: "Faculdade Inspirar Porto Velho",
+      address: "Porto Velho - RO",
+      featured: false,
+      bannerNotice: "⭐ Escolha 2 aulas práticas presenciais com sua inscrição!",
+      courses: [
+        {
+          id: "escolha-2-aulas-porto-velho",
+          title: "Escolha 2 aulas e amplie seus conhecimentos em Fisioterapia",
+          category: "Passaporte Especial • Escolha 2 Aulas",
+          badge: "Passaporte 2 Aulas",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-escolha-2-aulas-e-amplie-seus-conhecimentos-em-fisioterapia/3584713",
+          status: "available",
+          description: "Inscrição especial que permite selecionar e participar de 2 aulas de imersão prática na unidade Porto Velho."
         }
       ]
     },
