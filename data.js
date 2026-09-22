@@ -173,6 +173,47 @@ const AMO_FISIO_DATA = {
     },
 
     {
+      id: "campinas",
+      name: "Campinas",
+      state: "SP",
+      fullName: "Faculdade Inspirar Campinas",
+      address: "Campinas - SP",
+      featured: false,
+      courses: [
+        {
+          id: "fisioterapia-manipulativa-campinas",
+          title: "Fisioterapia Manipulativa na Prática - Da Evidência ao Raciocínio Clínico",
+          category: "Terapia Manual & Ortopedia",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-fisioterapia-manipulativa-na-pratica-da-evidencia-ao-raciocinio-clinico/3589937",
+          status: "available",
+          description: "Raciocínio clínico avançado e técnicas de manipulação baseadas em evidências para disfunções neuromusculoesqueléticas."
+        },
+        {
+          id: "estetica-estimulo-colageno-campinas",
+          title: "Atuação do profissional da estética no estímulo de colágeno",
+          category: "Dermatofuncional & Estética",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-atuacao-do-profissional-da-estetica-no-estimulo-de-colageno/3589946",
+          status: "available",
+          description: "Técnicas, tecnologias e abordagens clínicas para indução e estímulo de colágeno nos tratamentos estéticos."
+        },
+        {
+          id: "sarcopenia-fragilidade-campinas",
+          title: "Atuação do fisioterapeuta na sarcopenia e síndrome da fragilidade",
+          category: "Gerontologia & Saúde do Idoso",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-atuacao-do-fisioterapeuta-na-sarcopenia-e-sindrome-da-fragilidade/3589956",
+          status: "available",
+          description: "Estratégias de avaliação e intervenção no manejo da sarcopenia e fragilidade."
+        }
+      ]
+    },
+
+    {
       id: "campo-grande",
       name: "Campo Grande",
       state: "MS",
@@ -532,6 +573,27 @@ const AMO_FISIO_DATA = {
     },
 
     {
+      id: "maceio",
+      name: "Maceió",
+      state: "AL",
+      fullName: "Faculdade Inspirar Maceió",
+      address: "Maceió - AL",
+      featured: false,
+      courses: [
+        {
+          id: "lideranca-nao-espera-cargo-maceio",
+          title: "Liderança não espera cargo",
+          category: "Carreira & Gestão",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-lideranca-nao-espera-cargo/3589911",
+          status: "available",
+          description: "Desenvolvimento de habilidades de liderança e gestão de carreira para fisioterapeutas."
+        }
+      ]
+    },
+
+    {
       id: "porto-velho",
       name: "Porto Velho",
       state: "RO",
@@ -621,6 +683,16 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-criterios-de-progressao-e-alta-apos-a-reconstrucao-de-lca/3568083",
           status: "available",
           description: "Testes funcionais, controle de carga, marcadores de segurança e critérios baseados em evidência para a progressão de fases e Return to Play no pós-LCA."
+        },
+        {
+          id: "pele-pos-emagrecimento-rio",
+          title: "Pele Pós-Emagrecimento - GLP-1, Flacidez e Remodelamento Tecidual",
+          category: "Dermatofuncional & Estética",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-pele-pos-emagrecimento-glp-1-flacidez-e-remodelamento-tecidual/3589969",
+          status: "available",
+          description: "Abordagem estética da flacidez e remodelamento tecidual em pacientes pós-emagrecimento, incluindo o uso de medicamentos como GLP-1."
         }
       ]
     },
