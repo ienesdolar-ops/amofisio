@@ -449,26 +449,6 @@ const AMO_FISIO_DATA = {
       featured: false,
       courses: [
         {
-          id: "traumato-esportiva-quiro-guarulhos",
-          title: "Fisioterapia Traumato-Ortopédica, Esportiva e Quiropraxia",
-          category: "Ortopedia & Quiropraxia",
-          badge: "Esgotado",
-          priceInfo: "",
-          symplaUrl: "https://www.sympla.com.br/evento/amofisio-fisioterapia-traumato-ortopedica-esportiva-e-quiropraxia/3552221",
-          status: "sold_out",
-          description: "Integração prática da reabilitação ortopédica com ajustes de quiropraxia para rápida recuperação funcional."
-        },
-        {
-          id: "respiratoria-guarulhos",
-          title: "Técnicas e Manobras de Fisioterapia Respiratória – Adulto e Pediátrico",
-          category: "Fisioterapia Respiratória",
-          badge: "Esgotado",
-          priceInfo: "",
-          symplaUrl: "https://www.sympla.com.br/evento/amofisio-tecnicas-e-manobras-de-fisioterapia-respiratoria-adulto-e-pediatrico/3552255",
-          status: "sold_out",
-          description: "Manobras de desobstrução brônquica e reexpansão pulmonar em pacientes adultos e pediátricos."
-        },
-        {
           id: "disfuncoes-sexuais-guarulhos",
           title: "Fisioterapia nas Disfunções Sexuais",
           category: "Fisioterapia Pélvica & Sexologia",
@@ -477,16 +457,6 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-fisioterapia-nas-disfuncoes-sexuais/3552239",
           status: "available",
           description: "Manejo fisioterapêutico de vaginismo, dispareunia, disfunção erétil e dores pélvicas crônicas."
-        },
-        {
-          id: "urgencia-emergencia-guarulhos",
-          title: "Atuação na Urgência, Emergência e Terapia Intensiva",
-          category: "Fisioterapia Hospitalar & UTI",
-          badge: "Esgotado",
-          priceInfo: "",
-          symplaUrl: "https://www.sympla.com.br/evento/amofisio-atuacao-na-urgencia-emergencia-e-terapia-intensiva/3552251",
-          status: "sold_out",
-          description: "Atuação ágil e segura em pronto-socorro, paradas cardiorrespiratórias e suporte ventilatório avançado."
         },
         {
           id: "esporte-performance-guarulhos",
@@ -527,6 +497,36 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-cosmify-entendendo-como-fazer-da-cosmetologia-um-potencializador-dos-seus-resultados/3583895",
           status: "available",
           description: "Aplicação avançada de cosmetologia e dermocosméticos para potencializar protocolos e resultados em fisioterapia dermatofuncional."
+        },
+        {
+          id: "traumato-esportiva-quiro-guarulhos",
+          title: "Fisioterapia Traumato-Ortopédica, Esportiva e Quiropraxia",
+          category: "Ortopedia & Quiropraxia",
+          badge: "Esgotado",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-fisioterapia-traumato-ortopedica-esportiva-e-quiropraxia/3552221",
+          status: "sold_out",
+          description: "Integração prática da reabilitação ortopédica com ajustes de quiropraxia para rápida recuperação funcional."
+        },
+        {
+          id: "respiratoria-guarulhos",
+          title: "Técnicas e Manobras de Fisioterapia Respiratória – Adulto e Pediátrico",
+          category: "Fisioterapia Respiratória",
+          badge: "Esgotado",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-tecnicas-e-manobras-de-fisioterapia-respiratoria-adulto-e-pediatrico/3552255",
+          status: "sold_out",
+          description: "Manobras de desobstrução brônquica e reexpansão pulmonar em pacientes adultos e pediátricos."
+        },
+        {
+          id: "urgencia-emergencia-guarulhos",
+          title: "Atuação na Urgência, Emergência e Terapia Intensiva",
+          category: "Fisioterapia Hospitalar & UTI",
+          badge: "Esgotado",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-atuacao-na-urgencia-emergencia-e-terapia-intensiva/3552251",
+          status: "sold_out",
+          description: "Atuação ágil e segura em pronto-socorro, paradas cardiorrespiratórias e suporte ventilatório avançado."
         }
       ]
     },
