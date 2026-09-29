@@ -652,6 +652,16 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-avaliacao-da-mecanica-ventilatoria-fundamentos-parametros-e-curvas/3567342",
           status: "available",
           description: "Interpretação gráfica, mecânica respiratória avançada, análise de curvas e monitorização ventilatória na prática clínica."
+        },
+        {
+          id: "consultorio-maternidade-gestante-rp",
+          title: "Do consultório à maternidade - como a fisioterapia transforma a jornada da gestante",
+          category: "Saúde da Mulher & Fisioterapia Obstétrica",
+          badge: "Presencial",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-do-consultorio-a-maternidade---como-a-fisioterapia-transforma-a-jornada-da-gestante/3599001",
+          status: "available",
+          description: "Abordagem fisioterapêutica completa na gestação, parto e puerpério, integrando cuidados ambulatoriais e atuação hospitalar."
         }
       ]
     },
