@@ -452,20 +452,20 @@ const AMO_FISIO_DATA = {
           id: "traumato-esportiva-quiro-guarulhos",
           title: "Fisioterapia Traumato-Ortopédica, Esportiva e Quiropraxia",
           category: "Ortopedia & Quiropraxia",
-          badge: "Presencial",
+          badge: "Esgotado",
           priceInfo: "",
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-fisioterapia-traumato-ortopedica-esportiva-e-quiropraxia/3552221",
-          status: "available",
+          status: "sold_out",
           description: "Integração prática da reabilitação ortopédica com ajustes de quiropraxia para rápida recuperação funcional."
         },
         {
           id: "respiratoria-guarulhos",
           title: "Técnicas e Manobras de Fisioterapia Respiratória – Adulto e Pediátrico",
           category: "Fisioterapia Respiratória",
-          badge: "Presencial",
+          badge: "Esgotado",
           priceInfo: "",
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-tecnicas-e-manobras-de-fisioterapia-respiratoria-adulto-e-pediatrico/3552255",
-          status: "available",
+          status: "sold_out",
           description: "Manobras de desobstrução brônquica e reexpansão pulmonar em pacientes adultos e pediátricos."
         },
         {
@@ -482,10 +482,10 @@ const AMO_FISIO_DATA = {
           id: "urgencia-emergencia-guarulhos",
           title: "Atuação na Urgência, Emergência e Terapia Intensiva",
           category: "Fisioterapia Hospitalar & UTI",
-          badge: "Presencial",
+          badge: "Esgotado",
           priceInfo: "",
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-atuacao-na-urgencia-emergencia-e-terapia-intensiva/3552251",
-          status: "available",
+          status: "sold_out",
           description: "Atuação ágil e segura em pronto-socorro, paradas cardiorrespiratórias e suporte ventilatório avançado."
         },
         {
@@ -688,7 +688,8 @@ const AMO_FISIO_DATA = {
           id: "criterios-alta-reconstrucao-lca-rio",
           title: "Critérios de progressão e alta após a reconstrução de LCA",
           category: "Fisioterapia Esportiva & Ortopedia",
-          badge: "Presencial",
+          badge: "Últimas Vagas",
+          instructor: "Prof. Márcio Puglia",
           priceInfo: "",
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-criterios-de-progressao-e-alta-apos-a-reconstrucao-de-lca/3568083",
           status: "available",

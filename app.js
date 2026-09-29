@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const matchCourse = unit.courses.some(course => 
         course.title.toLowerCase().includes(query) || 
-        course.category.toLowerCase().includes(query)
+        course.category.toLowerCase().includes(query) ||
+        (course.instructor && course.instructor.toLowerCase().includes(query))
       );
 
       return matchUnit || matchCourse;
@@ -161,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!query) return true;
       return course.title.toLowerCase().includes(query) || 
              course.category.toLowerCase().includes(query) ||
+             (course.instructor && course.instructor.toLowerCase().includes(query)) ||
              (course.description && course.description.toLowerCase().includes(query));
     });
 
@@ -177,7 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filteredCourses.forEach(course => {
       const card = document.createElement('article');
-      card.className = 'course-card';
+      
+      const badgeText = course.badge || '';
+      const isSoldOut = course.status === 'sold_out' || badgeText.toLowerCase().includes('esgotad');
+      const isUrgent = badgeText.toLowerCase().includes('últimas') || badgeText.toLowerCase().includes('ultimas');
+
+      card.className = `course-card${isSoldOut ? ' is-sold-out' : ''}`;
 
       // Badge e Meta info
       const categoryHtml = course.category ? `
@@ -189,8 +196,26 @@ document.addEventListener('DOMContentLoaded', () => {
         </span>
       ` : '';
 
-      const badgeHtml = course.badge ? `
-        <span class="course-badge-pill">${course.badge}</span>
+      let badgeClass = '';
+      if (isSoldOut) {
+        badgeClass = 'badge-sold-out';
+      } else if (isUrgent) {
+        badgeClass = 'badge-urgent';
+      }
+
+      const badgeHtml = badgeText ? `
+        <span class="course-badge-pill ${badgeClass}">
+          ${isSoldOut ? `
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+            </svg>` : ''}
+          ${isUrgent ? `
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>` : ''}
+          ${badgeText}
+        </span>
       ` : '';
 
       const descHtml = course.description ? `
@@ -241,8 +266,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Botão Sympla
       const symplaUrl = course.symplaUrl || 'https://www.sympla.com.br';
-      const isAvailable = course.status !== 'soon';
-      const btnText = isAvailable ? 'Garantir Vaga no Sympla' : 'Inscrições em Breve';
+      let btnText = 'Garantir Vaga no Sympla';
+      let btnClass = 'btn-sympla';
+
+      if (isSoldOut) {
+        btnText = 'Turma Esgotada (Ver no Sympla)';
+        btnClass = 'btn-sympla btn-sold-out';
+      } else if (course.status === 'soon') {
+        btnText = 'Inscrições em Breve';
+      }
 
       card.innerHTML = `
         <div class="course-header-row">
@@ -259,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
             href="${symplaUrl}" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="btn-sympla" 
+            class="${btnClass}" 
             aria-label="Inscrever-se no curso ${course.title} no Sympla"
           >
             <span>${btnText}</span>
