@@ -685,17 +685,6 @@ const AMO_FISIO_DATA = {
           description: "Fundamentos, diferenciais e raciocínio clínico da Quiropraxia como especialidade para potencializar resultados na prática fisioterapêutica."
         },
         {
-          id: "criterios-alta-reconstrucao-lca-rio",
-          title: "Critérios de progressão e alta após a reconstrução de LCA",
-          category: "Fisioterapia Esportiva & Ortopedia",
-          badge: "Últimas Vagas",
-          instructor: "Prof. Márcio Puglia",
-          priceInfo: "",
-          symplaUrl: "https://www.sympla.com.br/evento/amofisio-criterios-de-progressao-e-alta-apos-a-reconstrucao-de-lca/3568083",
-          status: "available",
-          description: "Testes funcionais, controle de carga, marcadores de segurança e critérios baseados em evidência para a progressão de fases e Return to Play no pós-LCA."
-        },
-        {
           id: "pele-pos-emagrecimento-rio",
           title: "Pele Pós-Emagrecimento - GLP-1, Flacidez e Remodelamento Tecidual",
           category: "Dermatofuncional & Estética",
@@ -704,6 +693,28 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-pele-pos-emagrecimento-glp-1-flacidez-e-remodelamento-tecidual/3589969",
           status: "available",
           description: "Abordagem estética da flacidez e remodelamento tecidual em pacientes pós-emagrecimento, incluindo o uso de medicamentos como GLP-1."
+        },
+        {
+          id: "abordagens-terapeuticas-parkinson-rio",
+          title: "Abordagens Terapêuticas na Doença de Parkinson",
+          category: "Fisioterapia Neurofuncional & Neurologia",
+          badge: "Presencial",
+          instructor: "Dra. Débora Lima",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-abordagens-terapeuticas-na-doenca-de-parkinson/3602654",
+          status: "available",
+          description: "Patologia, manifestações clínicas, treino de marcha, equilíbrio e condutas fisioterapêuticas baseadas em evidências na Doença de Parkinson."
+        },
+        {
+          id: "criterios-alta-reconstrucao-lca-rio",
+          title: "Critérios de progressão e alta após a reconstrução de LCA",
+          category: "Fisioterapia Esportiva & Ortopedia",
+          badge: "Esgotado",
+          instructor: "Prof. Márcio Puglia",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-criterios-de-progressao-e-alta-apos-a-reconstrucao-de-lca/3568083",
+          status: "sold_out",
+          description: "Testes funcionais, controle de carga, marcadores de segurança e critérios baseados em evidência para a progressão de fases e Return to Play no pós-LCA."
         }
       ]
     },
