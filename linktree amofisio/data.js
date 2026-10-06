@@ -804,40 +804,6 @@ const AMO_FISIO_DATA = {
       ]
     },
     {
-      "id": "sao-jose-dos-campos",
-      "name": "São José dos Campos",
-      "state": "SP",
-      "fullName": "Faculdade Inspirar São José dos Campos",
-      "address": "São José dos Campos - SP",
-      "featured": false,
-      "courses": [
-        {
-          "id": "pelvica-promissora-sjc",
-          "title": "Fisioterapia Pélvica é uma área promissora. Entenda o porquê!",
-          "category": "Fisioterapia Pélvica & Carreira",
-          "badge": "Presencial",
-          "priceInfo": "",
-          "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-pelvica-e-uma-area-promissora-entenda-o-porque/3553362",
-          "status": "available",
-          "description": "Panorama de mercado, diferenciais de atuação e oportunidades clínicas da fisioterapia pélvica.",
-          "registered": 3,
-          "capacity": 30
-        },
-        {
-          "id": "atm-repercussoes-sjc",
-          "title": "Disfunções na ATM e suas repercussões no corpo humano",
-          "category": "Terapia Manual & DTM",
-          "badge": "Presencial",
-          "priceInfo": "",
-          "symplaUrl": "https://www.sympla.com.br/evento/amofisio-disfuncoes-na-atm-e-suas-repercussoes-no-corpo-humano/3553401",
-          "status": "available",
-          "description": "Conexões biomecânicas entre a Articulação Temporomandibular, coluna cervical e postura corporal.",
-          "registered": 2,
-          "capacity": 30
-        }
-      ]
-    },
-    {
       "id": "sao-luis",
       "name": "São Luís",
       "state": "MA",
