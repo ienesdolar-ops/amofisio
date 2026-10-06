@@ -458,7 +458,348 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
+  // ÁREA ADMINISTRATIVA (GESTÃO E OCUPAÇÃO DE TURMAS)
+  // =========================================================================
+  const adminTriggerBtn = document.getElementById('admin-trigger-btn');
+  const adminLoginModal = document.getElementById('admin-login-modal');
+  const adminLoginForm = document.getElementById('admin-login-form');
+  const adminPasswordInput = document.getElementById('admin-password-input');
+  const adminTogglePwd = document.getElementById('admin-toggle-pwd');
+  const adminLoginError = document.getElementById('admin-login-error');
+  const adminLoginClose = document.getElementById('admin-login-close');
+
+  const adminDashboardModal = document.getElementById('admin-dashboard-modal');
+  const adminDashboardClose = document.getElementById('admin-dashboard-close');
+  const adminLogoutBtn = document.getElementById('admin-logout-btn');
+  const adminFilterInput = document.getElementById('admin-filter-input');
+  const adminUnitsContainer = document.getElementById('admin-units-container');
+
+  const adminKpiTotalReg = document.getElementById('admin-kpi-total-reg');
+  const adminKpiTotalCap = document.getElementById('admin-kpi-total-cap');
+  const adminKpiOccupancyRate = document.getElementById('admin-kpi-occupancy-rate');
+  const adminKpiRemainingSpots = document.getElementById('admin-kpi-remaining-spots');
+  const adminKpiSoldOut = document.getElementById('admin-kpi-sold-out');
+  const adminKpiUrgent = document.getElementById('admin-kpi-urgent');
+  const adminCountUnits = document.getElementById('admin-count-units');
+
+  let currentAdminFilterStatus = 'all';
+  let currentAdminSearch = '';
+
+  const ADMIN_PWD_CORRECT = 'CampeãoInspirar';
+
+  function isValidAdminPassword(val) {
+    if (!val) return false;
+    const clean = val.trim();
+    if (clean === ADMIN_PWD_CORRECT) return true;
+    const norm = clean.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    return norm === 'campeaoinspirar';
+  }
+
+  function isAdminAuthenticated() {
+    return sessionStorage.getItem('amofisio_admin_auth') === 'true';
+  }
+
+  function openAdmin() {
+    if (isAdminAuthenticated()) {
+      showAdminDashboard();
+    } else {
+      showAdminLogin();
+    }
+  }
+
+  function showAdminLogin() {
+    if (adminLoginModal) {
+      adminLoginModal.style.display = 'flex';
+      if (adminPasswordInput) {
+        adminPasswordInput.value = '';
+        setTimeout(() => adminPasswordInput.focus(), 100);
+      }
+      if (adminLoginError) adminLoginError.style.display = 'none';
+    }
+  }
+
+  function closeAdminLogin() {
+    if (adminLoginModal) adminLoginModal.style.display = 'none';
+  }
+
+  function showAdminDashboard() {
+    closeAdminLogin();
+    if (adminDashboardModal) {
+      adminDashboardModal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      renderAdminDashboard();
+    }
+  }
+
+  function closeAdminDashboard() {
+    if (adminDashboardModal) {
+      adminDashboardModal.style.display = 'none';
+      document.body.style.overflow = '';
+      if (window.location.hash === '#admin') {
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+      }
+    }
+  }
+
+  function logoutAdmin() {
+    sessionStorage.removeItem('amofisio_admin_auth');
+    closeAdminDashboard();
+    showToast('Sessão administrativa bloqueada.');
+  }
+
+  // Toggle visualização de senha
+  if (adminTogglePwd && adminPasswordInput) {
+    adminTogglePwd.addEventListener('click', () => {
+      const isPwd = adminPasswordInput.type === 'password';
+      adminPasswordInput.type = isPwd ? 'text' : 'password';
+    });
+  }
+
+  // Submissão do formulário de login
+  if (adminLoginForm) {
+    adminLoginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const entered = adminPasswordInput ? adminPasswordInput.value : '';
+      if (isValidAdminPassword(entered)) {
+        sessionStorage.setItem('amofisio_admin_auth', 'true');
+        showAdminDashboard();
+      } else {
+        if (adminLoginError) adminLoginError.style.display = 'flex';
+        if (adminPasswordInput) {
+          adminPasswordInput.select();
+          adminPasswordInput.focus();
+        }
+      }
+    });
+  }
+
+  // Botões de fechar e logout
+  if (adminLoginClose) adminLoginClose.addEventListener('click', closeAdminLogin);
+  if (adminDashboardClose) adminDashboardClose.addEventListener('click', closeAdminDashboard);
+  if (adminLogoutBtn) adminLogoutBtn.addEventListener('click', logoutAdmin);
+
+  // Trigger discreto no rodapé
+  if (adminTriggerBtn) {
+    adminTriggerBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openAdmin();
+    });
+  }
+
+  // Atalho de teclado: Alt + A ou Ctrl + Shift + A
+  document.addEventListener('keydown', (e) => {
+    if ((e.altKey && (e.key === 'a' || e.key === 'A')) || 
+        (e.ctrlKey && e.shiftKey && (e.key === 'a' || e.key === 'A'))) {
+      e.preventDefault();
+      openAdmin();
+    }
+    if (e.key === 'Escape') {
+      if (adminDashboardModal && adminDashboardModal.style.display === 'block') {
+        closeAdminDashboard();
+      } else if (adminLoginModal && adminLoginModal.style.display === 'flex') {
+        closeAdminLogin();
+      }
+    }
+  });
+
+  // Busca no painel administrativo
+  if (adminFilterInput) {
+    adminFilterInput.addEventListener('input', (e) => {
+      currentAdminSearch = e.target.value.toLowerCase().trim();
+      renderAdminDashboard();
+    });
+  }
+
+  // Pílulas de filtro
+  const filterPillBtns = document.querySelectorAll('.admin-filter-pills .admin-pill');
+  filterPillBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterPillBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentAdminFilterStatus = btn.getAttribute('data-filter') || 'all';
+      renderAdminDashboard();
+    });
+  });
+
+  // RENDERIZAÇÃO DO PAINEL ADMINISTRATIVO
+  function renderAdminDashboard() {
+    if (!AMO_FISIO_DATA || !AMO_FISIO_DATA.units || !adminUnitsContainer) return;
+
+    let totalBrazilRegistered = 0;
+    let totalBrazilCapacity = 0;
+    let totalSoldOutCourses = 0;
+    let totalUrgentCourses = 0;
+    let matchingUnitsCount = 0;
+
+    adminUnitsContainer.innerHTML = '';
+
+    // Filtrar e calcular métricas
+    const unitsData = AMO_FISIO_DATA.units.map(unit => {
+      let unitReg = 0;
+      let unitCap = 0;
+
+      const coursesWithStats = unit.courses.map(course => {
+        const reg = typeof course.registered === 'number' ? course.registered : 0;
+        const cap = typeof course.capacity === 'number' ? course.capacity : 40;
+        const rem = Math.max(0, cap - reg);
+        const pct = cap > 0 ? Math.min(100, Math.round((reg / cap) * 100)) : 0;
+        const isSoldOut = course.status === 'sold_out' || (course.badge && course.badge.toLowerCase().includes('esgotad'));
+        const isUrgent = !isSoldOut && (rem <= 5 || (course.badge && course.badge.toLowerCase().includes('última') || course.badge && course.badge.toLowerCase().includes('ultima')));
+
+        unitReg += reg;
+        unitCap += cap;
+
+        totalBrazilRegistered += reg;
+        totalBrazilCapacity += cap;
+        if (isSoldOut) totalSoldOutCourses++;
+        if (isUrgent) totalUrgentCourses++;
+
+        return {
+          ...course,
+          reg,
+          cap,
+          rem,
+          pct,
+          isSoldOut,
+          isUrgent
+        };
+      });
+
+      return {
+        ...unit,
+        unitReg,
+        unitCap,
+        unitPct: unitCap > 0 ? Math.min(100, Math.round((unitReg / unitCap) * 100)) : 0,
+        coursesStats: coursesWithStats
+      };
+    });
+
+    // Atualizar KPIs no topo
+    if (adminKpiTotalReg) adminKpiTotalReg.textContent = totalBrazilRegistered.toLocaleString('pt-BR');
+    if (adminKpiTotalCap) adminKpiTotalCap.textContent = totalBrazilCapacity.toLocaleString('pt-BR');
+    
+    const generalOccupancy = totalBrazilCapacity > 0 ? ((totalBrazilRegistered / totalBrazilCapacity) * 100).toFixed(1) : 0;
+    if (adminKpiOccupancyRate) adminKpiOccupancyRate.textContent = `${generalOccupancy}% de ocupação geral`;
+    if (adminKpiRemainingSpots) adminKpiRemainingSpots.textContent = `${Math.max(0, totalBrazilCapacity - totalBrazilRegistered)} vagas disponíveis`;
+    if (adminKpiSoldOut) adminKpiSoldOut.textContent = totalSoldOutCourses;
+    if (adminKpiUrgent) adminKpiUrgent.textContent = totalUrgentCourses;
+
+    // Filtrar unidades e cursos de acordo com busca e filtro selecionado
+    unitsData.forEach(unit => {
+      // Filtrar cursos dentro da unidade
+      const filteredCourses = unit.coursesStats.filter(c => {
+        // Filtro de status
+        if (currentAdminFilterStatus === 'sold_out' && !c.isSoldOut) return false;
+        if (currentAdminFilterStatus === 'urgent' && !c.isUrgent) return false;
+
+        // Filtro de busca de texto
+        if (currentAdminSearch) {
+          const matchUnit = unit.name.toLowerCase().includes(currentAdminSearch) || unit.state.toLowerCase().includes(currentAdminSearch);
+          const matchCourse = c.title.toLowerCase().includes(currentAdminSearch) || (c.category && c.category.toLowerCase().includes(currentAdminSearch));
+          return matchUnit || matchCourse;
+        }
+        return true;
+      });
+
+      if (filteredCourses.length === 0) return;
+
+      matchingUnitsCount++;
+
+      // Card da Unidade
+      const unitCard = document.createElement('div');
+      unitCard.className = 'admin-unit-card';
+
+      let pctClass = '';
+      if (unit.unitPct >= 90) pctClass = 'pct-high';
+      else if (unit.unitPct >= 65) pctClass = 'pct-med';
+
+      unitCard.innerHTML = `
+        <div class="admin-unit-header">
+          <div class="admin-unit-title-group">
+            <h3>${unit.name}</h3>
+            <span class="admin-unit-state">${unit.state}</span>
+          </div>
+          <div class="admin-unit-meta">
+            <span class="admin-unit-stats-text">
+              Total da Unidade: <strong>${unit.unitReg} / ${unit.unitCap}</strong> inscritos
+            </span>
+            <span class="admin-unit-percent-badge ${pctClass}">${unit.unitPct}%</span>
+          </div>
+        </div>
+        <div class="admin-courses-table">
+          ${filteredCourses.map(c => {
+            let statusPillClass = 'status-normal';
+            let statusLabel = c.badge || 'Disponível';
+
+            if (c.isSoldOut) {
+              statusPillClass = 'status-soldout';
+              statusLabel = 'Esgotado';
+            } else if (c.isUrgent) {
+              statusPillClass = 'status-urgent';
+              statusLabel = c.rem === 1 ? 'Última vaga' : 'Últimas vagas';
+            }
+
+            let barColor = 'bar-green';
+            if (c.pct >= 95) barColor = 'bar-red';
+            else if (c.pct >= 70) barColor = 'bar-amber';
+
+            const remainingText = c.isSoldOut ? 'Capacidade esgotada' : `${c.rem} ${c.rem === 1 ? 'vaga restante' : 'vagas restantes'}`;
+
+            return `
+              <div class="admin-course-row">
+                <div class="admin-course-main">
+                  <div class="admin-course-title">${c.title}</div>
+                  <div class="admin-course-category">${c.category || 'Curso Presencial'}${c.instructor ? ` • ${c.instructor}` : ''}</div>
+                </div>
+
+                <div class="admin-course-metrics">
+                  <div class="admin-course-figures">
+                    <span class="admin-course-ratio"><strong>${c.reg}</strong> / ${c.cap}</span>
+                    <span class="admin-course-remaining-sub">${remainingText}</span>
+                  </div>
+
+                  <div class="admin-bar-wrap" title="${c.pct}% ocupado">
+                    <div class="admin-bar-fill ${barColor}" style="width: ${c.pct}%;"></div>
+                  </div>
+
+                  <span class="admin-status-pill ${statusPillClass}">${statusLabel}</span>
+
+                  <a href="${c.symplaUrl}" target="_blank" rel="noopener noreferrer" class="admin-sympla-link" title="Abrir página no Sympla">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+
+      adminUnitsContainer.appendChild(unitCard);
+    });
+
+    if (adminCountUnits) adminCountUnits.textContent = matchingUnitsCount;
+
+    if (matchingUnitsCount === 0) {
+      adminUnitsContainer.innerHTML = `
+        <div style="text-align: center; padding: 40px 20px; color: var(--text-muted);">
+          <p>Nenhuma turma encontrada com os filtros selecionados.</p>
+        </div>
+      `;
+    }
+  }
+
+  // Verificar se acessou diretamente com hash #admin
+  if (window.location.hash === '#admin') {
+    openAdmin();
+  }
+
+  // =========================================================================
   // INICIALIZAÇÃO
   // =========================================================================
   handleUrlRouting();
 });
+

@@ -150,6 +150,9 @@ async function run() {
       const maxCapacity = capacityInfo ? capacityInfo.capacity : 40;
       const remaining = maxCapacity - registered;
 
+      course.registered = registered;
+      course.capacity = maxCapacity;
+
       const oldBadge = course.badge;
       const oldStatus = course.status;
 

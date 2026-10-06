@@ -33,7 +33,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-abordagem-estetica-e-cosmetologica-ao-paciente-em-uso-de-canetas-emagrecedoras/3552261",
           "status": "available",
-          "description": "Manejo da flacidez tissular e protocolos estéticos adaptados aos efeitos do emagrecimento rápido."
+          "description": "Manejo da flacidez tissular e protocolos estéticos adaptados aos efeitos do emagrecimento rápido.",
+          "registered": 1,
+          "capacity": 40
         },
         {
           "id": "neuropediatria-cif-bauru",
@@ -43,7 +45,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-neuropediatria-usando-a-cif-e-escalas-para-planejar-intervencoes/3552294",
           "status": "last_spots",
-          "description": "Utilização prática da Classificação Internacional de Funcionalidade para mensuração de metas clínicas."
+          "description": "Utilização prática da Classificação Internacional de Funcionalidade para mensuração de metas clínicas.",
+          "registered": 25,
+          "capacity": 30
         },
         {
           "id": "pbe-esportiva-bauru",
@@ -53,7 +57,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-como-a-pbe-pode-auxiliar-o-fisioterapeuta-esportivo/3552282",
           "status": "available",
-          "description": "Como aplicar artigos científicos de alta qualidade para fundamentar tratamentos e condutas no esporte."
+          "description": "Como aplicar artigos científicos de alta qualidade para fundamentar tratamentos e condutas no esporte.",
+          "registered": 1,
+          "capacity": 40
         },
         {
           "id": "gestacao-puerperio-bauru",
@@ -63,7 +69,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-da-gestacao-ao-puerperio-avaliacao-e-condutas-fisioterapeuticas/3564737",
           "status": "available",
-          "description": "Avaliação biomecânica, intervenções fisioterapêuticas no pré-natal, parto e condutas essenciais no pós-parto imediato e tardio."
+          "description": "Avaliação biomecânica, intervenções fisioterapêuticas no pré-natal, parto e condutas essenciais no pós-parto imediato e tardio.",
+          "registered": 4,
+          "capacity": 40
         },
         {
           "id": "sindrome-fragilidade-bauru",
@@ -73,7 +81,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-a-fisioterapia-como-protagonista-na-prevencao-da-sindrome-da-fragilidade/3564725",
           "status": "available",
-          "description": "Estratégias clínicas e exercícios preventivos para conter o avanço da fragilidade, sarcopenia e risco de quedas na pessoa idosa."
+          "description": "Estratégias clínicas e exercícios preventivos para conter o avanço da fragilidade, sarcopenia e risco de quedas na pessoa idosa.",
+          "registered": 18,
+          "capacity": 40
         }
       ]
     },
@@ -93,7 +103,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-lesao-dos-isquiotibiais-do-consultorio-ao-retorno-ao-esporte/3562953",
           "status": "available",
-          "description": "Diagnóstico, fases de cicatrização tecidual, dosagem de carga e critérios clínicos para o Return to Play em lesões de isquiotibiais."
+          "description": "Diagnóstico, fases de cicatrização tecidual, dosagem de carga e critérios clínicos para o Return to Play em lesões de isquiotibiais.",
+          "registered": 6,
+          "capacity": 40
         },
         {
           "id": "ventilacao-mecanica-belem",
@@ -103,7 +115,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-imersao-pratica-em-ventilacao-mecanica-invasiva-e-nao-invasiva/3562957",
           "status": "available",
-          "description": "Manejo prático dos modos ventilatórios invasivos e VNI, ajustes de parâmetros, assincronias e condutas na terapia intensiva."
+          "description": "Manejo prático dos modos ventilatórios invasivos e VNI, ajustes de parâmetros, assincronias e condutas na terapia intensiva.",
+          "registered": 15,
+          "capacity": 40
         },
         {
           "id": "disfuncoes-urinarias-belem",
@@ -113,7 +127,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-disfuncoes-urinarias-do-diagnostico-funcional-ao-plano-de-tratamento/3562962",
           "status": "available",
-          "description": "Avaliação do assoalho pélvico, diagnóstico funcional das incontinências e elaboração de planos terapêuticos personalizados."
+          "description": "Avaliação do assoalho pélvico, diagnóstico funcional das incontinências e elaboração de planos terapêuticos personalizados.",
+          "registered": 7,
+          "capacity": 40
         }
       ]
     },
@@ -133,7 +149,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmss-membros-superiores/3573015",
           "status": "available",
-          "description": "Técnicas manuais de avaliação e mobilização articular aplicadas às disfunções e alívio da dor nos membros superiores."
+          "description": "Técnicas manuais de avaliação e mobilização articular aplicadas às disfunções e alívio da dor nos membros superiores.",
+          "registered": 13,
+          "capacity": 40
         },
         {
           "id": "mobilizacao-articular-mmii-bh",
@@ -143,7 +161,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmii-membros-inferiores/3573028",
           "status": "available",
-          "description": "Prática clínica de mobilização articular direcionada às articulações de quadril, joelho e tornozelo para ganho de amplitude de movimento e função."
+          "description": "Prática clínica de mobilização articular direcionada às articulações de quadril, joelho e tornozelo para ganho de amplitude de movimento e função.",
+          "registered": 11,
+          "capacity": 40
         }
       ]
     },
@@ -163,7 +183,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-quiropraxia-na-atencao-a-saude/3583906",
           "status": "available",
-          "description": "Princípios dos ajustes quiropráticos, avaliação vertebral e aplicação clínica integrada aos cuidados em saúde."
+          "description": "Princípios dos ajustes quiropráticos, avaliação vertebral e aplicação clínica integrada aos cuidados em saúde.",
+          "registered": 0,
+          "capacity": 40
         }
       ]
     },
@@ -183,7 +205,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-profissional-da-estetica-no-estimulo-de-colageno/3589946",
           "status": "available",
-          "description": "Técnicas, tecnologias e abordagens clínicas para indução e estímulo de colágeno nos tratamentos estéticos."
+          "description": "Técnicas, tecnologias e abordagens clínicas para indução e estímulo de colágeno nos tratamentos estéticos.",
+          "registered": 17,
+          "capacity": 40
         },
         {
           "id": "sarcopenia-fragilidade-campinas",
@@ -193,7 +217,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-fisioterapeuta-na-sarcopenia-e-sindrome-da-fragilidade/3589956",
           "status": "available",
-          "description": "Estratégias de avaliação e intervenção no manejo da sarcopenia e fragilidade."
+          "description": "Estratégias de avaliação e intervenção no manejo da sarcopenia e fragilidade.",
+          "registered": 2,
+          "capacity": 40
         },
         {
           "id": "fisioterapia-manipulativa-campinas",
@@ -203,7 +229,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-manipulativa-na-pratica-da-evidencia-ao-raciocinio-clinico/3589937",
           "status": "sold_out",
-          "description": "Raciocínio clínico avançado e técnicas de manipulação baseadas em evidências para disfunções neuromusculoesqueléticas."
+          "description": "Raciocínio clínico avançado e técnicas de manipulação baseadas em evidências para disfunções neuromusculoesqueléticas.",
+          "registered": 35,
+          "capacity": 35
         }
       ]
     },
@@ -224,7 +252,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "R$ 30,00 (Acesso a 4 cursos)",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-alem-da-clinica-home-care/3555189",
           "status": "last_spots",
-          "description": "Inscrição com valor único de R$ 30,00 que dá acesso completo aos 4 cursos diferentes da unidade Campo Grande."
+          "description": "Inscrição com valor único de R$ 30,00 que dá acesso completo aos 4 cursos diferentes da unidade Campo Grande.",
+          "registered": 46,
+          "capacity": 50
         }
       ]
     },
@@ -244,7 +274,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-recuperacao-funcional-da-crianca-na-uti/3552045",
           "status": "available",
-          "description": "Estratégias de reabilitação e desmame ventilatório na UTI Pediátrica para preservação funcional da criança."
+          "description": "Estratégias de reabilitação e desmame ventilatório na UTI Pediátrica para preservação funcional da criança.",
+          "registered": 4,
+          "capacity": 40
         },
         {
           "id": "corrida-inteligente-cuiaba",
@@ -254,7 +286,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-corrida-inteligente-atuacao-da-fisioterapia/3552122",
           "status": "available",
-          "description": "Análise biomecânica do padrão de corrida, calçados e prevenção de lesões comuns em corredores."
+          "description": "Análise biomecânica do padrão de corrida, calçados e prevenção de lesões comuns em corredores.",
+          "registered": 4,
+          "capacity": 40
         },
         {
           "id": "harmonizacao-facial-cuiaba",
@@ -264,7 +298,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-dermato-funcional-full-face-estrategico-na-harmonizacao-facial/3552028",
           "status": "available",
-          "description": "Abordagem anatômica global da face para tratamentos estéticos e regenerativos integrados."
+          "description": "Abordagem anatômica global da face para tratamentos estéticos e regenerativos integrados.",
+          "registered": 3,
+          "capacity": 40
         },
         {
           "id": "gestacao-parto-cuiaba",
@@ -274,7 +310,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-da-fisioterapia-na-gestacao-e-parto/3552112",
           "status": "available",
-          "description": "Preparação corporal no pré-natal, alívio não farmacológico da dor e condução biomecânica no trabalho de parto."
+          "description": "Preparação corporal no pré-natal, alívio não farmacológico da dor e condução biomecânica no trabalho de parto.",
+          "registered": 6,
+          "capacity": 40
         },
         {
           "id": "neurofuncional-pediatrica-cuiaba",
@@ -284,7 +322,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-neurofuncional-pediatrica-e-seu-campo-de-atuacao/3552098",
           "status": "available",
-          "description": "Conceitos neurológicos, escalas de desenvolvimento e estimulação precoce na neuropediatria."
+          "description": "Conceitos neurológicos, escalas de desenvolvimento e estimulação precoce na neuropediatria.",
+          "registered": 10,
+          "capacity": 40
         },
         {
           "id": "biomecanica-cinesioterapia-cuiaba",
@@ -294,7 +334,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-biomecanica-e-cinesioterapia-aplicacao-perfeita-de-exercicios/3552076",
           "status": "available",
-          "description": "Braço de momento, linhas de ação muscular e prescrição precisa de exercícios terapêuticos."
+          "description": "Braço de momento, linhas de ação muscular e prescrição precisa de exercícios terapêuticos.",
+          "registered": 32,
+          "capacity": 50
         }
       ]
     },
@@ -314,7 +356,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-intervencao-fisioterapeutica-nas-disfuncoes-miccionais-em-criancas-e-adolescentes/3560627",
           "status": "available",
-          "description": "Abordagem fisioterapêutica, avaliação e condutas nas disfunções miccionais e do assoalho pélvico em crianças e adolescentes."
+          "description": "Abordagem fisioterapêutica, avaliação e condutas nas disfunções miccionais e do assoalho pélvico em crianças e adolescentes.",
+          "registered": 3,
+          "capacity": 40
         },
         {
           "id": "liberacao-miofascial-piriforme-curitiba",
@@ -324,7 +368,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-liberacao-miofascial-manual-integrada-na-sindrome-do-piriforme/3560590",
           "status": "available",
-          "description": "Técnicas manuais integradas e descompressão miofascial no manejo da dor e disfunção do músculo piriforme."
+          "description": "Técnicas manuais integradas e descompressão miofascial no manejo da dor e disfunção do músculo piriforme.",
+          "registered": 6,
+          "capacity": 40
         },
         {
           "id": "reabilitacao-ombro-curitiba",
@@ -334,7 +380,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-reabilitacao-avancada-do-complexo-articular-do-ombro/3560614",
           "status": "available",
-          "description": "Avaliação biomecânica, raciocínio clínico e protocolos avançados de reabilitação para o complexo articular do ombro."
+          "description": "Avaliação biomecânica, raciocínio clínico e protocolos avançados de reabilitação para o complexo articular do ombro.",
+          "registered": 7,
+          "capacity": 40
         },
         {
           "id": "introducao-dtm-curitiba",
@@ -344,7 +392,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-introducao-a-disfuncao-temporomandibular/3561113",
           "status": "available",
-          "description": "Fundamentos clínicos, diagnóstico diferencial e intervenção fisioterapêutica nas desordens da articulação temporomandibular."
+          "description": "Fundamentos clínicos, diagnóstico diferencial e intervenção fisioterapêutica nas desordens da articulação temporomandibular.",
+          "registered": 4,
+          "capacity": 40
         },
         {
           "id": "correntes-diadinamicas-curitiba",
@@ -354,7 +404,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-correntes-diadinamicas-de-bernard-na-reabilitacao-musculoesqueletica/3562993",
           "status": "available",
-          "description": "Aplicações clínicas das correntes diadinâmicas para analgesia rápida, modulação inflamatória e reabilitação musculoesquelética."
+          "description": "Aplicações clínicas das correntes diadinâmicas para analgesia rápida, modulação inflamatória e reabilitação musculoesquelética.",
+          "registered": 1,
+          "capacity": 40
         },
         {
           "id": "exames-laboratoriais-dermato-curitiba",
@@ -364,7 +416,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-interpretacao-de-exames-laboratoriais-aplicada-a-dermatofuncional/3563006",
           "status": "available",
-          "description": "Raciocínio clínico laboratorial: leitura e interpretação de biomarcadores para potencializar e personalizar condutas em dermatofuncional."
+          "description": "Raciocínio clínico laboratorial: leitura e interpretação de biomarcadores para potencializar e personalizar condutas em dermatofuncional.",
+          "registered": 4,
+          "capacity": 40
         }
       ]
     },
@@ -384,7 +438,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-a-importancia-da-anatomia-palpatoria-no-raciocinio-clinico/3583921",
           "status": "available",
-          "description": "Palpação precisa de estruturas musculoesqueléticas, referências anatômicas de segurança e construção do raciocínio clínico assertivo."
+          "description": "Palpação precisa de estruturas musculoesqueléticas, referências anatômicas de segurança e construção do raciocínio clínico assertivo.",
+          "registered": 3,
+          "capacity": 40
         }
       ]
     },
@@ -404,7 +460,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-avaliacao-e-reabilitacao-de-fraturas/3574421",
           "status": "available",
-          "description": "Consolidação óssea, fases de reabilitação pós-fratura, controle de carga e condutas fisioterapêuticas para retorno funcional."
+          "description": "Consolidação óssea, fases de reabilitação pós-fratura, controle de carga e condutas fisioterapêuticas para retorno funcional.",
+          "registered": 7,
+          "capacity": 40
         }
       ]
     },
@@ -424,7 +482,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-reabilitacao-pos-parto-e-pilates-na-pratica/3567347",
           "status": "available",
-          "description": "Fundamentos, avaliação do puerpério e aplicação prática do método Pilates na recuperação funcional pós-parto."
+          "description": "Fundamentos, avaliação do puerpério e aplicação prática do método Pilates na recuperação funcional pós-parto.",
+          "registered": 12,
+          "capacity": 40
         }
       ]
     },
@@ -444,7 +504,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-nas-disfuncoes-sexuais/3552239",
           "status": "available",
-          "description": "Manejo fisioterapêutico de vaginismo, dispareunia, disfunção erétil e dores pélvicas crônicas."
+          "description": "Manejo fisioterapêutico de vaginismo, dispareunia, disfunção erétil e dores pélvicas crônicas.",
+          "registered": 28,
+          "capacity": 40
         },
         {
           "id": "esporte-performance-guarulhos",
@@ -454,7 +516,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-no-esporte-prevencao-reabilitacao-e-performance/3552228",
           "status": "available",
-          "description": "Avaliação funcional do movimento, controle de sobrecarga e estratégias de ganho de rendimento atlético."
+          "description": "Avaliação funcional do movimento, controle de sobrecarga e estratégias de ganho de rendimento atlético.",
+          "registered": 30,
+          "capacity": 40
         },
         {
           "id": "microagulhamento-guarulhos",
@@ -464,7 +528,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-microagulhamento-da-teoria-a-pratica/3552207",
           "status": "last_spots",
-          "description": "Técnica de indução percutânea de colágeno, drug delivery e protocolos para rejuvenescimento e cicatrizes."
+          "description": "Técnica de indução percutânea de colágeno, drug delivery e protocolos para rejuvenescimento e cicatrizes.",
+          "registered": 39,
+          "capacity": 40
         },
         {
           "id": "harmonizacao-labial-guarulhos",
@@ -474,7 +540,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-harmonizacao-labial-conhecimento-pratica-e-excelencia/3564711",
           "status": "available",
-          "description": "Conhecimento aprofundado, técnicas práticas e critérios de excelência e segurança na harmonização labial."
+          "description": "Conhecimento aprofundado, técnicas práticas e critérios de excelência e segurança na harmonização labial.",
+          "registered": 18,
+          "capacity": 40
         },
         {
           "id": "cosmify-cosmetologia-guarulhos",
@@ -484,7 +552,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-cosmify-entendendo-como-fazer-da-cosmetologia-um-potencializador-dos-seus-resultados/3583895",
           "status": "available",
-          "description": "Aplicação avançada de cosmetologia e dermocosméticos para potencializar protocolos e resultados em fisioterapia dermatofuncional."
+          "description": "Aplicação avançada de cosmetologia e dermocosméticos para potencializar protocolos e resultados em fisioterapia dermatofuncional.",
+          "registered": 22,
+          "capacity": 40
         },
         {
           "id": "traumato-esportiva-quiro-guarulhos",
@@ -494,7 +564,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-traumato-ortopedica-esportiva-e-quiropraxia/3552221",
           "status": "sold_out",
-          "description": "Integração prática da reabilitação ortopédica com ajustes de quiropraxia para rápida recuperação funcional."
+          "description": "Integração prática da reabilitação ortopédica com ajustes de quiropraxia para rápida recuperação funcional.",
+          "registered": 40,
+          "capacity": 40
         },
         {
           "id": "respiratoria-guarulhos",
@@ -504,7 +576,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-tecnicas-e-manobras-de-fisioterapia-respiratoria-adulto-e-pediatrico/3552255",
           "status": "sold_out",
-          "description": "Manobras de desobstrução brônquica e reexpansão pulmonar em pacientes adultos e pediátricos."
+          "description": "Manobras de desobstrução brônquica e reexpansão pulmonar em pacientes adultos e pediátricos.",
+          "registered": 50,
+          "capacity": 50
         },
         {
           "id": "urgencia-emergencia-guarulhos",
@@ -514,7 +588,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-na-urgencia-emergencia-e-terapia-intensiva/3552251",
           "status": "sold_out",
-          "description": "Atuação ágil e segura em pronto-socorro, paradas cardiorrespiratórias e suporte ventilatório avançado."
+          "description": "Atuação ágil e segura em pronto-socorro, paradas cardiorrespiratórias e suporte ventilatório avançado.",
+          "registered": 40,
+          "capacity": 40
         }
       ]
     },
@@ -534,7 +610,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-estrategias-nutricionais-na-prevencao-e-tratamento-de-lesoes-no-esporte/3555278",
           "status": "available",
-          "description": "Abordagem interdisciplinar entre suporte nutricional e fisioterapia na recuperação e prevenção de lesões."
+          "description": "Abordagem interdisciplinar entre suporte nutricional e fisioterapia na recuperação e prevenção de lesões.",
+          "registered": 0,
+          "capacity": 40
         },
         {
           "id": "lesoes-musculares-londrina",
@@ -544,7 +622,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-lesoes-musculares-em-atletas-diagnostico-e-tratamento-baseado-em-evidencias/3555322",
           "status": "available",
-          "description": "Classificação ecográfica/clínica, dosagem de carga e reabilitação baseada nas melhores evidências mundiais."
+          "description": "Classificação ecográfica/clínica, dosagem de carga e reabilitação baseada nas melhores evidências mundiais.",
+          "registered": 4,
+          "capacity": 40
         },
         {
           "id": "introducao-quiropraxia-londrina",
@@ -554,7 +634,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-introducao-a-quiropraxia/3555299",
           "status": "available",
-          "description": "Fundamentos teóricos e princípios dos ajustes articulares quiropráticos para alinhamento vertebral."
+          "description": "Fundamentos teóricos e princípios dos ajustes articulares quiropráticos para alinhamento vertebral.",
+          "registered": 0,
+          "capacity": 40
         }
       ]
     },
@@ -574,7 +656,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-lideranca-nao-espera-cargo/3589911",
           "status": "available",
-          "description": "Desenvolvimento de habilidades de liderança e gestão de carreira para fisioterapeutas."
+          "description": "Desenvolvimento de habilidades de liderança e gestão de carreira para fisioterapeutas.",
+          "registered": 0,
+          "capacity": 40
         }
       ]
     },
@@ -595,7 +679,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-escolha-2-aulas-e-amplie-seus-conhecimentos-em-fisioterapia/3584713",
           "status": "available",
-          "description": "Inscrição especial que permite selecionar e participar de 2 aulas de imersão prática na unidade Porto Velho."
+          "description": "Inscrição especial que permite selecionar e participar de 2 aulas de imersão prática na unidade Porto Velho.",
+          "registered": 12,
+          "capacity": 40
         }
       ]
     },
@@ -615,7 +701,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-analise-do-movimento-e-intervencao-no-sentar-e-ficar-em-pe/3564953",
           "status": "available",
-          "description": "Avaliação cinemática e cinética das transferências posturais de sentar e levantar, com intervenções para ganho de mobilidade e controle motor."
+          "description": "Avaliação cinemática e cinética das transferências posturais de sentar e levantar, com intervenções para ganho de mobilidade e controle motor.",
+          "registered": 10,
+          "capacity": 40
         },
         {
           "id": "avaliacao-funcional-membros-inferiores-rp",
@@ -625,7 +713,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-avaliacao-funcional-de-membros-inferiores---testes-e-aplicacao-clinica/3564928",
           "status": "available",
-          "description": "Bateria de testes funcionais, raciocínio clínico e aplicação prática na avaliação de membros inferiores em atletas e pacientes ortopédicos."
+          "description": "Bateria de testes funcionais, raciocínio clínico e aplicação prática na avaliação de membros inferiores em atletas e pacientes ortopédicos.",
+          "registered": 9,
+          "capacity": 40
         },
         {
           "id": "mecanica-ventilatoria-rp",
@@ -635,7 +725,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-avaliacao-da-mecanica-ventilatoria-fundamentos-parametros-e-curvas/3567342",
           "status": "available",
-          "description": "Interpretação gráfica, mecânica respiratória avançada, análise de curvas e monitorização ventilatória na prática clínica."
+          "description": "Interpretação gráfica, mecânica respiratória avançada, análise de curvas e monitorização ventilatória na prática clínica.",
+          "registered": 1,
+          "capacity": 40
         },
         {
           "id": "consultorio-maternidade-gestante-rp",
@@ -645,7 +737,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-do-consultorio-a-maternidade---como-a-fisioterapia-transforma-a-jornada-da-gestante/3599001",
           "status": "available",
-          "description": "Abordagem fisioterapêutica completa na gestação, parto e puerpério, integrando cuidados ambulatoriais e atuação hospitalar."
+          "description": "Abordagem fisioterapêutica completa na gestação, parto e puerpério, integrando cuidados ambulatoriais e atuação hospitalar.",
+          "registered": 2,
+          "capacity": 40
         }
       ]
     },
@@ -665,7 +759,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-quiropraxia-uma-especialidade-do-fisioterapeuta-como-ampliar-seus-resultados-clinicos/3568100",
           "status": "available",
-          "description": "Fundamentos, diferenciais e raciocínio clínico da Quiropraxia como especialidade para potencializar resultados na prática fisioterapêutica."
+          "description": "Fundamentos, diferenciais e raciocínio clínico da Quiropraxia como especialidade para potencializar resultados na prática fisioterapêutica.",
+          "registered": 6,
+          "capacity": 40
         },
         {
           "id": "pele-pos-emagrecimento-rio",
@@ -675,7 +771,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-pele-pos-emagrecimento-glp-1-flacidez-e-remodelamento-tecidual/3589969",
           "status": "available",
-          "description": "Abordagem estética da flacidez e remodelamento tecidual em pacientes pós-emagrecimento, incluindo o uso de medicamentos como GLP-1."
+          "description": "Abordagem estética da flacidez e remodelamento tecidual em pacientes pós-emagrecimento, incluindo o uso de medicamentos como GLP-1.",
+          "registered": 4,
+          "capacity": 40
         },
         {
           "id": "abordagens-terapeuticas-parkinson-rio",
@@ -686,7 +784,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-abordagens-terapeuticas-na-doenca-de-parkinson/3602654",
           "status": "available",
-          "description": "Patologia, manifestações clínicas, treino de marcha, equilíbrio e condutas fisioterapêuticas baseadas em evidências na Doença de Parkinson."
+          "description": "Patologia, manifestações clínicas, treino de marcha, equilíbrio e condutas fisioterapêuticas baseadas em evidências na Doença de Parkinson.",
+          "registered": 3,
+          "capacity": 40
         },
         {
           "id": "criterios-alta-reconstrucao-lca-rio",
@@ -697,7 +797,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-criterios-de-progressao-e-alta-apos-a-reconstrucao-de-lca/3568083",
           "status": "last_spots",
-          "description": "Testes funcionais, controle de carga, marcadores de segurança e critérios baseados em evidência para a progressão de fases e Return to Play no pós-LCA."
+          "description": "Testes funcionais, controle de carga, marcadores de segurança e critérios baseados em evidência para a progressão de fases e Return to Play no pós-LCA.",
+          "registered": 39,
+          "capacity": 40
         }
       ]
     },
@@ -717,7 +819,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-pelvica-e-uma-area-promissora-entenda-o-porque/3553362",
           "status": "available",
-          "description": "Panorama de mercado, diferenciais de atuação e oportunidades clínicas da fisioterapia pélvica."
+          "description": "Panorama de mercado, diferenciais de atuação e oportunidades clínicas da fisioterapia pélvica.",
+          "registered": 3,
+          "capacity": 40
         },
         {
           "id": "atm-repercussoes-sjc",
@@ -727,7 +831,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-disfuncoes-na-atm-e-suas-repercussoes-no-corpo-humano/3553401",
           "status": "available",
-          "description": "Conexões biomecânicas entre a Articulação Temporomandibular, coluna cervical e postura corporal."
+          "description": "Conexões biomecânicas entre a Articulação Temporomandibular, coluna cervical e postura corporal.",
+          "registered": 2,
+          "capacity": 40
         }
       ]
     },
@@ -747,7 +853,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-lca-na-pratica-da-lesao-ao-retorno-ao-esporte/3552163",
           "status": "available",
-          "description": "Reabilitação completa de Ligamento Cruzado Anterior: critérios de progressão e testes de Return to Play."
+          "description": "Reabilitação completa de Ligamento Cruzado Anterior: critérios de progressão e testes de Return to Play.",
+          "registered": 6,
+          "capacity": 40
         },
         {
           "id": "injetaveis-dermato-sao-luis",
@@ -757,7 +865,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-do-raciocinio-clinico-a-pratica-com-injetaveis-na-fisioterapia-dermatofuncional/3552138",
           "status": "available",
-          "description": "Fundamentos, segurança, indicações e técnicas injetáveis na estética e reabilitação tegumentar."
+          "description": "Fundamentos, segurança, indicações e técnicas injetáveis na estética e reabilitação tegumentar.",
+          "registered": 3,
+          "capacity": 40
         },
         {
           "id": "exercicios-funcionais-idosos-sao-luis",
@@ -767,7 +877,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-exercicios-funcionais-em-grupo-para-idosos/3557081",
           "status": "available",
-          "description": "Dinâmicas de treinamento funcional coletivo para melhora do equilíbrio, força e autonomia na terceira idade."
+          "description": "Dinâmicas de treinamento funcional coletivo para melhora do equilíbrio, força e autonomia na terceira idade.",
+          "registered": 6,
+          "capacity": 40
         },
         {
           "id": "mobilizacao-paciente-critico-sao-luis",
@@ -777,7 +889,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-domine-a-mobilizacao-do-paciente-critico-com-seguranca/3552149",
           "status": "available",
-          "description": "Critérios de segurança, monitorização hemodinâmica e mobilização precoce em Unidade de Terapia Intensiva."
+          "description": "Critérios de segurança, monitorização hemodinâmica e mobilização precoce em Unidade de Terapia Intensiva.",
+          "registered": 6,
+          "capacity": 40
         },
         {
           "id": "tea-pediatria-sao-luis",
@@ -787,7 +901,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-intervencoes-fisioterapeuticas-diagnosticas-e-terapeuticas-na-crianca-tea/3552156",
           "status": "available",
-          "description": "Avaliação motora, integração sensorial e condutas terapêuticas lúdicas no Transtorno do Espectro Autista."
+          "description": "Avaliação motora, integração sensorial e condutas terapêuticas lúdicas no Transtorno do Espectro Autista.",
+          "registered": 12,
+          "capacity": 40
         },
         {
           "id": "reabilitacao-cancer-mama-sao-luis",
@@ -797,7 +913,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-reabilitacao-funcional-no-cancer-de-mama/3557073",
           "status": "available",
-          "description": "Do pós-operatório imediato ao manejo do linfedema e retorno às atividades de vida diária."
+          "description": "Do pós-operatório imediato ao manejo do linfedema e retorno às atividades de vida diária.",
+          "registered": 1,
+          "capacity": 40
         },
         {
           "id": "neonatologia-critica-sao-luis",
@@ -807,7 +925,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-boas-praticas-em-neonatologia-em-situacoes-criticas/3557098",
           "status": "available",
-          "description": "Posicionamento terapêutico, ventilação mecânica neonatal e assistência integral ao recém-nascido crítico."
+          "description": "Posicionamento terapêutico, ventilação mecânica neonatal e assistência integral ao recém-nascido crítico.",
+          "registered": 11,
+          "capacity": 40
         }
       ]
     },
@@ -827,7 +947,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-como-tratar-lipedema/3555339",
           "status": "available",
-          "description": "Protocolos baseados em evidência para avaliação, descompressão tecidual e tratamento do lipedema."
+          "description": "Protocolos baseados em evidência para avaliação, descompressão tecidual e tratamento do lipedema.",
+          "registered": 4,
+          "capacity": 40
         },
         {
           "id": "fisiotech-tcar-ondas-choque",
@@ -837,7 +959,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisiotech-experience-tcar-e-ondas-de-choque-na-pratica-clinica/3555369",
           "status": "available",
-          "description": "Experiência prática de alta tecnologia com Tecarterapia e Ondas de Choque na recuperação musculoesquelética."
+          "description": "Experiência prática de alta tecnologia com Tecarterapia e Ondas de Choque na recuperação musculoesquelética.",
+          "registered": 0,
+          "capacity": 40
         }
       ]
     },
@@ -857,7 +981,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fotobiomodulacao-ampliando-possibilidades-na-pratica-clinica/3555403",
           "status": "available",
-          "description": "Laserterapia e fotobiomodulação aplicada com evidências para acelerar a regeneração e modular a dor."
+          "description": "Laserterapia e fotobiomodulação aplicada com evidências para acelerar a regeneração e modular a dor.",
+          "registered": 16,
+          "capacity": 40
         },
         {
           "id": "fisioterapia-domiciliar-vila-mariana",
@@ -867,7 +993,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-o-paciente-esta-em-casa-e-agora-desafios-e-decisoes-da-fisioterapia-domiciliar/3555399",
           "status": "available",
-          "description": "Tomada de decisão clínica, biossegurança, adaptação de ambiente e condutas no atendimento domiciliar."
+          "description": "Tomada de decisão clínica, biossegurança, adaptação de ambiente e condutas no atendimento domiciliar.",
+          "registered": 6,
+          "capacity": 40
         }
       ]
     },
@@ -887,7 +1015,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-fisioterapeuta-nas-doencas-neurodegenerativas-e-demencias-na-pessoa-idosa/3555397",
           "status": "available",
-          "description": "Estratégias de intervenção fisioterapêutica e reabilitação em demências e doenças neurodegenerativas."
+          "description": "Estratégias de intervenção fisioterapêutica e reabilitação em demências e doenças neurodegenerativas.",
+          "registered": 2,
+          "capacity": 40
         },
         {
           "id": "raciocinio-pelvica-sorocaba",
@@ -897,7 +1027,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-construcao-do-raciocinio-clinico-na-fisioterapia-pelvica/3555390",
           "status": "available",
-          "description": "Metodologia prática para diagnóstico assertivo e estruturação de condutas em fisioterapia pélvica."
+          "description": "Metodologia prática para diagnóstico assertivo e estruturação de condutas em fisioterapia pélvica.",
+          "registered": 2,
+          "capacity": 40
         }
       ]
     },
@@ -917,7 +1049,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-limpeza-de-pele-personalizada-protocolos-para-peles-young-old/3557069",
           "status": "available",
-          "description": "Protocolos avançados e personalizados para diferentes faixas etárias e tipos de pele."
+          "description": "Protocolos avançados e personalizados para diferentes faixas etárias e tipos de pele.",
+          "registered": 7,
+          "capacity": 40
         },
         {
           "id": "somatotopias-reflexologias-mtc",
@@ -927,7 +1061,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-somatotopias-e-reflexologias-na-mtc-mapas-do-corpo-para-o-cuidado-integral/3556990",
           "status": "available",
-          "description": "Mapas corporais, somatotopias e técnicas de reflexologia para o cuidado integral."
+          "description": "Mapas corporais, somatotopias e técnicas de reflexologia para o cuidado integral.",
+          "registered": 2,
+          "capacity": 40
         },
         {
           "id": "ventosoterapia",
@@ -937,7 +1073,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-como-avaliar-e-aplicar-a-tecnica-de-ventosoterapia/3556996",
           "status": "available",
-          "description": "Fundamentos práticos de avaliação e aplicação clínica da ventosoterapia."
+          "description": "Fundamentos práticos de avaliação e aplicação clínica da ventosoterapia.",
+          "registered": 8,
+          "capacity": 40
         },
         {
           "id": "saude-mental-acupuntura",
@@ -947,7 +1085,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-saude-mental-e-acupuntura-fundamentos-e-ferramentas-da-mtc-para-o-cuidado-da-mente/3556987",
           "status": "available",
-          "description": "Fundamentos e ferramentas práticas da MTC para o cuidado da mente e saúde emocional."
+          "description": "Fundamentos e ferramentas práticas da MTC para o cuidado da mente e saúde emocional.",
+          "registered": 2,
+          "capacity": 40
         },
         {
           "id": "manipulacao-fascias",
@@ -957,7 +1097,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-manipulacao-das-fascias-da-avaliacao-ao-tratamento/3557045",
           "status": "available",
-          "description": "Avaliação fascial e técnicas práticas de manipulação miofascial para reabilitação."
+          "description": "Avaliação fascial e técnicas práticas de manipulação miofascial para reabilitação.",
+          "registered": 8,
+          "capacity": 40
         },
         {
           "id": "tuina-atletas",
@@ -967,7 +1109,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-tuina-no-tratamento-de-atletas/3556968",
           "status": "available",
-          "description": "Aplicação das técnicas milenares do Tuiná na recuperação e alta performance de atletas."
+          "description": "Aplicação das técnicas milenares do Tuiná na recuperação e alta performance de atletas.",
+          "registered": 8,
+          "capacity": 40
         },
         {
           "id": "lipedema-vitoria",
@@ -977,7 +1121,9 @@ const AMO_FISIO_DATA = {
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-fisioterapeuta-no-tratamento-do-lipedema-do-diagnostico-ao-tratamento/3557056",
           "status": "available",
-          "description": "Condutas terapêuticas completas para diagnóstico, manejo clínico e tratamento do Lipedema."
+          "description": "Condutas terapêuticas completas para diagnóstico, manejo clínico e tratamento do Lipedema.",
+          "registered": 6,
+          "capacity": 40
         }
       ]
     }
