@@ -1,0 +1,41 @@
+name: Sincronizar Vagas Sympla Automaticamente
+
+on:
+  schedule:
+    # Executa a cada 1 hora (minuto 0)
+    - cron: '0 * * * *'
+  workflow_dispatch: # Permite disparar manualmente pelo botão "Run workflow" no GitHub
+
+jobs:
+  sync-sympla:
+    name: Sincronizar Inscrições e Vagas
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Executar sincronização com a API do Sympla
+        env:
+          SYMPLA_TOKEN: ${{ secrets.SYMPLA_TOKEN }}
+        run: node scripts/sync-sympla.mjs
+
+      - name: Salvar e publicar alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "Automated sync: atualizar vagas Sympla [skip ci]"
+            git push
+            echo "Alterações salvas e publicadas com sucesso."
+          else
+            echo "Nenhuma mudança nas vagas detectada nesta verificação."
+          fi
