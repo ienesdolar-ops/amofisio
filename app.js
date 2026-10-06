@@ -1007,6 +1007,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentRecentUnitFilter = 'all';
   let currentRecentSearchQuery = '';
 
+  // Ocultar botão público se a lista de inscrições recentes estiver vazia
+  if (btnPublicRecent && btnPublicRecent.parentElement) {
+    const hasRecent = Boolean(AMO_FISIO_DATA && AMO_FISIO_DATA.recentRegistrations && AMO_FISIO_DATA.recentRegistrations.length > 0);
+    btnPublicRecent.parentElement.style.display = hasRecent ? 'block' : 'none';
+  }
+
   // Inicializar opções de unidades no filtro de inscrições recentes
   function initRecentUnitSelect() {
     if (!adminRecentUnitSelect || !AMO_FISIO_DATA || !AMO_FISIO_DATA.units) return;
@@ -1057,12 +1063,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (filtered.length === 0) {
-      adminRecentList.innerHTML = `
-        <div style="text-align: center; padding: 40px 20px; color: var(--text-muted); background: rgba(18, 30, 49, 0.4); border-radius: 12px;">
-          <p>Nenhuma inscrição encontrada para os filtros selecionados.</p>
-        </div>
-      `;
+      if (list.length === 0) {
+        if (adminRecentCounter) {
+          adminRecentCounter.textContent = '0 inscrições registradas';
+        }
+        adminRecentList.innerHTML = `
+          <div style="text-align: center; padding: 45px 20px; color: var(--text-muted); background: rgba(18, 30, 49, 0.4); border: 1px dashed rgba(255, 255, 255, 0.12); border-radius: 14px;">
+            <div style="width: 52px; height: 52px; margin: 0 auto 14px; border-radius: 50%; background: rgba(123, 224, 248, 0.08); display: flex; align-items: center; justify-content: center; color: var(--cyan-bright);">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h4 style="color: var(--text-primary); font-size: 1.05rem; margin-bottom: 6px; font-weight: 700;">Aguardando Novas Inscrições</h4>
+            <p style="font-size: 0.85rem; max-width: 460px; margin: 0 auto; line-height: 1.5; color: var(--text-secondary);">
+              Nenhuma inscrição recente registrada no momento. Conforme os alunos garantirem suas vagas no Sympla, as confirmações reais aparecerão aqui automaticamente.
+            </p>
+          </div>
+        `;
+      } else {
+        adminRecentList.innerHTML = `
+          <div style="text-align: center; padding: 40px 20px; color: var(--text-muted); background: rgba(18, 30, 49, 0.4); border-radius: 12px;">
+            <p>Nenhuma inscrição encontrada para os filtros selecionados.</p>
+          </div>
+        `;
+      }
       return;
+    }
+
+    // Ocultar banner público se a lista estiver vazia
+    if (btnPublicRecent && btnPublicRecent.parentElement) {
+      const hasRecent = Boolean(AMO_FISIO_DATA.recentRegistrations && AMO_FISIO_DATA.recentRegistrations.length > 0);
+      btnPublicRecent.parentElement.style.display = hasRecent ? 'block' : 'none';
     }
 
     adminRecentList.innerHTML = filtered.map(item => {
@@ -1162,11 +1194,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (filtered.length === 0) {
-      publicRecentList.innerHTML = `
-        <div style="text-align: center; padding: 30px 16px; color: var(--text-muted);">
-          <p>Nenhuma inscrição recente encontrada para esta busca.</p>
-        </div>
-      `;
+      if (list.length === 0) {
+        publicRecentList.innerHTML = `
+          <div style="text-align: center; padding: 40px 16px; color: var(--text-muted);">
+            <div style="width: 48px; height: 48px; margin: 0 auto 12px; border-radius: 50%; background: rgba(123, 224, 248, 0.08); display: flex; align-items: center; justify-content: center; color: var(--cyan-bright);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <p style="color: var(--text-primary); font-weight: 600; margin-bottom: 4px;">Nenhuma nova inscrição registrada no momento.</p>
+            <p style="font-size: 0.82rem; color: var(--text-secondary);">Escolha sua unidade na página inicial para garantir a sua vaga!</p>
+          </div>
+        `;
+      } else {
+        publicRecentList.innerHTML = `
+          <div style="text-align: center; padding: 30px 16px; color: var(--text-muted);">
+            <p>Nenhuma inscrição recente encontrada para esta busca.</p>
+          </div>
+        `;
+      }
       return;
     }
 

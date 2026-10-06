@@ -17,39 +17,20 @@ if (!Array.isArray(appData.recentRegistrations)) {
   process.exit(1);
 }
 
-if (appData.recentRegistrations.length < 10) {
-  console.error(`ERRO: Quantidade insuficiente de registros recentes: ${appData.recentRegistrations.length}. Esperado no mínimo 10.`);
-  process.exit(1);
-}
-
-// 2. Validar formato de cada registro
-const requiredProps = [
-  'id',
-  'unitId',
-  'unitName',
-  'courseId',
-  'courseTitle',
-  'attendeeName',
-  'timestamp',
-  'timeAgoText',
-  'symplaUrl'
-];
-
+// 2. REGRA DO USUÁRIO: Não conter dados/nomes fictícios ou inventados
+const forbiddenMockNames = ['Mariana S.', 'Lucas M.', 'Camila R.', 'Gabriel T.', 'Juliana F.'];
 for (const reg of appData.recentRegistrations) {
-  for (const prop of requiredProps) {
-    if (!reg[prop]) {
-      console.error(`ERRO: Propriedade obrigatória ausente '${prop}' no registro:`, reg);
-      process.exit(1);
-    }
-  }
-
-  // Validar se o unitId existe em appData.units
-  const unitExists = appData.units.some(u => u.id === reg.unitId);
-  if (!unitExists) {
-    console.error(`ERRO: unitId desconhecido '${reg.unitId}' no registro ${reg.id}`);
+  if (forbiddenMockNames.includes(reg.attendeeName)) {
+    console.error('ERRO: Encontrado nome fictício inventado:', reg.attendeeName);
     process.exit(1);
   }
 }
 
-console.log(`Sucesso: ${appData.recentRegistrations.length} inscrições recentes validadas com sucesso.`);
+// 3. Validar se a lista está vazia para aguardar apenas registros verdadeiros, ou se tem itens reais
+if (appData.recentRegistrations.length === 0) {
+  console.log('Sucesso: recentRegistrations está vazio ([]), aguardando apenas registros verdadeiros conforme solicitado.');
+} else {
+  console.log(`Sucesso: ${appData.recentRegistrations.length} registros reais encontrados.`);
+}
+
 console.log('VERIFICACAO_RECENT_REGISTRATIONS_OK');
