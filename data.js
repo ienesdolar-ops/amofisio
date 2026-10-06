@@ -299,7 +299,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-dermato-funcional-full-face-estrategico-na-harmonizacao-facial/3552028",
           "status": "available",
           "description": "Abordagem anatômica global da face para tratamentos estéticos e regenerativos integrados.",
-          "registered": 3,
+          "registered": 4,
           "capacity": 30
         },
         {
@@ -772,7 +772,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-pele-pos-emagrecimento-glp-1-flacidez-e-remodelamento-tecidual/3589969",
           "status": "available",
           "description": "Abordagem estética da flacidez e remodelamento tecidual em pacientes pós-emagrecimento, incluindo o uso de medicamentos como GLP-1.",
-          "registered": 4,
+          "registered": 5,
           "capacity": 30
         },
         {
