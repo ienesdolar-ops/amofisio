@@ -264,6 +264,20 @@
           </div>
         </div>
 
+        <div class="admin-kpi-card highlight-success">
+          <div class="admin-kpi-icon-wrap icon-green">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <div class="admin-kpi-info">
+            <span class="admin-kpi-label">Turmas Confirmadas</span>
+            <div class="admin-kpi-val" id="admin-kpi-confirmed">0</div>
+            <span class="admin-kpi-sub" id="admin-kpi-confirmed-rate">Meta atingida</span>
+          </div>
+        </div>
+
         <div class="admin-kpi-card">
           <div class="admin-kpi-icon-wrap icon-blue">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -317,8 +331,11 @@
         </div>
         <div class="admin-filter-pills">
           <button class="admin-pill active" data-filter="all">Todas as Cidades (<span id="admin-count-units">0</span>)</button>
+          <button class="admin-pill" data-filter="confirmed">Confirmados</button>
+          <button class="admin-pill" data-filter="pending">Aguardando Confirmação</button>
           <button class="admin-pill" data-filter="urgent">Com Últimas Vagas</button>
           <button class="admin-pill" data-filter="sold_out">Com Esgotados</button>
+          <button class="admin-pill" data-filter="cancelled">Cancelados</button>
         </div>
       </div>
 

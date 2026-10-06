@@ -42,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Filtra unidades pelo nome, estado ou cursos contidos
     const filteredUnits = AMO_FISIO_DATA.units.filter(unit => {
+      // REGRA OBRIGATÓRIA: Unidades canceladas pelo franqueado (ex: São José dos Campos)
+      // NÃO devem aparecer na listagem pública para os alunos
+      if (unit.cancelledByFranchisee) return false;
+
       if (!query) return true;
       const matchUnit = unit.name.toLowerCase().includes(query) || 
                         unit.state.toLowerCase().includes(query) ||
@@ -128,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   function renderCourses(unitId, filterQuery = '') {
     const unit = AMO_FISIO_DATA.units.find(u => u.id === unitId);
-    if (!unit) {
+    if (!unit || unit.cancelledByFranchisee) {
       showUnitsView();
       return;
     }
@@ -480,6 +484,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const adminKpiRemainingSpots = document.getElementById('admin-kpi-remaining-spots');
   const adminKpiSoldOut = document.getElementById('admin-kpi-sold-out');
   const adminKpiUrgent = document.getElementById('admin-kpi-urgent');
+  const adminKpiConfirmed = document.getElementById('admin-kpi-confirmed');
+  const adminKpiConfirmedRate = document.getElementById('admin-kpi-confirmed-rate');
   const adminCountUnits = document.getElementById('admin-count-units');
 
   let currentAdminFilterStatus = 'all';
@@ -629,39 +635,60 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalBrazilCapacity = 0;
     let totalSoldOutCourses = 0;
     let totalUrgentCourses = 0;
+    let totalConfirmedCourses = 0;
+    let totalActiveCourses = 0;
     let matchingUnitsCount = 0;
 
     adminUnitsContainer.innerHTML = '';
 
-    // Filtrar e calcular métricas
+    // Mapear métricas por unidade e por curso
     const unitsData = AMO_FISIO_DATA.units.map(unit => {
       let unitReg = 0;
       let unitCap = 0;
+      let unitConfirmedCount = 0;
+      let unitActiveCoursesCount = 0;
+      const isUnitCancelled = Boolean(unit.cancelledByFranchisee);
 
       const coursesWithStats = unit.courses.map(course => {
+        const isCancelled = Boolean(isUnitCancelled || course.cancelledByFranchisee);
         const reg = typeof course.registered === 'number' ? course.registered : 0;
         const cap = typeof course.capacity === 'number' ? course.capacity : 40;
+        const min = typeof course.minParticipants === 'number' ? course.minParticipants : 10;
         const rem = Math.max(0, cap - reg);
         const pct = cap > 0 ? Math.min(100, Math.round((reg / cap) * 100)) : 0;
-        const isSoldOut = course.status === 'sold_out' || (course.badge && course.badge.toLowerCase().includes('esgotad'));
-        const isUrgent = !isSoldOut && (rem <= 5 || (course.badge && course.badge.toLowerCase().includes('última') || course.badge && course.badge.toLowerCase().includes('ultima')));
+        
+        const isSoldOut = !isCancelled && (course.status === 'sold_out' || (course.badge && course.badge.toLowerCase().includes('esgotad')));
+        const isUrgent = !isCancelled && !isSoldOut && (rem <= 5 || (course.badge && (course.badge.toLowerCase().includes('última') || course.badge.toLowerCase().includes('ultima'))));
+        const isConfirmed = !isCancelled && (reg >= min);
+        const confirmPct = isCancelled ? 0 : (isConfirmed ? 100 : Math.min(100, Math.round((reg / min) * 100)));
 
-        unitReg += reg;
-        unitCap += cap;
-
-        totalBrazilRegistered += reg;
-        totalBrazilCapacity += cap;
-        if (isSoldOut) totalSoldOutCourses++;
-        if (isUrgent) totalUrgentCourses++;
+        if (!isCancelled) {
+          unitReg += reg;
+          unitCap += cap;
+          totalBrazilRegistered += reg;
+          totalBrazilCapacity += cap;
+          totalActiveCourses++;
+          unitActiveCoursesCount++;
+          if (isConfirmed) {
+            totalConfirmedCourses++;
+            unitConfirmedCount++;
+          }
+          if (isSoldOut) totalSoldOutCourses++;
+          if (isUrgent) totalUrgentCourses++;
+        }
 
         return {
           ...course,
           reg,
           cap,
+          min,
           rem,
           pct,
+          confirmPct,
+          isConfirmed,
           isSoldOut,
-          isUrgent
+          isUrgent,
+          isCancelled
         };
       });
 
@@ -669,6 +696,9 @@ document.addEventListener('DOMContentLoaded', () => {
         ...unit,
         unitReg,
         unitCap,
+        unitConfirmedCount,
+        unitActiveCoursesCount,
+        isCancelled: isUnitCancelled,
         unitPct: unitCap > 0 ? Math.min(100, Math.round((unitReg / unitCap) * 100)) : 0,
         coursesStats: coursesWithStats
       };
@@ -677,7 +707,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Atualizar KPIs no topo
     if (adminKpiTotalReg) adminKpiTotalReg.textContent = totalBrazilRegistered.toLocaleString('pt-BR');
     if (adminKpiTotalCap) adminKpiTotalCap.textContent = totalBrazilCapacity.toLocaleString('pt-BR');
-    
+    if (adminKpiConfirmed) adminKpiConfirmed.textContent = totalConfirmedCourses;
+    if (adminKpiConfirmedRate) {
+      const confirmedRate = totalActiveCourses > 0 ? Math.round((totalConfirmedCourses / totalActiveCourses) * 100) : 0;
+      adminKpiConfirmedRate.textContent = `${totalConfirmedCourses} de ${totalActiveCourses} turmas (${confirmedRate}%)`;
+    }
+
     const generalOccupancy = totalBrazilCapacity > 0 ? ((totalBrazilRegistered / totalBrazilCapacity) * 100).toFixed(1) : 0;
     if (adminKpiOccupancyRate) adminKpiOccupancyRate.textContent = `${generalOccupancy}% de ocupação geral`;
     if (adminKpiRemainingSpots) adminKpiRemainingSpots.textContent = `${Math.max(0, totalBrazilCapacity - totalBrazilRegistered)} vagas disponíveis`;
@@ -689,6 +724,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Filtrar cursos dentro da unidade
       const filteredCourses = unit.coursesStats.filter(c => {
         // Filtro de status
+        if (currentAdminFilterStatus === 'confirmed' && (!c.isConfirmed || c.isCancelled)) return false;
+        if (currentAdminFilterStatus === 'pending' && (c.isConfirmed || c.isCancelled)) return false;
+        if (currentAdminFilterStatus === 'cancelled' && !c.isCancelled) return false;
         if (currentAdminFilterStatus === 'sold_out' && !c.isSoldOut) return false;
         if (currentAdminFilterStatus === 'urgent' && !c.isUrgent) return false;
 
@@ -707,27 +745,104 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Card da Unidade
       const unitCard = document.createElement('div');
-      unitCard.className = 'admin-unit-card';
+      unitCard.className = `admin-unit-card ${unit.isCancelled ? 'unit-cancelled' : ''}`;
 
       let pctClass = '';
       if (unit.unitPct >= 90) pctClass = 'pct-high';
       else if (unit.unitPct >= 65) pctClass = 'pct-med';
 
+      let unitHeaderHTML = '';
+      if (unit.isCancelled) {
+        unitHeaderHTML = `
+          <div class="admin-unit-header">
+            <div class="admin-unit-title-group">
+              <h3>${unit.name}</h3>
+              <span class="admin-unit-state">${unit.state}</span>
+              <span class="admin-unit-cancelled-badge">Cancelado pelo Franqueado</span>
+            </div>
+            <div class="admin-unit-meta">
+              <span class="admin-unit-stats-text" style="color: #F87171;">
+                Aulas canceladas a pedido do franqueado (oculto no site público)
+              </span>
+              <span class="admin-unit-percent-badge pct-cancelled">Cancelado</span>
+            </div>
+          </div>
+        `;
+      } else {
+        unitHeaderHTML = `
+          <div class="admin-unit-header">
+            <div class="admin-unit-title-group">
+              <h3>${unit.name}</h3>
+              <span class="admin-unit-state">${unit.state}</span>
+            </div>
+            <div class="admin-unit-header-right">
+              <div class="admin-unit-meta">
+                <span class="admin-unit-stats-text">
+                  Total da Unidade: <strong>${unit.unitReg} / ${unit.unitCap}</strong> inscritos
+                </span>
+                <span class="admin-unit-confirmed-summary" title="${unit.unitConfirmedCount} turmas atingiram o mínimo para confirmação">
+                  <span class="dot-green"></span> ${unit.unitConfirmedCount}/${unit.courses.length} confirmadas
+                </span>
+                <span class="admin-unit-percent-badge ${pctClass}">${unit.unitPct}%</span>
+              </div>
+              <button class="admin-copy-report-btn" data-unit-id="${unit.id}" title="Copiar resumo de turmas desta unidade">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copiar
+              </button>
+            </div>
+          </div>
+        `;
+      }
+
       unitCard.innerHTML = `
-        <div class="admin-unit-header">
-          <div class="admin-unit-title-group">
-            <h3>${unit.name}</h3>
-            <span class="admin-unit-state">${unit.state}</span>
-          </div>
-          <div class="admin-unit-meta">
-            <span class="admin-unit-stats-text">
-              Total da Unidade: <strong>${unit.unitReg} / ${unit.unitCap}</strong> inscritos
-            </span>
-            <span class="admin-unit-percent-badge ${pctClass}">${unit.unitPct}%</span>
-          </div>
-        </div>
+        ${unitHeaderHTML}
         <div class="admin-courses-table">
           ${filteredCourses.map(c => {
+            if (c.isCancelled) {
+              return `
+                <div class="admin-course-row row-cancelled">
+                  <div class="admin-course-main">
+                    <div class="admin-course-title">${c.title}</div>
+                    <div class="admin-course-category">${c.category || 'Curso Presencial'}${c.instructor ? ` • ${c.instructor}` : ''}</div>
+                  </div>
+
+                  <div class="admin-course-metrics">
+                    <div class="admin-confirm-block">
+                      <div class="admin-confirm-header">
+                        <span class="admin-confirm-label">Status da Turma:</span>
+                        <span class="admin-confirm-badge status-cancelled">Cancelado pelo franqueado</span>
+                      </div>
+                      <div class="admin-confirm-bar-wrap" title="Aulas canceladas pelo franqueado local">
+                        <div class="admin-confirm-bar-fill bar-cancelled" style="width: 0%;"></div>
+                      </div>
+                      <div class="admin-confirm-sub">
+                        <span>Aulas canceladas na unidade</span>
+                      </div>
+                    </div>
+
+                    <div class="admin-course-figures">
+                      <span class="admin-course-ratio"><strong>0</strong> / ${c.cap} vagas</span>
+                      <span class="admin-course-remaining-sub">Cancelado</span>
+                    </div>
+
+                    <span class="admin-status-pill status-cancelled">Cancelado</span>
+
+                    <a href="${c.symplaUrl}" target="_blank" rel="noopener noreferrer" class="admin-sympla-link" title="Abrir página no Sympla">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              `;
+            }
+
+            // Curso Normal
             let statusPillClass = 'status-normal';
             let statusLabel = c.badge || 'Disponível';
 
@@ -739,11 +854,13 @@ document.addEventListener('DOMContentLoaded', () => {
               statusLabel = c.rem === 1 ? 'Última vaga' : 'Últimas vagas';
             }
 
-            let barColor = 'bar-green';
-            if (c.pct >= 95) barColor = 'bar-red';
-            else if (c.pct >= 70) barColor = 'bar-amber';
-
             const remainingText = c.isSoldOut ? 'Capacidade esgotada' : `${c.rem} ${c.rem === 1 ? 'vaga restante' : 'vagas restantes'}`;
+            const confirmBadgeClass = c.isConfirmed ? 'status-confirmed' : 'status-pending';
+            const confirmBadgeLabel = c.isConfirmed ? '✓ Confirmado' : `Faltam ${c.min - c.reg}`;
+            const confirmBarClass = c.isConfirmed ? 'bar-confirmed' : 'bar-pending';
+            const confirmSubLabel = c.isConfirmed 
+              ? `<span>Meta: <strong>${c.min}</strong> mín.</span><strong style="color: #10B981;">Confirmado (${c.reg} inscritos)</strong>`
+              : `<span>Meta: <strong>${c.min}</strong> mín.</span><span>${c.reg}/${c.min} alunos</span>`;
 
             return `
               <div class="admin-course-row">
@@ -753,13 +870,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
 
                 <div class="admin-course-metrics">
-                  <div class="admin-course-figures">
-                    <span class="admin-course-ratio"><strong>${c.reg}</strong> / ${c.cap}</span>
-                    <span class="admin-course-remaining-sub">${remainingText}</span>
+                  <!-- Barrinha Verde de Meta de Confirmação -->
+                  <div class="admin-confirm-block">
+                    <div class="admin-confirm-header">
+                      <span class="admin-confirm-label">Confirmação:</span>
+                      <span class="admin-confirm-badge ${confirmBadgeClass}">${confirmBadgeLabel}</span>
+                    </div>
+                    <div class="admin-confirm-bar-wrap" title="${c.reg} inscritos de ${c.min} necessários para confirmação (${c.confirmPct}%)">
+                      <div class="admin-confirm-bar-fill ${confirmBarClass}" style="width: ${c.confirmPct}%;"></div>
+                    </div>
+                    <div class="admin-confirm-sub">
+                      ${confirmSubLabel}
+                    </div>
                   </div>
 
-                  <div class="admin-bar-wrap" title="${c.pct}% ocupado">
-                    <div class="admin-bar-fill ${barColor}" style="width: ${c.pct}%;"></div>
+                  <!-- Capacidade Máxima e Vagas -->
+                  <div class="admin-course-figures">
+                    <span class="admin-course-ratio"><strong>${c.reg}</strong> / ${c.cap} vagas</span>
+                    <span class="admin-course-remaining-sub">${remainingText}</span>
                   </div>
 
                   <span class="admin-status-pill ${statusPillClass}">${statusLabel}</span>
@@ -790,6 +918,38 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
     }
+
+    // Configurar botões de cópia de relatório por unidade
+    adminUnitsContainer.querySelectorAll('.admin-copy-report-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const uId = btn.getAttribute('data-unit-id');
+        const unit = AMO_FISIO_DATA.units.find(u => u.id === uId);
+        if (!unit) return;
+
+        let reportText = `📋 *RELATÓRIO DE TURMAS - ${unit.name.toUpperCase()}*\n`;
+        reportText += `Faculdade Inspirar • Amo Fisio\n`;
+        if (unit.cancelledByFranchisee) {
+          reportText += `⚠️ Aulas canceladas pelo franqueado.\n`;
+        } else {
+          reportText += `Total da Unidade: ${unit.courses.reduce((acc, c) => acc + (c.registered || 0), 0)} inscritos\n\n`;
+          unit.courses.forEach(c => {
+            const min = c.minParticipants || 10;
+            const reg = c.registered || 0;
+            const cap = c.capacity || 40;
+            const isConf = reg >= min;
+            const statusTxt = isConf ? `✅ CONFIRMADO (${reg}/${min} mín.)` : `⏳ AGUARDANDO (Faltam ${min - reg} para ${min} mín.)`;
+            reportText += `• ${c.title}\n  Inscritos: ${reg}/${cap} vagas | ${statusTxt}\n\n`;
+          });
+        }
+
+        navigator.clipboard.writeText(reportText.trim()).then(() => {
+          showToast(`Relatório de ${unit.name} copiado!`);
+        }).catch(() => {
+          showToast('Erro ao copiar relatório.');
+        });
+      });
+    });
   }
 
   // Verificar se acessou diretamente com hash #admin
