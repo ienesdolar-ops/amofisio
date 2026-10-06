@@ -35,7 +35,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Manejo da flacidez tissular e protocolos estéticos adaptados aos efeitos do emagrecimento rápido.",
           "registered": 1,
-          "capacity": 40
+          "capacity": 25
         },
         {
           "id": "neuropediatria-cif-bauru",
@@ -59,7 +59,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Como aplicar artigos científicos de alta qualidade para fundamentar tratamentos e condutas no esporte.",
           "registered": 1,
-          "capacity": 40
+          "capacity": 25
         },
         {
           "id": "gestacao-puerperio-bauru",
@@ -71,7 +71,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Avaliação biomecânica, intervenções fisioterapêuticas no pré-natal, parto e condutas essenciais no pós-parto imediato e tardio.",
           "registered": 4,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "sindrome-fragilidade-bauru",
@@ -83,7 +83,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Estratégias clínicas e exercícios preventivos para conter o avanço da fragilidade, sarcopenia e risco de quedas na pessoa idosa.",
           "registered": 18,
-          "capacity": 40
+          "capacity": 30
         }
       ]
     },
@@ -151,7 +151,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Técnicas manuais de avaliação e mobilização articular aplicadas às disfunções e alívio da dor nos membros superiores.",
           "registered": 13,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "mobilizacao-articular-mmii-bh",
@@ -163,7 +163,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Prática clínica de mobilização articular direcionada às articulações de quadril, joelho e tornozelo para ganho de amplitude de movimento e função.",
           "registered": 11,
-          "capacity": 40
+          "capacity": 30
         }
       ]
     },
@@ -185,7 +185,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Princípios dos ajustes quiropráticos, avaliação vertebral e aplicação clínica integrada aos cuidados em saúde.",
           "registered": 0,
-          "capacity": 40
+          "capacity": 30
         }
       ]
     },
@@ -206,8 +206,8 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-profissional-da-estetica-no-estimulo-de-colageno/3589946",
           "status": "available",
           "description": "Técnicas, tecnologias e abordagens clínicas para indução e estímulo de colágeno nos tratamentos estéticos.",
-          "registered": 17,
-          "capacity": 40
+          "registered": 16,
+          "capacity": 35
         },
         {
           "id": "sarcopenia-fragilidade-campinas",
@@ -219,7 +219,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Estratégias de avaliação e intervenção no manejo da sarcopenia e fragilidade.",
           "registered": 2,
-          "capacity": 40
+          "capacity": 35
         },
         {
           "id": "fisioterapia-manipulativa-campinas",
@@ -276,7 +276,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Estratégias de reabilitação e desmame ventilatório na UTI Pediátrica para preservação funcional da criança.",
           "registered": 4,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "corrida-inteligente-cuiaba",
@@ -288,7 +288,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Análise biomecânica do padrão de corrida, calçados e prevenção de lesões comuns em corredores.",
           "registered": 4,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "harmonizacao-facial-cuiaba",
@@ -300,7 +300,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Abordagem anatômica global da face para tratamentos estéticos e regenerativos integrados.",
           "registered": 3,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "gestacao-parto-cuiaba",
@@ -312,7 +312,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Preparação corporal no pré-natal, alívio não farmacológico da dor e condução biomecânica no trabalho de parto.",
           "registered": 6,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "neurofuncional-pediatrica-cuiaba",
@@ -324,7 +324,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Conceitos neurológicos, escalas de desenvolvimento e estimulação precoce na neuropediatria.",
           "registered": 10,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "biomecanica-cinesioterapia-cuiaba",
@@ -358,7 +358,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Abordagem fisioterapêutica, avaliação e condutas nas disfunções miccionais e do assoalho pélvico em crianças e adolescentes.",
           "registered": 3,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "liberacao-miofascial-piriforme-curitiba",
@@ -370,7 +370,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Técnicas manuais integradas e descompressão miofascial no manejo da dor e disfunção do músculo piriforme.",
           "registered": 6,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "reabilitacao-ombro-curitiba",
@@ -382,7 +382,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Avaliação biomecânica, raciocínio clínico e protocolos avançados de reabilitação para o complexo articular do ombro.",
           "registered": 7,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "introducao-dtm-curitiba",
@@ -394,7 +394,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Fundamentos clínicos, diagnóstico diferencial e intervenção fisioterapêutica nas desordens da articulação temporomandibular.",
           "registered": 4,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "correntes-diadinamicas-curitiba",
@@ -406,7 +406,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Aplicações clínicas das correntes diadinâmicas para analgesia rápida, modulação inflamatória e reabilitação musculoesquelética.",
           "registered": 1,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "exames-laboratoriais-dermato-curitiba",
@@ -418,7 +418,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Raciocínio clínico laboratorial: leitura e interpretação de biomarcadores para potencializar e personalizar condutas em dermatofuncional.",
           "registered": 4,
-          "capacity": 40
+          "capacity": 30
         }
       ]
     },
@@ -440,7 +440,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Palpação precisa de estruturas musculoesqueléticas, referências anatômicas de segurança e construção do raciocínio clínico assertivo.",
           "registered": 3,
-          "capacity": 40
+          "capacity": 30
         }
       ]
     },
@@ -462,7 +462,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Consolidação óssea, fases de reabilitação pós-fratura, controle de carga e condutas fisioterapêuticas para retorno funcional.",
           "registered": 7,
-          "capacity": 40
+          "capacity": 30
         }
       ]
     },
@@ -484,7 +484,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Fundamentos, avaliação do puerpério e aplicação prática do método Pilates na recuperação funcional pós-parto.",
           "registered": 12,
-          "capacity": 40
+          "capacity": 50
         }
       ]
     },
@@ -542,7 +542,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Conhecimento aprofundado, técnicas práticas e critérios de excelência e segurança na harmonização labial.",
           "registered": 18,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "cosmify-cosmetologia-guarulhos",
@@ -554,7 +554,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Aplicação avançada de cosmetologia e dermocosméticos para potencializar protocolos e resultados em fisioterapia dermatofuncional.",
           "registered": 22,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "traumato-esportiva-quiro-guarulhos",
@@ -612,7 +612,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Abordagem interdisciplinar entre suporte nutricional e fisioterapia na recuperação e prevenção de lesões.",
           "registered": 0,
-          "capacity": 40
+          "capacity": 15
         },
         {
           "id": "lesoes-musculares-londrina",
@@ -624,7 +624,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Classificação ecográfica/clínica, dosagem de carga e reabilitação baseada nas melhores evidências mundiais.",
           "registered": 4,
-          "capacity": 40
+          "capacity": 15
         },
         {
           "id": "introducao-quiropraxia-londrina",
@@ -636,7 +636,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Fundamentos teóricos e princípios dos ajustes articulares quiropráticos para alinhamento vertebral.",
           "registered": 0,
-          "capacity": 40
+          "capacity": 15
         }
       ]
     },
@@ -658,7 +658,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Desenvolvimento de habilidades de liderança e gestão de carreira para fisioterapeutas.",
           "registered": 0,
-          "capacity": 40
+          "capacity": 35
         }
       ]
     },
@@ -703,7 +703,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Avaliação cinemática e cinética das transferências posturais de sentar e levantar, com intervenções para ganho de mobilidade e controle motor.",
           "registered": 10,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "avaliacao-funcional-membros-inferiores-rp",
@@ -715,7 +715,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Bateria de testes funcionais, raciocínio clínico e aplicação prática na avaliação de membros inferiores em atletas e pacientes ortopédicos.",
           "registered": 9,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "mecanica-ventilatoria-rp",
@@ -727,7 +727,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Interpretação gráfica, mecânica respiratória avançada, análise de curvas e monitorização ventilatória na prática clínica.",
           "registered": 1,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "consultorio-maternidade-gestante-rp",
@@ -739,7 +739,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Abordagem fisioterapêutica completa na gestação, parto e puerpério, integrando cuidados ambulatoriais e atuação hospitalar.",
           "registered": 2,
-          "capacity": 40
+          "capacity": 30
         }
       ]
     },
@@ -761,7 +761,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Fundamentos, diferenciais e raciocínio clínico da Quiropraxia como especialidade para potencializar resultados na prática fisioterapêutica.",
           "registered": 6,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "pele-pos-emagrecimento-rio",
@@ -773,7 +773,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Abordagem estética da flacidez e remodelamento tecidual em pacientes pós-emagrecimento, incluindo o uso de medicamentos como GLP-1.",
           "registered": 4,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "abordagens-terapeuticas-parkinson-rio",
@@ -786,7 +786,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Patologia, manifestações clínicas, treino de marcha, equilíbrio e condutas fisioterapêuticas baseadas em evidências na Doença de Parkinson.",
           "registered": 3,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "criterios-alta-reconstrucao-lca-rio",
@@ -821,7 +821,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Panorama de mercado, diferenciais de atuação e oportunidades clínicas da fisioterapia pélvica.",
           "registered": 3,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "atm-repercussoes-sjc",
@@ -833,7 +833,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Conexões biomecânicas entre a Articulação Temporomandibular, coluna cervical e postura corporal.",
           "registered": 2,
-          "capacity": 40
+          "capacity": 30
         }
       ]
     },
@@ -855,7 +855,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Reabilitação completa de Ligamento Cruzado Anterior: critérios de progressão e testes de Return to Play.",
           "registered": 6,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "injetaveis-dermato-sao-luis",
@@ -867,7 +867,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Fundamentos, segurança, indicações e técnicas injetáveis na estética e reabilitação tegumentar.",
           "registered": 3,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "exercicios-funcionais-idosos-sao-luis",
@@ -879,7 +879,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Dinâmicas de treinamento funcional coletivo para melhora do equilíbrio, força e autonomia na terceira idade.",
           "registered": 6,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "mobilizacao-paciente-critico-sao-luis",
@@ -891,7 +891,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Critérios de segurança, monitorização hemodinâmica e mobilização precoce em Unidade de Terapia Intensiva.",
           "registered": 6,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "tea-pediatria-sao-luis",
@@ -903,7 +903,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Avaliação motora, integração sensorial e condutas terapêuticas lúdicas no Transtorno do Espectro Autista.",
           "registered": 12,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "reabilitacao-cancer-mama-sao-luis",
@@ -915,7 +915,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Do pós-operatório imediato ao manejo do linfedema e retorno às atividades de vida diária.",
           "registered": 1,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "neonatologia-critica-sao-luis",
@@ -927,7 +927,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Posicionamento terapêutico, ventilação mecânica neonatal e assistência integral ao recém-nascido crítico.",
           "registered": 11,
-          "capacity": 40
+          "capacity": 20
         }
       ]
     },
@@ -949,7 +949,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Protocolos baseados em evidência para avaliação, descompressão tecidual e tratamento do lipedema.",
           "registered": 4,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "fisiotech-tcar-ondas-choque",
@@ -961,7 +961,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Experiência prática de alta tecnologia com Tecarterapia e Ondas de Choque na recuperação musculoesquelética.",
           "registered": 0,
-          "capacity": 40
+          "capacity": 20
         }
       ]
     },
@@ -1017,7 +1017,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Estratégias de intervenção fisioterapêutica e reabilitação em demências e doenças neurodegenerativas.",
           "registered": 2,
-          "capacity": 40
+          "capacity": 30
         },
         {
           "id": "raciocinio-pelvica-sorocaba",
@@ -1029,7 +1029,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Metodologia prática para diagnóstico assertivo e estruturação de condutas em fisioterapia pélvica.",
           "registered": 2,
-          "capacity": 40
+          "capacity": 30
         }
       ]
     },
@@ -1051,7 +1051,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Protocolos avançados e personalizados para diferentes faixas etárias e tipos de pele.",
           "registered": 7,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "somatotopias-reflexologias-mtc",
@@ -1063,7 +1063,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Mapas corporais, somatotopias e técnicas de reflexologia para o cuidado integral.",
           "registered": 2,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "ventosoterapia",
@@ -1075,7 +1075,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Fundamentos práticos de avaliação e aplicação clínica da ventosoterapia.",
           "registered": 8,
-          "capacity": 40
+          "capacity": 25
         },
         {
           "id": "saude-mental-acupuntura",
@@ -1087,7 +1087,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Fundamentos e ferramentas práticas da MTC para o cuidado da mente e saúde emocional.",
           "registered": 2,
-          "capacity": 40
+          "capacity": 15
         },
         {
           "id": "manipulacao-fascias",
@@ -1099,7 +1099,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Avaliação fascial e técnicas práticas de manipulação miofascial para reabilitação.",
           "registered": 8,
-          "capacity": 40
+          "capacity": 25
         },
         {
           "id": "tuina-atletas",
@@ -1111,7 +1111,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Aplicação das técnicas milenares do Tuiná na recuperação e alta performance de atletas.",
           "registered": 8,
-          "capacity": 40
+          "capacity": 20
         },
         {
           "id": "lipedema-vitoria",
@@ -1123,7 +1123,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Condutas terapêuticas completas para diagnóstico, manejo clínico e tratamento do Lipedema.",
           "registered": 6,
-          "capacity": 40
+          "capacity": 25
         }
       ]
     }
