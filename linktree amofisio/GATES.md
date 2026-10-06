@@ -27,3 +27,4 @@ Scope: Criar visualização completa das últimas inscrições feitas em eventos
 - [x] G5: Confirmar envio das atualizações para o repositório remoto no GitHub
   CHECK: node scripts/verify-git.mjs
   EXPECT: VERIFICACAO_GIT_OK
+  EVIDENCE: Commit a594809 sincronizado e verificado com sucesso na branch main do repositório remoto (https://github.com/ienesdolar-ops/amofisio.git).
