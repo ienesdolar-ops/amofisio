@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const badgeText = course.badge || '';
       const isSoldOut = course.status === 'sold_out' || badgeText.toLowerCase().includes('esgotad');
-      const isUrgent = badgeText.toLowerCase().includes('últimas') || badgeText.toLowerCase().includes('ultimas');
+      const isUrgent = course.status === 'last_spots' || badgeText.toLowerCase().includes('última') || badgeText.toLowerCase().includes('ultima');
 
       card.className = `course-card${isSoldOut ? ' is-sold-out' : ''}`;
 

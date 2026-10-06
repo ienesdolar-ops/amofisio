@@ -40,10 +40,10 @@ const AMO_FISIO_DATA = {
           id: "neuropediatria-cif-bauru",
           title: "Neuropediatria – usando a CIF e escalas para planejar intervenções",
           category: "Neuropediatria & CIF",
-          badge: "Presencial",
+          badge: "Últimas vagas",
           priceInfo: "",
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-neuropediatria-usando-a-cif-e-escalas-para-planejar-intervencoes/3552294",
-          status: "available",
+          status: "last_spots",
           description: "Utilização prática da Classificação Internacional de Funcionalidade para mensuração de metas clínicas."
         },
         {
@@ -181,16 +181,6 @@ const AMO_FISIO_DATA = {
       featured: false,
       courses: [
         {
-          id: "fisioterapia-manipulativa-campinas",
-          title: "Fisioterapia Manipulativa na Prática - Da Evidência ao Raciocínio Clínico",
-          category: "Terapia Manual & Ortopedia",
-          badge: "Presencial",
-          priceInfo: "",
-          symplaUrl: "https://www.sympla.com.br/evento/amofisio-fisioterapia-manipulativa-na-pratica-da-evidencia-ao-raciocinio-clinico/3589937",
-          status: "available",
-          description: "Raciocínio clínico avançado e técnicas de manipulação baseadas em evidências para disfunções neuromusculoesqueléticas."
-        },
-        {
           id: "estetica-estimulo-colageno-campinas",
           title: "Atuação do profissional da estética no estímulo de colágeno",
           category: "Dermatofuncional & Estética",
@@ -209,6 +199,16 @@ const AMO_FISIO_DATA = {
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-atuacao-do-fisioterapeuta-na-sarcopenia-e-sindrome-da-fragilidade/3589956",
           status: "available",
           description: "Estratégias de avaliação e intervenção no manejo da sarcopenia e fragilidade."
+        },
+        {
+          id: "fisioterapia-manipulativa-campinas",
+          title: "Fisioterapia Manipulativa na Prática - Da Evidência ao Raciocínio Clínico",
+          category: "Terapia Manual & Ortopedia",
+          badge: "Esgotado",
+          priceInfo: "",
+          symplaUrl: "https://www.sympla.com.br/evento/amofisio-fisioterapia-manipulativa-na-pratica-da-evidencia-ao-raciocinio-clinico/3589937",
+          status: "sold_out",
+          description: "Raciocínio clínico avançado e técnicas de manipulação baseadas em evidências para disfunções neuromusculoesqueléticas."
         }
       ]
     },
@@ -226,10 +226,10 @@ const AMO_FISIO_DATA = {
           id: "home-care-campo-grande",
           title: "Fisioterapia Além da Clínica - Home Care",
           category: "Passaporte Especial • 4 Cursos por R$ 30",
-          badge: "Combo R$ 30 (4 Cursos)",
+          badge: "Últimas vagas",
           priceInfo: "R$ 30,00 (Acesso a 4 cursos)",
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-fisioterapia-alem-da-clinica-home-care/3555189",
-          status: "available",
+          status: "last_spots",
           description: "Inscrição com valor único de R$ 30,00 que dá acesso completo aos 4 cursos diferentes da unidade Campo Grande."
         }
       ]
@@ -472,10 +472,10 @@ const AMO_FISIO_DATA = {
           id: "microagulhamento-guarulhos",
           title: "Microagulhamento – da teoria à prática",
           category: "Dermatofuncional & Estética",
-          badge: "Presencial",
+          badge: "Última vaga",
           priceInfo: "",
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-microagulhamento-da-teoria-a-pratica/3552207",
-          status: "available",
+          status: "last_spots",
           description: "Técnica de indução percutânea de colágeno, drug delivery e protocolos para rejuvenescimento e cicatrizes."
         },
         {
@@ -709,11 +709,11 @@ const AMO_FISIO_DATA = {
           id: "criterios-alta-reconstrucao-lca-rio",
           title: "Critérios de progressão e alta após a reconstrução de LCA",
           category: "Fisioterapia Esportiva & Ortopedia",
-          badge: "Esgotado",
+          badge: "Última vaga",
           instructor: "Prof. Márcio Puglia",
           priceInfo: "",
           symplaUrl: "https://www.sympla.com.br/evento/amofisio-criterios-de-progressao-e-alta-apos-a-reconstrucao-de-lca/3568083",
-          status: "sold_out",
+          status: "last_spots",
           description: "Testes funcionais, controle de carga, marcadores de segurança e critérios baseados em evidência para a progressão de fases e Return to Play no pós-LCA."
         }
       ]
