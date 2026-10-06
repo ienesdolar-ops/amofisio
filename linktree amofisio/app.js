@@ -924,7 +924,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
               </div>
             `;
-          }}).join('')}
+          }).join('')}
         </div>
       `;
 
