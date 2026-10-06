@@ -316,7 +316,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-dermato-funcional-full-face-estrategico-na-harmonizacao-facial/3552028",
           "status": "available",
           "description": "Abordagem anatômica global da face para tratamentos estéticos e regenerativos integrados.",
-          "registered": 3,
+          "registered": 4,
           "capacity": 30,
           "minParticipants": 10
         },
@@ -722,7 +722,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-escolha-2-aulas-e-amplie-seus-conhecimentos-em-fisioterapia/3584713",
           "status": "available",
           "description": "Inscrição especial que permite selecionar e participar de 2 aulas de imersão prática na unidade Porto Velho.",
-          "registered": 12,
+          "registered": 14,
           "capacity": 40,
           "minParticipants": 20
         }
@@ -807,7 +807,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-quiropraxia-uma-especialidade-do-fisioterapeuta-como-ampliar-seus-resultados-clinicos/3568100",
           "status": "available",
           "description": "Fundamentos, diferenciais e raciocínio clínico da Quiropraxia como especialidade para potencializar resultados na prática fisioterapêutica.",
-          "registered": 6,
+          "registered": 7,
           "capacity": 30,
           "minParticipants": 10
         },
@@ -820,7 +820,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-pele-pos-emagrecimento-glp-1-flacidez-e-remodelamento-tecidual/3589969",
           "status": "available",
           "description": "Abordagem estética da flacidez e remodelamento tecidual em pacientes pós-emagrecimento, incluindo o uso de medicamentos como GLP-1.",
-          "registered": 4,
+          "registered": 7,
           "capacity": 30,
           "minParticipants": 10
         },
