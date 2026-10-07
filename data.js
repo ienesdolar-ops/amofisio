@@ -593,7 +593,7 @@ const AMO_FISIO_DATA = {
         },
         {
           "id": "terapia-alto-fluxo-guarulhos",
-          "title": "Amofisio: Terapia de Alto Fluxo - Novas Tecnologias e Inovação no Suporte Respiratório",
+          "title": "Terapia de Alto Fluxo - Novas Tecnologias e Inovação no Suporte Respiratório",
           "category": "Fisioterapia Hospitalar & Respiratória",
           "badge": "Presencial",
           "priceInfo": "",
