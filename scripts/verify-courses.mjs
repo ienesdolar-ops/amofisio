@@ -56,10 +56,14 @@ if (biomec.status === 'sold_out' || biomec.badge.toLowerCase().includes('esgotad
   process.exit(1);
 }
 
-// 5. Campinas: Fisioterapia Manipulativa
+// 5. Campinas: Fisioterapia Manipulativa (ampliado para 50 vagas)
 const manip = findCourse('campinas', 'fisioterapia-manipulativa-campinas');
-if (manip.status !== 'sold_out' || !manip.badge.toLowerCase().includes('esgotad')) {
-  console.error(`Erro: Fisioterapia Manipulativa Campinas deve ser 'sold_out' e 'Esgotado'`);
+if (manip.status === 'sold_out' || manip.badge.toLowerCase().includes('esgotad')) {
+  console.error(`Erro: Fisioterapia Manipulativa Campinas não deve estar esgotado`);
+  process.exit(1);
+}
+if (manip.capacity !== 50) {
+  console.error(`Erro: Fisioterapia Manipulativa Campinas deve ter capacidade 50, encontrou ${manip.capacity}`);
   process.exit(1);
 }
 

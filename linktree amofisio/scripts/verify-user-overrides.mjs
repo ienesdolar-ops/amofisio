@@ -8,7 +8,7 @@ const userOverrides = [
   { id: '3555189', expected: 50, name: 'Home Care Campo Grande' },
   { id: '3552294', expected: 30, name: 'Neuropediatria Bauru' },
   { id: '3552076', expected: 50, name: 'Biomecânica Cuiabá' },
-  { id: '3589937', expected: 35, name: 'Manipulativa Campinas' },
+  { id: '3589937', expected: 50, name: 'Manipulativa Campinas' },
   { id: '3552207', expected: 40, name: 'Microagulhamento Guarulhos' },
   { id: '3552221', expected: 40, name: 'Traumato Guarulhos' },
   { id: '3552255', expected: 50, name: 'Respiratória Guarulhos' },

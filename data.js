@@ -238,13 +238,13 @@ const AMO_FISIO_DATA = {
           "id": "fisioterapia-manipulativa-campinas",
           "title": "Fisioterapia Manipulativa na Prática - Da Evidência ao Raciocínio Clínico",
           "category": "Terapia Manual & Ortopedia",
-          "badge": "Esgotado",
+          "badge": "Presencial",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-manipulativa-na-pratica-da-evidencia-ao-raciocinio-clinico/3589937",
-          "status": "sold_out",
+          "status": "available",
           "description": "Raciocínio clínico avançado e técnicas de manipulação baseadas em evidências para disfunções neuromusculoesqueléticas.",
           "registered": 35,
-          "capacity": 35,
+          "capacity": 50,
           "minParticipants": 12
         }
       ]
