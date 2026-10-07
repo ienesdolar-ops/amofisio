@@ -158,7 +158,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmss-membros-superiores/3573015",
           "status": "available",
           "description": "Técnicas manuais de avaliação e mobilização articular aplicadas às disfunções e alívio da dor nos membros superiores.",
-          "registered": 14,
+          "registered": 13,
           "capacity": 30,
           "minParticipants": 15
         },
@@ -171,7 +171,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmii-membros-inferiores/3573028",
           "status": "available",
           "description": "Prática clínica de mobilização articular direcionada às articulações de quadril, joelho e tornozelo para ganho de amplitude de movimento e função.",
-          "registered": 12,
+          "registered": 11,
           "capacity": 30,
           "minParticipants": 15
         }
@@ -316,7 +316,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-dermato-funcional-full-face-estrategico-na-harmonizacao-facial/3552028",
           "status": "available",
           "description": "Abordagem anatômica global da face para tratamentos estéticos e regenerativos integrados.",
-          "registered": 4,
+          "registered": 3,
           "capacity": 30,
           "minParticipants": 10
         },
@@ -722,7 +722,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-escolha-2-aulas-e-amplie-seus-conhecimentos-em-fisioterapia/3584713",
           "status": "available",
           "description": "Inscrição especial que permite selecionar e participar de 2 aulas de imersão prática na unidade Porto Velho.",
-          "registered": 14,
+          "registered": 12,
           "capacity": 40,
           "minParticipants": 20
         }
@@ -807,7 +807,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-quiropraxia-uma-especialidade-do-fisioterapeuta-como-ampliar-seus-resultados-clinicos/3568100",
           "status": "available",
           "description": "Fundamentos, diferenciais e raciocínio clínico da Quiropraxia como especialidade para potencializar resultados na prática fisioterapêutica.",
-          "registered": 7,
+          "registered": 6,
           "capacity": 30,
           "minParticipants": 10
         },
@@ -820,7 +820,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-pele-pos-emagrecimento-glp-1-flacidez-e-remodelamento-tecidual/3589969",
           "status": "available",
           "description": "Abordagem estética da flacidez e remodelamento tecidual em pacientes pós-emagrecimento, incluindo o uso de medicamentos como GLP-1.",
-          "registered": 7,
+          "registered": 4,
           "capacity": 30,
           "minParticipants": 10
         },
@@ -1096,7 +1096,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-construcao-do-raciocinio-clinico-na-fisioterapia-pelvica/3555390",
           "status": "available",
           "description": "Metodologia prática para diagnóstico assertivo e estruturação de condutas em fisioterapia pélvica.",
-          "registered": 3,
+          "registered": 2,
           "capacity": 30,
           "minParticipants": 10
         }

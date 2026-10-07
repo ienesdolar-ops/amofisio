@@ -1013,6 +1013,20 @@ document.addEventListener('DOMContentLoaded', () => {
     btnPublicRecent.parentElement.style.display = hasRecent ? 'block' : 'none';
   }
 
+  // Tempo relativo calculado a partir do horário real do pedido
+  function recentTimeAgo(item) {
+    if (!item.timestamp) return item.timeAgoText || '';
+    const d = new Date(item.timestamp);
+    const min = Math.floor((Date.now() - d.getTime()) / 60000);
+    const hh = d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+    if (min < 1) return 'Agora mesmo';
+    if (min < 60) return 'Há ' + min + ' min';
+    const today = new Date(); const y = new Date(); y.setDate(today.getDate() - 1);
+    if (d.toDateString() === today.toDateString()) return 'Hoje às ' + hh;
+    if (d.toDateString() === y.toDateString()) return 'Ontem às ' + hh;
+    return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }) + ' às ' + hh;
+  }
+
   // Inicializar opções de unidades no filtro de inscrições recentes
   function initRecentUnitSelect() {
     if (!adminRecentUnitSelect || !AMO_FISIO_DATA || !AMO_FISIO_DATA.units) return;
@@ -1110,7 +1124,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="recent-card-top">
             <span class="recent-time-badge">
               <span class="recent-pulse-dot"></span>
-              ${item.timeAgoText}
+              ${recentTimeAgo(item)}
             </span>
             <span class="recent-unit-pill">${item.unitName} - ${item.state}</span>
           </div>
@@ -1230,7 +1244,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="recent-card-top">
             <span class="recent-time-badge">
               <span class="recent-pulse-dot"></span>
-              ${item.timeAgoText}
+              ${recentTimeAgo(item)}
             </span>
             <span class="recent-unit-pill">${item.unitName} - ${item.state}</span>
           </div>
@@ -1238,7 +1252,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="recent-card-body">
             <div class="recent-course-title">${item.courseTitle}</div>
             <div class="recent-attendee-info">
-              <span>Nova vaga garantida por <strong>${item.attendeeName}</strong></span>
+              <span>Nova vaga garantida</span>
             </div>
           </div>
 

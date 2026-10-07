@@ -104,6 +104,44 @@ function getParticipantsCount(eventId) {
   });
 }
 
+// 4b. Pedidos mais recentes de um evento (datas reais de inscrição)
+function getRecentOrders(eventId) {
+  return new Promise((resolve) => {
+    const req = https.request({
+      hostname: 'api.sympla.com.br',
+      path: `/public/v3/events/${eventId}/orders?page_size=20&field_sort=order_date&sort=DESC`,
+      method: 'GET',
+      headers: { 's_token': token, 'User-Agent': 'AmoFisio-Sync/1.0' },
+      timeout: 10000
+    }, (res) => {
+      let body = '';
+      res.on('data', c => body += c);
+      res.on('end', () => {
+        try {
+          if (res.statusCode !== 200) {
+            console.warn(`[AVISO] orders ${eventId}: status ${res.statusCode}`);
+            return resolve([]);
+          }
+          const json = JSON.parse(body);
+          resolve(Array.isArray(json.data) ? json.data : []);
+        } catch { resolve([]); }
+      });
+    });
+    req.on('error', () => resolve([]));
+    req.on('timeout', () => { req.destroy(); resolve([]); });
+    req.end();
+  });
+}
+
+// Sympla retorna "YYYY-MM-DD HH:mm:ss" no horário de Brasília
+function toIsoBR(s) {
+  if (!s) return null;
+  const m = String(s).match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2}:\d{2})/);
+  if (!m) return null;
+  const d = new Date(`${m[1]}T${m[2]}-03:00`);
+  return isNaN(d) ? null : d.toISOString();
+}
+
 // 5. Executar consultas com controle de taxa (concorrência limitada)
 async function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
@@ -195,6 +233,51 @@ async function run() {
     }));
 
     await sleep(150); // intervalo amigável para a API
+  }
+
+  // 5b. ÚLTIMAS INSCRIÇÕES REAIS (pedidos aprovados no Sympla)
+  try {
+    const recent = [];
+    for (let i = 0; i < allCourses.length; i += BATCH_SIZE) {
+      const batch = allCourses.slice(i, i + BATCH_SIZE);
+      await Promise.all(batch.map(async ({ unit, course, eventId }) => {
+        if (unit.cancelledByFranchisee || course.cancelledByFranchisee) return;
+        const orders = await getRecentOrders(eventId);
+        orders.forEach(o => {
+          if (o.order_status && o.order_status !== 'A') return; // apenas aprovados
+          const iso = toIsoBR(o.order_date);
+          if (!iso) return;
+          const first = (o.buyer_first_name || '').trim().split(/\s+/)[0] || '';
+          const lastInitial = (o.buyer_last_name || '').trim().charAt(0);
+          recent.push({
+            id: `ord-${o.id}`,
+            unitId: unit.id,
+            unitName: unit.name,
+            state: unit.state,
+            courseId: course.id,
+            courseTitle: course.title,
+            instructor: course.instructor || '',
+            attendeeName: first ? `${first}${lastInitial ? ' ' + lastInitial.toUpperCase() + '.' : ''}` : 'Participante',
+            registeredCount: course.registered,
+            capacity: course.capacity,
+            minParticipants: course.minParticipants,
+            isConfirmed: course.registered >= (course.minParticipants || 10),
+            isSoldOut: course.status === 'sold_out',
+            isUrgent: course.status === 'last_spots',
+            statusBadge: course.status === 'sold_out' ? 'Turma Esgotada' : (course.badge || 'Confirmado'),
+            timestamp: iso,
+            timeAgoText: '',
+            symplaUrl: course.symplaUrl
+          });
+        });
+      }));
+      await sleep(150);
+    }
+    recent.sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+    appData.recentRegistrations = recent.slice(0, 60);
+    console.log(`Últimas inscrições reais coletadas: ${appData.recentRegistrations.length}`);
+  } catch (e) {
+    console.warn('[AVISO] Falha ao coletar últimas inscrições:', e.message);
   }
 
   // 6. Regra de UX: Cursos esgotados vão para o final de cada unidade
