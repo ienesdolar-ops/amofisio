@@ -7,9 +7,7 @@ const requiredHtmlElements = [
   'admin-tab-units',
   'admin-tab-recent',
   'admin-recent-feed-view',
-  'admin-recent-list',
-  'btn-public-recent',
-  'modal-recent-registrations'
+  'admin-recent-list'
 ];
 
 for (const el of requiredHtmlElements) {
@@ -19,7 +17,16 @@ for (const el of requiredHtmlElements) {
   }
 }
 
-// 2. Validar style.css
+// 2. Validar que elementos públicos foram devidamente removidos
+const removedElements = ['btn-public-recent', 'modal-recent-registrations'];
+for (const el of removedElements) {
+  if (html.includes(el)) {
+    console.error(`ERRO: Elemento público não deveria estar em index.html: ${el}`);
+    process.exit(1);
+  }
+}
+
+// 3. Validar style.css
 const css = fs.readFileSync('style.css', 'utf8');
 
 const requiredCssClasses = [
@@ -28,8 +35,7 @@ const requiredCssClasses = [
   'admin-recent-feed-view',
   'admin-recent-list',
   'admin-recent-card',
-  'public-recent-card',
-  'recent-pulse-dot'
+  'hero-event-info-card'
 ];
 
 for (const cls of requiredCssClasses) {
@@ -39,5 +45,5 @@ for (const cls of requiredCssClasses) {
   }
 }
 
-console.log('Sucesso: Todos os elementos de interface e estilos CSS foram validados.');
+console.log('Sucesso: Interface admin e isolamento público validados.');
 console.log('VERIFICACAO_RECENT_UI_OK');

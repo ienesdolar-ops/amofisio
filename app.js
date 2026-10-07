@@ -997,21 +997,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const adminRecentCounter = document.getElementById('admin-recent-counter');
   const adminRecentBadge = document.getElementById('admin-recent-badge');
 
-  // Elementos do Modal Público
-  const btnPublicRecent = document.getElementById('btn-public-recent');
-  const modalRecentRegistrations = document.getElementById('modal-recent-registrations');
-  const modalRecentClose = document.getElementById('modal-recent-close');
-  const publicRecentSearch = document.getElementById('public-recent-search');
-  const publicRecentList = document.getElementById('public-recent-list');
-
   let currentRecentUnitFilter = 'all';
   let currentRecentSearchQuery = '';
-
-  // Ocultar botão público se a lista de inscrições recentes estiver vazia
-  if (btnPublicRecent && btnPublicRecent.parentElement) {
-    const hasRecent = Boolean(AMO_FISIO_DATA && AMO_FISIO_DATA.recentRegistrations && AMO_FISIO_DATA.recentRegistrations.length > 0);
-    btnPublicRecent.parentElement.style.display = hasRecent ? 'block' : 'none';
-  }
 
   // Tempo relativo calculado a partir do horário real do pedido
   function recentTimeAgo(item) {
@@ -1190,135 +1177,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Renderização do Modal Público de Últimas Inscrições
-  function renderPublicRecentList(query = '') {
-    if (!publicRecentList || !AMO_FISIO_DATA) return;
-
-    const list = AMO_FISIO_DATA.recentRegistrations || [];
-    const q = query.toLowerCase().trim();
-
-    const filtered = list.filter(item => {
-      if (q) {
-        const matchTitle = item.courseTitle.toLowerCase().includes(q);
-        const matchUnit = item.unitName.toLowerCase().includes(q);
-        const matchAttendee = item.attendeeName.toLowerCase().includes(q);
-        if (!matchTitle && !matchUnit && !matchAttendee) return false;
-      }
-      return true;
-    });
-
-    if (filtered.length === 0) {
-      if (list.length === 0) {
-        publicRecentList.innerHTML = `
-          <div style="text-align: center; padding: 40px 16px; color: var(--text-muted);">
-            <div style="width: 48px; height: 48px; margin: 0 auto 12px; border-radius: 50%; background: rgba(123, 224, 248, 0.08); display: flex; align-items: center; justify-content: center; color: var(--cyan-bright);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-            </div>
-            <p style="color: var(--text-primary); font-weight: 600; margin-bottom: 4px;">Nenhuma nova inscrição registrada no momento.</p>
-            <p style="font-size: 0.82rem; color: var(--text-secondary);">Escolha sua unidade na página inicial para garantir a sua vaga!</p>
-          </div>
-        `;
-      } else {
-        publicRecentList.innerHTML = `
-          <div style="text-align: center; padding: 30px 16px; color: var(--text-muted);">
-            <p>Nenhuma inscrição recente encontrada para esta busca.</p>
-          </div>
-        `;
-      }
-      return;
-    }
-
-    publicRecentList.innerHTML = filtered.map(item => {
-      let statusClass = 'recent-status-confirmed';
-      if (item.isSoldOut) {
-        statusClass = 'recent-status-soldout';
-      } else if (item.isUrgent) {
-        statusClass = 'recent-status-urgent';
-      }
-
-      return `
-        <div class="public-recent-card">
-          <div class="recent-card-top">
-            <span class="recent-time-badge">
-              <span class="recent-pulse-dot"></span>
-              ${recentTimeAgo(item)}
-            </span>
-            <span class="recent-unit-pill">${item.unitName} - ${item.state}</span>
-          </div>
-
-          <div class="recent-card-body">
-            <div class="recent-course-title">${item.courseTitle}</div>
-            <div class="recent-attendee-info">
-              <span>Nova vaga garantida</span>
-            </div>
-          </div>
-
-          <div class="recent-card-footer">
-            <span class="recent-status-pill ${statusClass}">
-              ${item.statusBadge}
-            </span>
-
-            <a href="${item.symplaUrl}" target="_blank" rel="noopener noreferrer" class="recent-sympla-btn">
-              <span>Garantir Vaga no Sympla</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </a>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-
-  function openRecentModal() {
-    if (modalRecentRegistrations) {
-      modalRecentRegistrations.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-      renderPublicRecentList();
-      if (publicRecentSearch) publicRecentSearch.value = '';
-    }
-  }
-
-  function closeRecentModal() {
-    if (modalRecentRegistrations) {
-      modalRecentRegistrations.style.display = 'none';
-      document.body.style.overflow = '';
-      if (window.location.hash === '#inscricoes' || window.location.hash === '#recentes') {
-        history.replaceState(null, null, window.location.pathname + window.location.search);
-      }
-    }
-  }
-
-  if (btnPublicRecent) {
-    btnPublicRecent.addEventListener('click', openRecentModal);
-  }
-
-  if (modalRecentClose) {
-    modalRecentClose.addEventListener('click', closeRecentModal);
-  }
-
-  if (modalRecentRegistrations) {
-    modalRecentRegistrations.addEventListener('click', (e) => {
-      if (e.target === modalRecentRegistrations) {
-        closeRecentModal();
-      }
-    });
-  }
-
-  if (publicRecentSearch) {
-    publicRecentSearch.addEventListener('input', (e) => {
-      renderPublicRecentList(e.target.value);
-    });
-  }
-
   // Verificar se acessou diretamente com hash #admin
   if (window.location.hash === '#admin') {
     openAdmin();
-  } else if (window.location.hash === '#inscricoes' || window.location.hash === '#recentes') {
-    openRecentModal();
   }
 
   // =========================================================================

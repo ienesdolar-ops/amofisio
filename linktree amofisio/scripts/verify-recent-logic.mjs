@@ -17,9 +17,8 @@ const requiredAppTerms = [
   'renderAdminRecentFeed',
   'admin-tab-recent',
   'admin-tab-units',
-  'btn-public-recent',
-  'modal-recent-registrations',
-  '#inscricoes'
+  'adminRecentList',
+  '#admin'
 ];
 
 for (const term of requiredAppTerms) {
@@ -64,5 +63,5 @@ if (filteredSearch.length !== 1 || filteredSearch[0].id !== '2') {
   process.exit(1);
 }
 
-console.log('Sucesso: Toda a lógica de renderização e filtros foi validada.');
+console.log('Sucesso: Toda a lógica de renderização e filtros admin foi validada.');
 console.log('VERIFICACAO_RECENT_LOGIC_OK');

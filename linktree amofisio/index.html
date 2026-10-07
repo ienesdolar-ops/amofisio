@@ -44,18 +44,14 @@
         Selecione sua unidade abaixo para conferir a programação de aulas e garantir sua vaga.
       </p>
 
-      <!-- Botão de Acesso Rápido às Últimas Inscrições (Público) -->
-      <div class="public-recent-banner-wrapper">
-        <button id="btn-public-recent" class="btn-public-recent" aria-label="Ver últimas inscrições realizadas nos eventos">
-          <span class="recent-pulse-dot"></span>
-          <svg class="recent-bolt-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-          </svg>
-          <span class="recent-banner-text"><strong>Inscrições em Tempo Real:</strong> Veja as vagas garantidas agora</span>
-          <svg class="recent-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
+      <!-- Destaque Informativo do Evento Presencial -->
+      <div class="hero-event-info-card" aria-label="Informações do Evento AmoFisio Presencial">
+        <div class="hero-info-watermark">3</div>
+        <div class="hero-info-number">21</div>
+        <div class="hero-info-text">
+          cidades com <strong>AmoFisio</strong> presencial,<br>
+          <span>de 23 a 31/10</span>
+        </div>
       </div>
     </header>
 
@@ -406,34 +402,6 @@
         </div>
       </div>
 
-    </div>
-  </div>
-
-  <!-- MODAL PÚBLICO: ÚLTIMAS INSCRIÇÕES REALIZADAS -->
-  <div id="modal-recent-registrations" class="modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="public-recent-title">
-    <div class="modal-card modal-recent-card">
-      <button id="modal-recent-close" class="admin-modal-close" aria-label="Fechar">&times;</button>
-      
-      <div class="public-recent-header">
-        <div class="public-recent-icon-wrap">
-          <span class="recent-pulse-dot"></span>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-          </svg>
-        </div>
-        <div>
-          <h2 id="public-recent-title" class="public-recent-title">Últimas Inscrições Realizadas</h2>
-          <p class="public-recent-subtitle">Vagas garantidas em tempo real nos eventos do Amo Fisio</p>
-        </div>
-      </div>
-
-      <div class="public-recent-filter-bar">
-        <input type="text" id="public-recent-search" class="public-recent-search-input" placeholder="Buscar por cidade ou curso..." />
-      </div>
-
-      <div id="public-recent-list" class="public-recent-list">
-        <!-- Renderizado dinamicamente via app.js -->
-      </div>
     </div>
   </div>
 

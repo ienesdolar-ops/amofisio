@@ -1,29 +1,25 @@
-# Gates: Limpeza de Dados Simulados e Suporte Autêntico a Inscrições Recentes
+# Gates: Card Informativo no Hero e Remoção de Inscrições em Tempo Real da Área Pública
 
-OWNS: data.js, index.html, style.css, app.js, GATES.md
+OWNS: index.html, style.css, app.js, GATES.md
 
-Scope: Remover 100% de quaisquer dados simulados ou fictícios de inscrições recentes, mantendo recentRegistrations estritamente vazio ([]) até a chegada de inscrições verdadeiras; respeitar a privacidade dos alunos (sem inventar nomes ou violar LGPD); implementar empty states informativos no painel admin e ocultar banner público na ausência de inscrições reais; sincronizar com o GitHub.
+Scope: Adicionar card informativo fiel ao print (21 cidades com AmoFisio presencial, de 23 a 31/10 com número 21 em destaque cyan) na área de hero/menu do site; remover permanentemente o botão de "Inscrições em Tempo Real" e modal público da página pública para os alunos; manter a aba de últimas inscrições exclusiva no painel administrativo com dados reais; sincronizar com o GitHub.
 
-- [x] G1: Validar que data.js não contém nomes fictícios e que a lista está vazia para receber apenas inscrições verdadeiras
-  CHECK: node scripts/verify-recent-registrations.mjs
-  EXPECT: VERIFICACAO_RECENT_REGISTRATIONS_OK
-  EVIDENCE: Passou com sucesso. Nomes simulados ("Mariana S.", "Lucas M.", etc.) removidos completamente. recentRegistrations está definido como [] (vazio) aguardando registros autênticos.
+- [ ] G1: Validar presença do card informativo de cidades e datas no hero e remoção do banner/modal público de inscrições em index.html
+  CHECK: node scripts/verify-public-hero-card.mjs
+  EXPECT: VERIFICACAO_PUBLIC_HERO_CARD_OK
 
-- [x] G2: Validar elementos de interface e estilos do feed e modal de últimas inscrições
+- [ ] G2: Validar estilos do card informativo e classes exclusivas no painel admin em style.css
   CHECK: node scripts/verify-recent-ui.mjs
   EXPECT: VERIFICACAO_RECENT_UI_OK
-  EVIDENCE: Passou com sucesso. Estrutura HTML e CSS mantida para renderização dinâmica e suporte a empty states.
 
-- [x] G3: Validar lógica de renderização, empty state transparente e ocultação de banner público sem dados em app.js
+- [ ] G3: Validar que app.js não referencia gatilhos do modal público removido e preserva integridade do feed admin
   CHECK: node scripts/verify-recent-logic.mjs
   EXPECT: VERIFICACAO_RECENT_LOGIC_OK
-  EVIDENCE: Passou com sucesso. Sintaxe limpa, empty state honesto exibido no admin ("Aguardando Novas Inscrições") e botão público oculto quando não há inscrições a mostrar.
 
-- [x] G4: Validar integridade geral do linktree, ordenação A-Z, capacidades e cancelamento SJC
+- [ ] G4: Validar integridade geral do linktree, ordenação A-Z, capacidades e cancelamento SJC
   CHECK: node scripts/verify-integrity.mjs
   EXPECT: TODOS_TESTES_INTEGRIDADE_OK
-  EVIDENCE: Passou com sucesso. 22 cidades ativas em ordem A-Z, São José dos Campos mantida cancelada e oculta do público, integridade total.
 
-- [x] G5: Confirmar envio das atualizações para o repositório remoto no GitHub
+- [ ] G5: Confirmar envio das atualizações para o repositório remoto no GitHub
   CHECK: node scripts/verify-git.mjs
   EXPECT: VERIFICACAO_GIT_OK

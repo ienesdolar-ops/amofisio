@@ -1956,62 +1956,89 @@ body {
   }
 }
 
-/* Botão Banner Público */
-.public-recent-banner-wrapper {
-  margin: 12px auto 6px;
-  width: 100%;
-  max-width: 580px;
-}
-
-.btn-public-recent {
-  width: 100%;
-  background: rgba(18, 30, 49, 0.85);
-  border: 1px solid rgba(123, 224, 248, 0.3);
-  border-radius: 12px;
-  padding: 10px 16px;
-  color: var(--text-primary);
+/* ==========================================================================
+   CARD INFORMATIVO HERO (21 Cidades AmoFisio Presencial)
+   ========================================================================== */
+.hero-event-info-card {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  gap: 16px;
+  background: linear-gradient(135deg, #09131F 0%, #0D1C2E 100%);
+  border: 1px solid rgba(123, 224, 248, 0.22);
+  border-radius: 16px;
+  padding: 14px 22px;
+  margin: 16px auto 4px;
+  max-width: 440px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  /* Textura sutil pontilhada/grid */
+  background-image: 
+    radial-gradient(rgba(123, 224, 248, 0.07) 1px, transparent 1px),
+    linear-gradient(135deg, #09131F 0%, #0D1C2E 100%);
+  background-size: 14px 14px, 100% 100%;
 }
 
-.btn-public-recent:hover {
-  background: rgba(26, 42, 68, 0.95);
-  border-color: var(--cyan-bright);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(123, 224, 248, 0.15);
+.hero-info-watermark {
+  position: absolute;
+  right: -2px;
+  bottom: -22px;
+  font-family: var(--font-heading);
+  font-size: 6.8rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.035);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
 }
 
-.recent-bolt-icon {
-  color: #FBBF24;
+.hero-info-number {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-heading);
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #7BE0F8;
+  text-shadow: 0 0 24px rgba(123, 224, 248, 0.4);
   flex-shrink: 0;
 }
 
-.recent-banner-text {
-  font-size: 0.84rem;
-  color: var(--text-secondary);
-  flex: 1;
+.hero-info-text {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: #E2E8F0;
   text-align: left;
 }
 
-.recent-banner-text strong {
-  color: var(--cyan-bright);
+.hero-info-text strong {
+  color: #FFFFFF;
   font-weight: 700;
 }
 
-.recent-arrow-icon {
-  color: var(--text-muted);
-  transition: transform 0.2s ease;
-  flex-shrink: 0;
+.hero-info-text span {
+  color: #94A3B8;
+  font-size: 0.88rem;
+  font-weight: 500;
 }
 
-.btn-public-recent:hover .recent-arrow-icon {
-  transform: translateX(3px);
-  color: var(--cyan-bright);
+@media (max-width: 480px) {
+  .hero-event-info-card {
+    padding: 12px 18px;
+    gap: 14px;
+  }
+  .hero-info-number {
+    font-size: 2.9rem;
+  }
+  .hero-info-text {
+    font-size: 0.86rem;
+  }
 }
 
 /* Navegação de Abas no Admin */
