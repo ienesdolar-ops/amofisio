@@ -14,8 +14,9 @@ if (!html.includes('hero-info-number') || !html.includes('21')) {
   process.exit(1);
 }
 
-if (!html.includes('hero-info-watermark') || !html.includes('>3<')) {
-  console.error('ERRO: Marca d\'água "3" não encontrada no card');
+// 3. Garantir que a marca d'água "3" foi removida conforme solicitado
+if (html.includes('hero-info-watermark') || html.includes('>3<')) {
+  console.error('ERRO: Marca d\'água "3" ainda presente no card');
   process.exit(1);
 }
 
@@ -24,7 +25,7 @@ if (!html.includes('cidades com <strong>AmoFisio</strong> presencial') || !html.
   process.exit(1);
 }
 
-// 3. Garantir que não há elementos de ticker/inscrições públicas em tempo real no HTML público
+// 4. Garantir que não há elementos de ticker/inscrições públicas em tempo real no HTML público
 if (html.includes('btn-public-recent')) {
   console.error('ERRO: Botão público btn-public-recent ainda presente no index.html');
   process.exit(1);
@@ -35,12 +36,11 @@ if (html.includes('modal-recent-registrations')) {
   process.exit(1);
 }
 
-// 4. Ler style.css e verificar declarações visuais do card
+// 5. Ler style.css e verificar declarações visuais do card
 const css = fs.readFileSync('style.css', 'utf8');
 
 const requiredCss = [
   '.hero-event-info-card',
-  '.hero-info-watermark',
   '.hero-info-number',
   '.hero-info-text'
 ];
@@ -52,5 +52,10 @@ for (const rule of requiredCss) {
   }
 }
 
-console.log('Sucesso: Card hero verificado fielmente ao print e área pública protegida contra exibição de inscrições.');
+if (css.includes('.hero-info-watermark')) {
+  console.error('ERRO: Estilo .hero-info-watermark ainda presente em style.css');
+  process.exit(1);
+}
+
+console.log('Sucesso: Card hero verificado sem marca d\'água "3", limpo e área pública protegida.');
 console.log('VERIFICACAO_PUBLIC_HERO_CARD_OK');

@@ -1,30 +1,30 @@
-# Gates: Card Informativo no Hero e Remoção de Inscrições em Tempo Real da Área Pública
+# Gates: Remoção da Marca D'água "3" do Card Hero
 
-OWNS: index.html, style.css, app.js, GATES.md
+OWNS: index.html, style.css, GATES.md
 
-Scope: Adicionar card informativo fiel ao print (21 cidades com AmoFisio presencial, de 23 a 31/10 com número 21 em destaque cyan) na área de hero/menu do site; remover permanentemente o botão de "Inscrições em Tempo Real" e modal público da página pública para os alunos; manter a aba de últimas inscrições exclusiva no painel administrativo com dados reais; sincronizar com o GitHub.
+Scope: Remover o número "3" flutuante (marca d'água de fundo) do card informativo no hero do site; manter o layout limpo com o "21", textos e efeitos de destaque; executar todos os testes de regressão e sincronizar com o GitHub.
 
-- [x] G1: Validar presença do card informativo de cidades e datas no hero e remoção do banner/modal público de inscrições em index.html
+- [x] G1: Validar remoção do elemento e da marca d'água "3" do hero card em index.html e scripts de verificação
   CHECK: node scripts/verify-public-hero-card.mjs
   EXPECT: VERIFICACAO_PUBLIC_HERO_CARD_OK
-  EVIDENCE: VERIFICACAO_PUBLIC_HERO_CARD_OK (Card .hero-event-info-card renderizado com "21", "cidades com AmoFisio presencial, de 23 a 31/10" e marca d'água "3"; btn-public-recent e modal-recent-registrations removidos)
+  EVIDENCE: VERIFICACAO_PUBLIC_HERO_CARD_OK (Elemento .hero-info-watermark e texto '3' removidos do HTML e CSS)
 
-- [x] G2: Validar estilos do card informativo e classes exclusivas no painel admin em style.css
+- [x] G2: Validar estilos do card hero e classes da área administrativa em style.css
   CHECK: node scripts/verify-recent-ui.mjs
   EXPECT: VERIFICACAO_RECENT_UI_OK
-  EVIDENCE: VERIFICACAO_RECENT_UI_OK (Estilos do card hero e classes da aba admin verificados com sucesso)
+  EVIDENCE: VERIFICACAO_RECENT_UI_OK (Layout consistente e sem classes fantasmas)
 
-- [x] G3: Validar que app.js não referencia gatilhos do modal público removido e preserva integridade do feed admin
+- [x] G3: Validar que a lógica de aplicação e abas administrativas operam perfeitamente
   CHECK: node scripts/verify-recent-logic.mjs
   EXPECT: VERIFICACAO_RECENT_LOGIC_OK
-  EVIDENCE: VERIFICACAO_RECENT_LOGIC_OK (App.js sem referências órfãs do modal público; filtros e renderização do feed admin operando normalmente)
+  EVIDENCE: VERIFICACAO_RECENT_LOGIC_OK (Sem referências quebradas, filtros funcionais)
 
 - [x] G4: Validar integridade geral do linktree, ordenação A-Z, capacidades e cancelamento SJC
   CHECK: node scripts/verify-integrity.mjs
   EXPECT: TODOS_TESTES_INTEGRIDADE_OK
-  EVIDENCE: TODOS_TESTES_INTEGRIDADE_OK (21 unidades ativas em A-Z, SJC cancelada pelo franqueado, barras e metas preservadas)
+  EVIDENCE: TODOS_TESTES_INTEGRIDADE_OK (21 unidades ativas em A-Z, SJC cancelada pelo franqueado, metas operacionais)
 
-- [x] G5: Confirmar envio das atualizações para o repositório remoto no GitHub
+- [x] G5: Confirmar envio das alterações para o repositório remoto no GitHub
   CHECK: node scripts/verify-git.mjs
   EXPECT: VERIFICACAO_GIT_OK
-  EVIDENCE: VERIFICACAO_GIT_OK (Commit 0b504b2 enviado para origin/main)
+  EVIDENCE: VERIFICACAO_GIT_OK
