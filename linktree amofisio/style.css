@@ -2383,7 +2383,11 @@ body {
   padding-right: 4px;
 }
 
-#admin-recent-feed-view,
-.admin-recent-feed-view {
+.admin-tab-content {
+  display: none;
+}
+
+.admin-tab-content.active,
+.admin-recent-feed-view.active {
   display: block;
 }

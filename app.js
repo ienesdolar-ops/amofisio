@@ -1092,12 +1092,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Ocultar banner público se a lista estiver vazia
-    if (btnPublicRecent && btnPublicRecent.parentElement) {
-      const hasRecent = Boolean(AMO_FISIO_DATA.recentRegistrations && AMO_FISIO_DATA.recentRegistrations.length > 0);
-      btnPublicRecent.parentElement.style.display = hasRecent ? 'block' : 'none';
-    }
-
     adminRecentList.innerHTML = filtered.map(item => {
       let statusClass = 'recent-status-confirmed';
       if (item.isSoldOut) {
@@ -1148,15 +1142,27 @@ document.addEventListener('DOMContentLoaded', () => {
     adminTabUnits.addEventListener('click', () => {
       adminTabUnits.classList.add('active');
       adminTabRecent.classList.remove('active');
-      if (adminUnitsTabContent) adminUnitsTabContent.style.display = 'block';
-      if (adminRecentFeedView) adminRecentFeedView.style.display = 'none';
+      if (adminUnitsTabContent) {
+        adminUnitsTabContent.classList.add('active');
+        adminUnitsTabContent.style.display = 'block';
+      }
+      if (adminRecentFeedView) {
+        adminRecentFeedView.classList.remove('active');
+        adminRecentFeedView.style.display = 'none';
+      }
     });
 
     adminTabRecent.addEventListener('click', () => {
       adminTabRecent.classList.add('active');
       adminTabUnits.classList.remove('active');
-      if (adminUnitsTabContent) adminUnitsTabContent.style.display = 'none';
-      if (adminRecentFeedView) adminRecentFeedView.style.display = 'block';
+      if (adminUnitsTabContent) {
+        adminUnitsTabContent.classList.remove('active');
+        adminUnitsTabContent.style.display = 'none';
+      }
+      if (adminRecentFeedView) {
+        adminRecentFeedView.classList.add('active');
+        adminRecentFeedView.style.display = 'block';
+      }
       initRecentUnitSelect();
       renderAdminRecentFeed(currentRecentUnitFilter, currentRecentSearchQuery);
     });
