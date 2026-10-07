@@ -171,7 +171,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmii-membros-inferiores/3573028",
           "status": "available",
           "description": "Prática clínica de mobilização articular direcionada às articulações de quadril, joelho e tornozelo para ganho de amplitude de movimento e função.",
-          "registered": 11,
+          "registered": 12,
           "capacity": 30,
           "minParticipants": 15
         }
