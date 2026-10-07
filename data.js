@@ -592,6 +592,19 @@ const AMO_FISIO_DATA = {
           "minParticipants": 10
         },
         {
+          "id": "terapia-alto-fluxo-guarulhos",
+          "title": "Amofisio: Terapia de Alto Fluxo - Novas Tecnologias e Inovação no Suporte Respiratório",
+          "category": "Fisioterapia Hospitalar & Respiratória",
+          "badge": "Presencial",
+          "priceInfo": "",
+          "symplaUrl": "https://www.sympla.com.br/evento/amofisio-terapia-de-alto-fluxo---novas-tecnologias-e-inovacao-no-suporte-respiratorio/3610611",
+          "status": "available",
+          "description": "Fundamentos, inovações tecnológicas, indicações clínicas, ajustes e monitorização da TAF ministrado por Joice Pazos Fernandes.",
+          "registered": 0,
+          "capacity": 40,
+          "minParticipants": 10
+        },
+        {
           "id": "traumato-esportiva-quiro-guarulhos",
           "title": "Fisioterapia Traumato-Ortopédica, Esportiva e Quiropraxia",
           "category": "Ortopedia & Quiropraxia",

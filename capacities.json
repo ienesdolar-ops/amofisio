@@ -444,6 +444,12 @@
       "city": "Rio de Janeiro",
       "capacity": 20,
       "minParticipants": 10
+    },
+    "3610611": {
+      "name": "Amofisio: Terapia de Alto Fluxo - Novas Tecnologias e Inovação no Suporte Respiratório",
+      "city": "Guarulhos",
+      "capacity": 40,
+      "minParticipants": 10
     }
   }
 }

@@ -3,8 +3,8 @@ import fs from 'fs';
 const capData = JSON.parse(fs.readFileSync('capacities.json', 'utf8'));
 const courses = capData.courses;
 
-if (Object.keys(courses).length !== 73 && Object.keys(courses).length !== 71) {
-  console.error(`Erro: Esperava 73 cursos em capacities.json (71 ativos + 2 SJC cancelados), encontrou ${Object.keys(courses).length}`);
+if (Object.keys(courses).length !== 74 && Object.keys(courses).length !== 73 && Object.keys(courses).length !== 72) {
+  console.error(`Erro: Esperava 74 cursos em capacities.json (72 ativos + 2 SJC cancelados), encontrou ${Object.keys(courses).length}`);
   process.exit(1);
 }
 
