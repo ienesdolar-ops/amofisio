@@ -158,7 +158,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmss-membros-superiores/3573015",
           "status": "available",
           "description": "Técnicas manuais de avaliação e mobilização articular aplicadas às disfunções e alívio da dor nos membros superiores.",
-          "registered": 13,
+          "registered": 14,
           "capacity": 30,
           "minParticipants": 15
         },
@@ -1096,7 +1096,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-construcao-do-raciocinio-clinico-na-fisioterapia-pelvica/3555390",
           "status": "available",
           "description": "Metodologia prática para diagnóstico assertivo e estruturação de condutas em fisioterapia pélvica.",
-          "registered": 2,
+          "registered": 3,
           "capacity": 30,
           "minParticipants": 10
         }
