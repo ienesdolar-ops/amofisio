@@ -450,6 +450,12 @@
       "city": "Guarulhos",
       "capacity": 40,
       "minParticipants": 10
+    },
+    "3612450": {
+      "name": "Biomecânica do pé e alterações funcionais",
+      "city": "Curitiba",
+      "capacity": 30,
+      "minParticipants": 10
     }
   }
 }
