@@ -566,19 +566,6 @@ const AMO_FISIO_DATA = {
           "minParticipants": 10
         },
         {
-          "id": "microagulhamento-guarulhos",
-          "title": "Microagulhamento – da teoria à prática",
-          "category": "Dermatofuncional & Estética",
-          "badge": "Última vaga",
-          "priceInfo": "",
-          "symplaUrl": "https://www.sympla.com.br/evento/amofisio-microagulhamento-da-teoria-a-pratica/3552207",
-          "status": "last_spots",
-          "description": "Técnica de indução percutânea de colágeno, drug delivery e protocolos para rejuvenescimento e cicatrizes.",
-          "registered": 39,
-          "capacity": 40,
-          "minParticipants": 10
-        },
-        {
           "id": "harmonizacao-labial-guarulhos",
           "title": "Harmonização Labial — conhecimento, prática e excelência",
           "category": "Dermatofuncional & Harmonização",
@@ -614,6 +601,19 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Fundamentos, inovações tecnológicas, indicações clínicas, ajustes e monitorização da TAF ministrado por Joice Pazos Fernandes.",
           "registered": 5,
+          "capacity": 40,
+          "minParticipants": 10
+        },
+        {
+          "id": "microagulhamento-guarulhos",
+          "title": "Microagulhamento – da teoria à prática",
+          "category": "Dermatofuncional & Estética",
+          "badge": "Esgotado",
+          "priceInfo": "",
+          "symplaUrl": "https://www.sympla.com.br/evento/amofisio-microagulhamento-da-teoria-a-pratica/3552207",
+          "status": "sold_out",
+          "description": "Técnica de indução percutânea de colágeno, drug delivery e protocolos para rejuvenescimento e cicatrizes.",
+          "registered": 40,
           "capacity": 40,
           "minParticipants": 10
         },
@@ -1231,6 +1231,26 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3CCUFBPSYFH",
+      "unitId": "guarulhos",
+      "unitName": "Guarulhos",
+      "state": "SP",
+      "courseId": "microagulhamento-guarulhos",
+      "courseTitle": "Microagulhamento – da teoria à prática",
+      "instructor": "",
+      "attendeeName": "Sara D.",
+      "registeredCount": 40,
+      "capacity": 40,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": true,
+      "isUrgent": false,
+      "statusBadge": "Turma Esgotada",
+      "timestamp": "2026-10-10T19:08:45.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-microagulhamento-da-teoria-a-pratica/3552207"
+    },
     {
       "id": "ord-3DHPHBPPU4V",
       "unitId": "campinas",
@@ -2160,13 +2180,13 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Microagulhamento – da teoria à prática",
       "instructor": "",
       "attendeeName": "Alcyone L.",
-      "registeredCount": 39,
+      "registeredCount": 40,
       "capacity": 40,
       "minParticipants": 10,
       "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": true,
-      "statusBadge": "Última vaga",
+      "isSoldOut": true,
+      "isUrgent": false,
+      "statusBadge": "Turma Esgotada",
       "timestamp": "2026-10-05T20:03:26.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-microagulhamento-da-teoria-a-pratica/3552207"
@@ -2320,13 +2340,13 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Microagulhamento – da teoria à prática",
       "instructor": "",
       "attendeeName": "Thamires M.",
-      "registeredCount": 39,
+      "registeredCount": 40,
       "capacity": 40,
       "minParticipants": 10,
       "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": true,
-      "statusBadge": "Última vaga",
+      "isSoldOut": true,
+      "isUrgent": false,
+      "statusBadge": "Turma Esgotada",
       "timestamp": "2026-10-03T14:46:01.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-microagulhamento-da-teoria-a-pratica/3552207"
@@ -2410,26 +2430,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-02T22:49:42.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-neuropediatria-usando-a-cif-e-escalas-para-planejar-intervencoes/3552294"
-    },
-    {
-      "id": "ord-3DCM9BZJASP",
-      "unitId": "porto-velho",
-      "unitName": "Porto Velho",
-      "state": "RO",
-      "courseId": "escolha-2-aulas-porto-velho",
-      "courseTitle": "Escolha 2 aulas e amplie seus conhecimentos em Fisioterapia",
-      "instructor": "",
-      "attendeeName": "VITÓRIA F.",
-      "registeredCount": 16,
-      "capacity": 40,
-      "minParticipants": 20,
-      "isConfirmed": false,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Passaporte 2 Aulas",
-      "timestamp": "2026-10-02T22:36:30.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-escolha-2-aulas-e-amplie-seus-conhecimentos-em-fisioterapia/3584713"
     }
   ]
 };
