@@ -962,7 +962,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-exercicios-funcionais-em-grupo-para-idosos/3557081",
           "status": "available",
           "description": "Dinâmicas de treinamento funcional coletivo para melhora do equilíbrio, força e autonomia na terceira idade.",
-          "registered": 7,
+          "registered": 8,
           "capacity": 20,
           "minParticipants": 10
         },
@@ -1231,6 +1231,26 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3CHMPBPP6RH",
+      "unitId": "sao-luis",
+      "unitName": "São Luís",
+      "state": "MA",
+      "courseId": "exercicios-funcionais-idosos-sao-luis",
+      "courseTitle": "Exercícios Funcionais em Grupo para Idosos",
+      "instructor": "",
+      "attendeeName": "Manuelly S.",
+      "registeredCount": 8,
+      "capacity": 20,
+      "minParticipants": 10,
+      "isConfirmed": false,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-10T01:34:36.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-exercicios-funcionais-em-grupo-para-idosos/3557081"
+    },
     {
       "id": "ord-3CSF4BPNMEE",
       "unitId": "rio-de-janeiro",
@@ -1520,7 +1540,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Exercícios Funcionais em Grupo para Idosos",
       "instructor": "",
       "attendeeName": "Wanja D.",
-      "registeredCount": 7,
+      "registeredCount": 8,
       "capacity": 20,
       "minParticipants": 10,
       "isConfirmed": false,
@@ -2408,26 +2428,6 @@ const AMO_FISIO_DATA = {
       "isUrgent": false,
       "statusBadge": "Presencial",
       "timestamp": "2026-10-02T21:01:49.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-manipulativa-na-pratica-da-evidencia-ao-raciocinio-clinico/3589937"
-    },
-    {
-      "id": "ord-3DHPHBZYL13",
-      "unitId": "campinas",
-      "unitName": "Campinas",
-      "state": "SP",
-      "courseId": "fisioterapia-manipulativa-campinas",
-      "courseTitle": "Fisioterapia Manipulativa na Prática - Da Evidência ao Raciocínio Clínico",
-      "instructor": "",
-      "attendeeName": "Eliezer S.",
-      "registeredCount": 40,
-      "capacity": 50,
-      "minParticipants": 12,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-02T20:50:57.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-manipulativa-na-pratica-da-evidencia-ao-raciocinio-clinico/3589937"
     }
