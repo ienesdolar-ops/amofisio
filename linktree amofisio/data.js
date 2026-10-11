@@ -525,7 +525,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-reabilitacao-pos-parto-e-pilates-na-pratica/3567347",
           "status": "available",
           "description": "Fundamentos, avaliação do puerpério e aplicação prática do método Pilates na recuperação funcional pós-parto.",
-          "registered": 12,
+          "registered": 13,
           "capacity": 50,
           "minParticipants": 50
         }
@@ -1145,7 +1145,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-limpeza-de-pele-personalizada-protocolos-para-peles-young-old/3557069",
           "status": "available",
           "description": "Protocolos avançados e personalizados para diferentes faixas etárias e tipos de pele.",
-          "registered": 7,
+          "registered": 8,
           "capacity": 20,
           "minParticipants": 7
         },
@@ -1231,6 +1231,46 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3CRNJBQ1ABC",
+      "unitId": "goiania",
+      "unitName": "Goiânia",
+      "state": "GO",
+      "courseId": "reabilitacao-pos-parto-pilates-goiania",
+      "courseTitle": "Reabilitação Pós-Parto e Pilates na Prática",
+      "instructor": "",
+      "attendeeName": "Hyarima S.",
+      "registeredCount": 13,
+      "capacity": 50,
+      "minParticipants": 50,
+      "isConfirmed": false,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-11T17:54:22.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-reabilitacao-pos-parto-e-pilates-na-pratica/3567347"
+    },
+    {
+      "id": "ord-3CHMDBQ0NZM",
+      "unitId": "vitoria",
+      "unitName": "Vitória",
+      "state": "ES",
+      "courseId": "limpeza-de-pele",
+      "courseTitle": "Limpeza de Pele Personalizada - Protocolos para Peles Young & Old",
+      "instructor": "",
+      "attendeeName": "Luana R.",
+      "registeredCount": 8,
+      "capacity": 20,
+      "minParticipants": 7,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-11T15:56:14.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-limpeza-de-pele-personalizada-protocolos-para-peles-young-old/3557069"
+    },
     {
       "id": "ord-3CCSABPUQZF",
       "unitId": "sao-luis",
@@ -2390,46 +2430,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-03T14:46:01.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-microagulhamento-da-teoria-a-pratica/3552207"
-    },
-    {
-      "id": "ord-3DHPQBZL7YV",
-      "unitId": "campinas",
-      "unitName": "Campinas",
-      "state": "SP",
-      "courseId": "estetica-estimulo-colageno-campinas",
-      "courseTitle": "Atuação do profissional da estética no estímulo de colágeno",
-      "instructor": "",
-      "attendeeName": "Adriana A.",
-      "registeredCount": 16,
-      "capacity": 35,
-      "minParticipants": 15,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-03T13:11:48.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-profissional-da-estetica-no-estimulo-de-colageno/3589946"
-    },
-    {
-      "id": "ord-3CSF4BZK6TQ",
-      "unitId": "rio-de-janeiro",
-      "unitName": "Rio de Janeiro",
-      "state": "RJ",
-      "courseId": "quiropraxia-especialidade-rio",
-      "courseTitle": "Quiropraxia - Uma especialidade do fisioterapeuta. Como ampliar seus resultados clínicos",
-      "instructor": "",
-      "attendeeName": "Rafael M.",
-      "registeredCount": 8,
-      "capacity": 30,
-      "minParticipants": 10,
-      "isConfirmed": false,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-03T01:21:45.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-quiropraxia-uma-especialidade-do-fisioterapeuta-como-ampliar-seus-resultados-clinicos/3568100"
     }
   ]
 };
