@@ -3,8 +3,8 @@ import fs from 'fs';
 const capData = JSON.parse(fs.readFileSync('capacities.json', 'utf8'));
 const courses = capData.courses;
 
-if (Object.keys(courses).length !== 75 && Object.keys(courses).length !== 74 && Object.keys(courses).length !== 73 && Object.keys(courses).length !== 72) {
-  console.error(`Erro: Esperava 75 cursos em capacities.json (73 ativos + 2 SJC cancelados), encontrou ${Object.keys(courses).length}`);
+if (Object.keys(courses).length !== 76 && Object.keys(courses).length !== 75 && Object.keys(courses).length !== 74 && Object.keys(courses).length !== 73 && Object.keys(courses).length !== 72) {
+  console.error(`Erro: Esperava 76 cursos em capacities.json (74 ativos + 2 SJC cancelados), encontrou ${Object.keys(courses).length}`);
   process.exit(1);
 }
 
@@ -17,7 +17,8 @@ const testCases = [
   { id: '3602654', expected: 20, name: 'Rio de Janeiro - Doença de Parkinson' },
   { id: '3567347', expected: 50, name: 'Goiânia - Reabilitação Pós-Parto e Pilates' },
   { id: '3589911', expected: 35, name: 'Maceió - Liderança' },
-  { id: '3612450', expected: 30, name: 'Curitiba - Biomecânica do pé e alterações funcionais' }
+  { id: '3612450', expected: 30, name: 'Curitiba - Biomecânica do pé e alterações funcionais' },
+  { id: '3617940', expected: 15, name: 'Salvador - Injetáveis na Fisioterapia Dermatofuncional' }
 ];
 
 for (const tc of testCases) {

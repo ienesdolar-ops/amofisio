@@ -83,4 +83,15 @@ if (resp.status !== 'sold_out' || urg.status !== 'sold_out' || traum.status !== 
   process.exit(1);
 }
 
+// 8. Salvador: Injetáveis Dermatofuncional
+const salv = findCourse('salvador', 'injetaveis-dermato-salvador');
+if (salv.badge.toLowerCase() !== 'presencial') {
+  console.error(`Erro: Injetáveis Salvador deveria ter badge 'Presencial', mas tem '${salv.badge}'`);
+  process.exit(1);
+}
+if (salv.capacity !== 15) {
+  console.error(`Erro: Injetáveis Salvador deve ter capacidade 15, encontrou ${salv.capacity}`);
+  process.exit(1);
+}
+
 console.log('VERIFICACAO_CURSOS_OK');

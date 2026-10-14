@@ -456,6 +456,12 @@
       "city": "Curitiba",
       "capacity": 30,
       "minParticipants": 10
+    },
+    "3617940": {
+      "name": "Do raciocínio clínico à prática com injetáveis na Fisioterapia Dermatofuncional",
+      "city": "Salvador",
+      "capacity": 15,
+      "minParticipants": 10
     }
   }
 }
