@@ -147,11 +147,14 @@ export default async function handler(req, res) {
     }
   });
 
+  // Ordem: 1º turmas com inscrição nova (at = 0), 2º nunca buscadas, 3º as mais antigas
+  const ordersRank = id => !ordersCache[id] ? 1 : ordersCache[id].at === 0 ? 0 : ordersCache[id].at;
+
   // Fase 2: renovar pedidos — prioridade para os que mudaram, depois os mais antigos
   const due = all
     .filter(({ unit, course, eventId }) => !(unit.cancelledByFranchisee || course.cancelledByFranchisee)
       && (!ordersCache[eventId] || Date.now() - ordersCache[eventId].at > ORDERS_MAX_AGE))
-    .sort((a, b) => ((ordersCache[a.eventId] || {}).at ?? -1) - ((ordersCache[b.eventId] || {}).at ?? -1))
+    .sort((a, b) => ordersRank(a.eventId) - ordersRank(b.eventId))
     .slice(0, ORDERS_PER_RUN);
   await pool(due, async ({ eventId }) => {
     if (Date.now() > deadline) return;
