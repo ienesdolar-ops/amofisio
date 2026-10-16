@@ -5,7 +5,9 @@
 import fs from 'fs';
 import path from 'path';
 
-const CONCURRENCY = 8;
+const CONCURRENCY = 3;
+// Últimas contagens boas por evento (sobrevive entre chamadas enquanto a função está aquecida)
+const lastGood = {};
 const failures = {};
 const fail = k => { failures[k] = (failures[k] || 0) + 1; };
 
@@ -22,22 +24,33 @@ function loadCapacities() {
   }
 }
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+// O Sympla limita requisições (429): tenta de novo com espera crescente
 async function symplaGet(token, p) {
-  const ctrl = new AbortController();
-  const t = setTimeout(() => ctrl.abort(), 8000);
-  try {
-    const res = await fetch(`https://api.sympla.com.br/public/v3${p}`, {
-      headers: { s_token: token, 'User-Agent': 'AmoFisio-Live/1.0' },
-      signal: ctrl.signal
-    });
-    if (!res.ok) { fail(res.status); return null; }
-    return await res.json();
-  } catch (e) {
-    fail(e.name || 'erro');
-    return null;
-  } finally {
-    clearTimeout(t);
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 8000);
+    try {
+      const res = await fetch(`https://api.sympla.com.br/public/v3${p}`, {
+        headers: { s_token: token, 'User-Agent': 'AmoFisio-Live/1.0' },
+        signal: ctrl.signal
+      });
+      if (res.status === 429) {
+        await sleep(1000 * 2 ** attempt);
+        continue;
+      }
+      if (!res.ok) { fail(res.status); return null; }
+      return await res.json();
+    } catch (e) {
+      fail(e.name || 'erro');
+      return null;
+    } finally {
+      clearTimeout(t);
+    }
   }
+  fail(429);
+  return null;
 }
 
 async function pool(items, fn) {
@@ -108,9 +121,14 @@ export default async function handler(req, res) {
         ? null
         : symplaGet(token, `/events/${eventId}/orders?page_size=20&field_sort=order_date&sort=DESC`)
     ]);
+    const count = parts && parts.pagination ? (parts.pagination.quantity ?? 0) : lastGood[eventId];
     if (parts && parts.pagination) {
       ok++;
-      applyStatus(unit, course, parts.pagination.quantity ?? 0, caps.courses[eventId]);
+      lastGood[eventId] = count;
+    }
+    if (count !== undefined) {
+      course.live = true;
+      applyStatus(unit, course, count, caps.courses[eventId]);
     }
     const list = orders && Array.isArray(orders.data) ? orders.data : [];
     list.forEach(o => {
@@ -156,7 +174,8 @@ export default async function handler(req, res) {
 
   const units = data.units.map(u => ({
     id: u.id,
-    courses: u.courses.map(c => ({
+    // Só turmas com número confirmado agora: as que falharam não sobrescrevem o site
+    courses: u.courses.filter(c => c.live).map(c => ({
       id: c.id,
       registered: c.registered,
       capacity: c.capacity,
