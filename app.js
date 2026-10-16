@@ -1139,12 +1139,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
-  // Atualização ao vivo: busca o data.js mais recente do repositório (sem cache) a cada 60s
+  // Atualização ao vivo: /api/vagas consulta o Sympla direto (cache de 60s na Vercel).
+  // Se a API falhar, cai para o data.js mais recente do repositório.
+  function applyLiveCounts(live) {
+    let changed = false;
+    live.units.forEach(lu => {
+      const unit = AMO_FISIO_DATA.units.find(u => u.id === lu.id);
+      if (!unit) return;
+      lu.courses.forEach(lc => {
+        const course = unit.courses.find(c => c.id === lc.id);
+        if (!course) return;
+        ['registered', 'capacity', 'minParticipants', 'status', 'badge'].forEach(k => {
+          if (lc[k] !== undefined && course[k] !== lc[k]) {
+            course[k] = lc[k];
+            changed = true;
+          }
+        });
+      });
+    });
+    return changed;
+  }
+
+  async function refreshFromLiveApi() {
+    const res = await fetch('/api/vagas', { cache: 'no-store' });
+    if (!res.ok) return false;
+    const live = await res.json();
+    if (!live || !Array.isArray(live.units)) return false;
+    const countsChanged = applyLiveCounts(live);
+    const oldTop = (AMO_FISIO_DATA.recentRegistrations || [])[0];
+    const newTop = (live.recentRegistrations || [])[0];
+    if (newTop) AMO_FISIO_DATA.recentRegistrations = live.recentRegistrations;
+    if (countsChanged) {
+      if (currentUnitId) renderCourses(currentUnitId, currentSearchQuery);
+      else renderUnits(currentSearchQuery);
+      renderAdminDashboard();
+    }
+    if (newTop && (!oldTop || oldTop.id !== newTop.id || oldTop.timestamp !== newTop.timestamp)) {
+      renderAdminRecentFeed(
+        adminRecentUnitSelect ? adminRecentUnitSelect.value : 'all',
+        adminRecentSearch ? adminRecentSearch.value : ''
+      );
+    }
+    return true;
+  }
+
   const LIVE_DATA_SOURCES = [
     'https://raw.githubusercontent.com/ienesdolar-ops/amofisio/main/data.js',
     './data.js'
   ];
   async function refreshRecentRegistrationsLive() {
+    try {
+      if (await refreshFromLiveApi()) return;
+    } catch (e) { /* cai para o data.js */ }
     for (const src of LIVE_DATA_SOURCES) {
       try {
         const res = await fetch(`${src}?t=${Date.now()}`, { cache: 'no-store' });

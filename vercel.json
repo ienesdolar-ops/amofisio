@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/vagas.mjs": {
+      "includeFiles": "{data.js,capacities.json}",
+      "maxDuration": 30
+    }
+  }
+}
