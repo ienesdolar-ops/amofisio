@@ -1139,6 +1139,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
+  // Atualização ao vivo: busca o data.js mais recente do repositório (sem cache) a cada 60s
+  const LIVE_DATA_SOURCES = [
+    'https://raw.githubusercontent.com/ienesdolar-ops/amofisio/main/data.js',
+    './data.js'
+  ];
+  async function refreshRecentRegistrationsLive() {
+    for (const src of LIVE_DATA_SOURCES) {
+      try {
+        const res = await fetch(`${src}?t=${Date.now()}`, { cache: 'no-store' });
+        if (!res.ok) continue;
+        const txt = await res.text();
+        const fresh = new Function(txt + '; return AMO_FISIO_DATA;')();
+        if (!fresh || !Array.isArray(fresh.recentRegistrations)) continue;
+        const oldTop = (AMO_FISIO_DATA.recentRegistrations || [])[0];
+        const newTop = fresh.recentRegistrations[0];
+        AMO_FISIO_DATA.recentRegistrations = fresh.recentRegistrations;
+        if (!oldTop || !newTop || oldTop.id !== newTop.id || oldTop.timestamp !== newTop.timestamp) {
+          renderAdminRecentFeed(
+            adminRecentUnitSelect ? adminRecentUnitSelect.value : 'all',
+            adminRecentSearch ? adminRecentSearch.value : ''
+          );
+        }
+        return;
+      } catch (e) { /* tenta a próxima fonte */ }
+    }
+  }
+  refreshRecentRegistrationsLive();
+  setInterval(refreshRecentRegistrationsLive, 60000);
+
   // Alternância de Abas no Painel Administrativo
   if (adminTabUnits && adminTabRecent) {
     adminTabUnits.addEventListener('click', () => {
