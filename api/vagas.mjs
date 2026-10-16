@@ -6,6 +6,8 @@ import fs from 'fs';
 import path from 'path';
 
 const CONCURRENCY = 8;
+const failures = {};
+const fail = k => { failures[k] = (failures[k] || 0) + 1; };
 
 function loadData() {
   const txt = fs.readFileSync(path.join(process.cwd(), 'data.js'), 'utf8');
@@ -28,9 +30,10 @@ async function symplaGet(token, p) {
       headers: { s_token: token, 'User-Agent': 'AmoFisio-Live/1.0' },
       signal: ctrl.signal
     });
-    if (!res.ok) return null;
+    if (!res.ok) { fail(res.status); return null; }
     return await res.json();
-  } catch {
+  } catch (e) {
+    fail(e.name || 'erro');
     return null;
   } finally {
     clearTimeout(t);
@@ -87,6 +90,7 @@ export default async function handler(req, res) {
     return;
   }
 
+  for (const k in failures) delete failures[k];
   const data = loadData();
   const caps = loadCapacities();
   const all = [];
@@ -122,7 +126,7 @@ export default async function handler(req, res) {
   // Nenhuma consulta funcionou: não sobrescreve o que o site já tem
   if (ok === 0) {
     res.setHeader('Cache-Control', 'no-store');
-    res.status(502).json({ error: 'Sympla indisponível' });
+    res.status(502).json({ error: 'Sympla indisponível', failures });
     return;
   }
 
@@ -163,5 +167,5 @@ export default async function handler(req, res) {
   }));
 
   res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=240');
-  res.status(200).json({ updatedAt: new Date().toISOString(), checked: ok, units, recentRegistrations });
+  res.status(200).json({ updatedAt: new Date().toISOString(), checked: ok, failures, units, recentRegistrations });
 }
