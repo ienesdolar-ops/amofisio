@@ -11,6 +11,16 @@ const lastGood = {};
 // Teto de tempo por chamada: devolve o que conseguiu antes do limite da Vercel
 const BUDGET_MS = 20000;
 let deadline = 0;
+// Ao primeiro 429, pausa as consultas por 60s (insistir só prolonga o bloqueio)
+let blockedUntil = 0;
+// Pedidos recentes por evento: { at, items } — renovados aos poucos para não estourar o limite
+const ordersCache = {};
+// O limite do Sympla é baixo: cada chamada consulta poucas turmas, em rodízio (as mais antigas primeiro).
+// Com a CDN segurando 60s, são no máximo ~14 requisições/min.
+const PARTS_PER_RUN = 10;
+const ORDERS_PER_RUN = 4;
+const ORDERS_MAX_AGE = 20 * 60 * 1000;
+const countAt = {};
 const failures = {};
 const fail = k => { failures[k] = (failures[k] || 0) + 1; };
 
@@ -27,34 +37,25 @@ function loadCapacities() {
   }
 }
 
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-
-// O Sympla limita requisições (429): tenta de novo com espera crescente
+// O Sympla limita requisições (429) e não informa o limite nos cabeçalhos
 async function symplaGet(token, p) {
-  for (let attempt = 0; attempt < 2; attempt++) {
-    if (Date.now() > deadline) break;
-    const ctrl = new AbortController();
-    const t = setTimeout(() => ctrl.abort(), 8000);
-    try {
-      const res = await fetch(`https://api.sympla.com.br/public/v3${p}`, {
-        headers: { s_token: token, 'User-Agent': 'AmoFisio-Live/1.0' },
-        signal: ctrl.signal
-      });
-      if (res.status === 429) {
-        await sleep(1500);
-        continue;
-      }
-      if (!res.ok) { fail(res.status); return null; }
-      return await res.json();
-    } catch (e) {
-      fail(e.name || 'erro');
-      return null;
-    } finally {
-      clearTimeout(t);
-    }
+  if (Date.now() < blockedUntil || Date.now() > deadline) { fail('pausado'); return null; }
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), 8000);
+  try {
+    const res = await fetch(`https://api.sympla.com.br/public/v3${p}`, {
+      headers: { s_token: token, 'User-Agent': 'AmoFisio-Live/1.0' },
+      signal: ctrl.signal
+    });
+    if (res.status === 429) blockedUntil = Date.now() + 60000;
+    if (!res.ok) { fail(res.status); return null; }
+    return await res.json();
+  } catch (e) {
+    fail(e.name || 'erro');
+    return null;
+  } finally {
+    clearTimeout(t);
   }
-  fail(429);
-  return null;
 }
 
 async function pool(items, fn) {
@@ -119,24 +120,47 @@ export default async function handler(req, res) {
 
   let ok = 0;
   const recent = [];
-  await pool(all, async ({ unit, course, eventId }) => {
-    if (Date.now() > deadline) { fail('tempo'); return; }
+  const dueParts = [...all]
+    .sort((a, b) => (countAt[a.eventId] || 0) - (countAt[b.eventId] || 0))
+    .slice(0, PARTS_PER_RUN);
+  await pool(dueParts, async ({ course, eventId }) => {
     const before = lastGood[eventId] ?? course.registered ?? 0;
     const parts = await symplaGet(token, `/events/${eventId}/participants?page_size=1`);
-    const count = parts && parts.pagination ? (parts.pagination.quantity ?? 0) : lastGood[eventId];
-    if (parts && parts.pagination) {
-      ok++;
-      lastGood[eventId] = count;
+    if (!parts || !parts.pagination) return;
+    ok++;
+    const count = parts.pagination.quantity ?? 0;
+    lastGood[eventId] = count;
+    countAt[eventId] = Date.now();
+    if (count !== before) {
+      // Entrou (ou saiu) inscrição: pedidos desse evento precisam ser renovados primeiro
+      if (ordersCache[eventId]) ordersCache[eventId].at = 0;
+      else ordersCache[eventId] = { at: 0, items: [] };
     }
+  });
+
+  // Turmas com número confirmado (agora ou em chamadas anteriores desta instância)
+  all.forEach(({ unit, course, eventId }) => {
+    const count = lastGood[eventId];
     if (count !== undefined) {
       course.live = true;
       applyStatus(unit, course, count, caps.courses[eventId]);
     }
-    // Pedidos só onde entrou inscrição nova (economiza o limite do Sympla)
-    const cancelled = unit.cancelledByFranchisee || course.cancelledByFranchisee;
-    const orders = !cancelled && count > before
-      ? await symplaGet(token, `/events/${eventId}/orders?page_size=20&field_sort=order_date&sort=DESC`)
-      : null;
+  });
+
+  // Fase 2: renovar pedidos — prioridade para os que mudaram, depois os mais antigos
+  const due = all
+    .filter(({ unit, course, eventId }) => !(unit.cancelledByFranchisee || course.cancelledByFranchisee)
+      && (!ordersCache[eventId] || Date.now() - ordersCache[eventId].at > ORDERS_MAX_AGE))
+    .sort((a, b) => ((ordersCache[a.eventId] || {}).at ?? -1) - ((ordersCache[b.eventId] || {}).at ?? -1))
+    .slice(0, ORDERS_PER_RUN);
+  await pool(due, async ({ eventId }) => {
+    if (Date.now() > deadline) return;
+    const orders = await symplaGet(token, `/events/${eventId}/orders?page_size=20&field_sort=order_date&sort=DESC`);
+    if (orders && Array.isArray(orders.data)) ordersCache[eventId] = { at: Date.now(), items: orders.data };
+  });
+
+  all.forEach(({ unit, course, eventId }) => {
+    const orders = ordersCache[eventId] ? { data: ordersCache[eventId].items } : null;
     const list = orders && Array.isArray(orders.data) ? orders.data : [];
     list.forEach(o => {
       if (o.order_status && o.order_status !== 'A') return; // apenas aprovados
@@ -148,8 +172,8 @@ export default async function handler(req, res) {
     });
   });
 
-  // Nenhuma consulta funcionou: não sobrescreve o que o site já tem
-  if (ok === 0) {
+  // Nada confirmado (nem agora nem em chamadas anteriores): não sobrescreve o que o site já tem
+  if (!all.some(x => x.course.live)) {
     res.setHeader('Cache-Control', 'no-store');
     res.status(502).json({ error: 'Sympla indisponível', failures });
     return;
