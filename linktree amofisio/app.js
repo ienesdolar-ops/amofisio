@@ -496,12 +496,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentAdminFilterStatus = 'all';
   let currentAdminSearch = '';
 
-  const ADMIN_PWD_CORRECT = 'CampeãoInspirar';
+  const ADMIN_PWD_CORRECT = '41';
+  const ADMIN_PWD_LEGACY = 'CampeãoInspirar';
 
   function isValidAdminPassword(val) {
     if (!val) return false;
     const clean = val.trim();
-    if (clean === ADMIN_PWD_CORRECT) return true;
+    if (clean === '41' || clean === ADMIN_PWD_CORRECT) return true;
+    if (clean === ADMIN_PWD_LEGACY) return true;
     const norm = clean.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     return norm === 'campeaoinspirar';
   }
