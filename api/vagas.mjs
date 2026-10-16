@@ -8,6 +8,9 @@ import path from 'path';
 const CONCURRENCY = 3;
 // Últimas contagens boas por evento (sobrevive entre chamadas enquanto a função está aquecida)
 const lastGood = {};
+// Teto de tempo por chamada: devolve o que conseguiu antes do limite da Vercel
+const BUDGET_MS = 20000;
+let deadline = 0;
 const failures = {};
 const fail = k => { failures[k] = (failures[k] || 0) + 1; };
 
@@ -28,7 +31,8 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // O Sympla limita requisições (429): tenta de novo com espera crescente
 async function symplaGet(token, p) {
-  for (let attempt = 0; attempt < 4; attempt++) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    if (Date.now() > deadline) break;
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), 8000);
     try {
@@ -37,7 +41,7 @@ async function symplaGet(token, p) {
         signal: ctrl.signal
       });
       if (res.status === 429) {
-        await sleep(1000 * 2 ** attempt);
+        await sleep(1500);
         continue;
       }
       if (!res.ok) { fail(res.status); return null; }
@@ -104,6 +108,7 @@ export default async function handler(req, res) {
   }
 
   for (const k in failures) delete failures[k];
+  deadline = Date.now() + BUDGET_MS;
   const data = loadData();
   const caps = loadCapacities();
   const all = [];
@@ -115,12 +120,9 @@ export default async function handler(req, res) {
   let ok = 0;
   const recent = [];
   await pool(all, async ({ unit, course, eventId }) => {
-    const [parts, orders] = await Promise.all([
-      symplaGet(token, `/events/${eventId}/participants?page_size=1`),
-      unit.cancelledByFranchisee || course.cancelledByFranchisee
-        ? null
-        : symplaGet(token, `/events/${eventId}/orders?page_size=20&field_sort=order_date&sort=DESC`)
-    ]);
+    if (Date.now() > deadline) { fail('tempo'); return; }
+    const before = lastGood[eventId] ?? course.registered ?? 0;
+    const parts = await symplaGet(token, `/events/${eventId}/participants?page_size=1`);
     const count = parts && parts.pagination ? (parts.pagination.quantity ?? 0) : lastGood[eventId];
     if (parts && parts.pagination) {
       ok++;
@@ -130,6 +132,11 @@ export default async function handler(req, res) {
       course.live = true;
       applyStatus(unit, course, count, caps.courses[eventId]);
     }
+    // Pedidos só onde entrou inscrição nova (economiza o limite do Sympla)
+    const cancelled = unit.cancelledByFranchisee || course.cancelledByFranchisee;
+    const orders = !cancelled && count > before
+      ? await symplaGet(token, `/events/${eventId}/orders?page_size=20&field_sort=order_date&sort=DESC`)
+      : null;
     const list = orders && Array.isArray(orders.data) ? orders.data : [];
     list.forEach(o => {
       if (o.order_status && o.order_status !== 'A') return; // apenas aprovados
@@ -148,10 +155,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const recentRegistrations = recent
-    .sort((a, b) => b.iso.localeCompare(a.iso))
-    .slice(0, 60)
-    .map(({ o, iso, first, lastInitial, unit, course }) => ({
+  const fresh = recent.map(({ o, iso, first, lastInitial, unit, course }) => ({
       id: `ord-${o.id}`,
       unitId: unit.id,
       unitName: unit.name,
@@ -171,6 +175,11 @@ export default async function handler(req, res) {
       timeAgoText: '',
       symplaUrl: course.symplaUrl
     }));
+  const seen = new Set();
+  const recentRegistrations = [...fresh, ...(data.recentRegistrations || [])]
+    .filter(r => !seen.has(r.id) && seen.add(r.id))
+    .sort((a, b) => b.timestamp.localeCompare(a.timestamp))
+    .slice(0, 60);
 
   const units = data.units.map(u => ({
     id: u.id,
