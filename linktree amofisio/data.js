@@ -1060,7 +1060,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-como-tratar-lipedema/3555339",
           "status": "available",
           "description": "Protocolos baseados em evidência para avaliação, descompressão tecidual e tratamento do lipedema.",
-          "registered": 6,
+          "registered": 7,
           "capacity": 20,
           "minParticipants": 10
         },
@@ -1255,6 +1255,26 @@ const AMO_FISIO_DATA = {
   ],
   "recentRegistrations": [
     {
+      "id": "ord-3CG0BBQVG7S",
+      "unitId": "sp-borba-gato",
+      "unitName": "São Paulo - Borba Gato",
+      "state": "SP",
+      "courseId": "como-tratar-lipedema-borba-gato",
+      "courseTitle": "Como Tratar Lipedema",
+      "instructor": "",
+      "attendeeName": "MYLENA T.",
+      "registeredCount": 7,
+      "capacity": 20,
+      "minParticipants": 10,
+      "isConfirmed": false,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-17T09:19:14.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-como-tratar-lipedema/3555339"
+    },
+    {
       "id": "ord-3D18NBQVA52",
       "unitId": "belo-horizonte",
       "unitName": "Belo Horizonte",
@@ -1283,7 +1303,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Como Tratar Lipedema",
       "instructor": "",
       "attendeeName": "Mylena T.",
-      "registeredCount": 6,
+      "registeredCount": 7,
       "capacity": 20,
       "minParticipants": 10,
       "isConfirmed": false,
@@ -1583,7 +1603,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Como Tratar Lipedema",
       "instructor": "",
       "attendeeName": "Caroline A.",
-      "registeredCount": 6,
+      "registeredCount": 7,
       "capacity": 20,
       "minParticipants": 10,
       "isConfirmed": false,
@@ -2433,26 +2453,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-14T20:35:24.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-disfuncoes-urinarias-do-diagnostico-funcional-ao-plano-de-tratamento/3562962"
-    },
-    {
-      "id": "ord-3CP61BQFN0G",
-      "unitId": "bauru",
-      "unitName": "Bauru",
-      "state": "SP",
-      "courseId": "gestacao-puerperio-bauru",
-      "courseTitle": "Da Gestação ao Puerpério - Avaliação e Condutas Fisioterapêuticas",
-      "instructor": "",
-      "attendeeName": "Thaís S.",
-      "registeredCount": 5,
-      "capacity": 30,
-      "minParticipants": 10,
-      "isConfirmed": false,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-14T20:00:17.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-da-gestacao-ao-puerperio-avaliacao-e-condutas-fisioterapeuticas/3564737"
     }
   ]
 };
