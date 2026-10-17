@@ -456,7 +456,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-biomecanica-do-pe-e-alteracoes-funcionais/3612450",
           "status": "available",
           "description": "Avaliação criteriosa do pé, tornozelo e padrão da marcha, com raciocínio clínico e tomada de decisão nas disfunções biomecânicas.",
-          "registered": 1,
+          "registered": 2,
           "capacity": 30,
           "minParticipants": 10
         }
@@ -833,7 +833,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-quiropraxia-uma-especialidade-do-fisioterapeuta-como-ampliar-seus-resultados-clinicos/3568100",
           "status": "available",
           "description": "Fundamentos, diferenciais e raciocínio clínico da Quiropraxia como especialidade para potencializar resultados na prática fisioterapêutica.",
-          "registered": 8,
+          "registered": 9,
           "capacity": 30,
           "minParticipants": 10
         },
@@ -1254,6 +1254,46 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3CSF4BR2YB7",
+      "unitId": "rio-de-janeiro",
+      "unitName": "Rio de Janeiro",
+      "state": "RJ",
+      "courseId": "quiropraxia-especialidade-rio",
+      "courseTitle": "Quiropraxia - Uma especialidade do fisioterapeuta. Como ampliar seus resultados clínicos",
+      "instructor": "",
+      "attendeeName": "Camilla B.",
+      "registeredCount": 9,
+      "capacity": 30,
+      "minParticipants": 10,
+      "isConfirmed": false,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-17T20:15:01.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-quiropraxia-uma-especialidade-do-fisioterapeuta-como-ampliar-seus-resultados-clinicos/3568100"
+    },
+    {
+      "id": "ord-3E7P2BR275A",
+      "unitId": "curitiba",
+      "unitName": "Curitiba",
+      "state": "PR",
+      "courseId": "biomecanica-pe-alteracoes-funcionais-curitiba",
+      "courseTitle": "Biomecânica do pé e alterações funcionais",
+      "instructor": "",
+      "attendeeName": "RAMON M.",
+      "registeredCount": 2,
+      "capacity": 30,
+      "minParticipants": 10,
+      "isConfirmed": false,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-17T19:17:50.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-biomecanica-do-pe-e-alteracoes-funcionais/3612450"
+    },
     {
       "id": "ord-3CL56BR25PF",
       "unitId": "curitiba",
@@ -2413,46 +2453,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-15T13:13:05.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmss-membros-superiores/3573015"
-    },
-    {
-      "id": "ord-3CCSSBQYTAM",
-      "unitId": "sao-luis",
-      "unitName": "São Luís",
-      "state": "MA",
-      "courseId": "tea-pediatria-sao-luis",
-      "courseTitle": "Intervenções Fisioterapêuticas, Diagnósticas e Terapêuticas na Criança TEA",
-      "instructor": "",
-      "attendeeName": "Mariana M.",
-      "registeredCount": 17,
-      "capacity": 20,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": true,
-      "statusBadge": "Últimas vagas",
-      "timestamp": "2026-10-15T12:50:58.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-intervencoes-fisioterapeuticas-diagnosticas-e-terapeuticas-na-crianca-tea/3552156"
-    },
-    {
-      "id": "ord-3D2KLBQHNS7",
-      "unitId": "fortaleza",
-      "unitName": "Fortaleza",
-      "state": "CE",
-      "courseId": "avaliacao-reabilitacao-fraturas-fortaleza",
-      "courseTitle": "Avaliação e Reabilitação de Fraturas",
-      "instructor": "",
-      "attendeeName": "Valdilene G.",
-      "registeredCount": 12,
-      "capacity": 30,
-      "minParticipants": 15,
-      "isConfirmed": false,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-15T01:36:22.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-avaliacao-e-reabilitacao-de-fraturas/3574421"
     }
   ]
 };
