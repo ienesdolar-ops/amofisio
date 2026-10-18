@@ -230,7 +230,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-fisioterapeuta-na-sarcopenia-e-sindrome-da-fragilidade/3589956",
           "status": "available",
           "description": "Estratégias de avaliação e intervenção no manejo da sarcopenia e fragilidade.",
-          "registered": 2,
+          "registered": 3,
           "capacity": 35,
           "minParticipants": 15
         },
@@ -1254,6 +1254,26 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3DHQ4BR643F",
+      "unitId": "campinas",
+      "unitName": "Campinas",
+      "state": "SP",
+      "courseId": "sarcopenia-fragilidade-campinas",
+      "courseTitle": "Atuação do fisioterapeuta na sarcopenia e síndrome da fragilidade",
+      "instructor": "",
+      "attendeeName": "Débora N.",
+      "registeredCount": 3,
+      "capacity": 35,
+      "minParticipants": 15,
+      "isConfirmed": false,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-18T16:56:34.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-fisioterapeuta-na-sarcopenia-e-sindrome-da-fragilidade/3589956"
+    },
     {
       "id": "ord-3CCQCBR4KN8",
       "unitId": "cuiaba",
@@ -2433,26 +2453,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-15T13:57:01.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmii-membros-inferiores/3573028"
-    },
-    {
-      "id": "ord-3CHMDBQJ2JC",
-      "unitId": "vitoria",
-      "unitName": "Vitória",
-      "state": "ES",
-      "courseId": "limpeza-de-pele",
-      "courseTitle": "Limpeza de Pele Personalizada - Protocolos para Peles Young & Old",
-      "instructor": "",
-      "attendeeName": "Talita S.",
-      "registeredCount": 13,
-      "capacity": 20,
-      "minParticipants": 7,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-15T13:22:40.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-limpeza-de-pele-personalizada-protocolos-para-peles-young-old/3557069"
     }
   ]
 };
