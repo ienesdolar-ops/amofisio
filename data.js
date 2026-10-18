@@ -355,7 +355,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-biomecanica-e-cinesioterapia-aplicacao-perfeita-de-exercicios/3552076",
           "status": "available",
           "description": "Braço de momento, linhas de ação muscular e prescrição precisa de exercícios terapêuticos.",
-          "registered": 37,
+          "registered": 38,
           "capacity": 50,
           "minParticipants": 10
         }
@@ -1255,6 +1255,26 @@ const AMO_FISIO_DATA = {
   ],
   "recentRegistrations": [
     {
+      "id": "ord-3CCQCBR4KN8",
+      "unitId": "cuiaba",
+      "unitName": "Cuiabá",
+      "state": "MT",
+      "courseId": "biomecanica-cinesioterapia-cuiaba",
+      "courseTitle": "Biomecânica e Cinesioterapia - Aplicação Perfeita de Exercícios",
+      "instructor": "",
+      "attendeeName": "Raiane A.",
+      "registeredCount": 38,
+      "capacity": 50,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-18T02:47:50.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-biomecanica-e-cinesioterapia-aplicacao-perfeita-de-exercicios/3552076"
+    },
+    {
       "id": "ord-3CSF4BR2YB7",
       "unitId": "rio-de-janeiro",
       "unitName": "Rio de Janeiro",
@@ -1363,7 +1383,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Biomecânica e Cinesioterapia - Aplicação Perfeita de Exercícios",
       "instructor": "",
       "attendeeName": "Regiane M.",
-      "registeredCount": 37,
+      "registeredCount": 38,
       "capacity": 50,
       "minParticipants": 10,
       "isConfirmed": true,
@@ -1783,7 +1803,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Biomecânica e Cinesioterapia - Aplicação Perfeita de Exercícios",
       "instructor": "",
       "attendeeName": "Samara A.",
-      "registeredCount": 37,
+      "registeredCount": 38,
       "capacity": 50,
       "minParticipants": 10,
       "isConfirmed": true,
@@ -1963,7 +1983,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Biomecânica e Cinesioterapia - Aplicação Perfeita de Exercícios",
       "instructor": "",
       "attendeeName": "ANA G.",
-      "registeredCount": 37,
+      "registeredCount": 38,
       "capacity": 50,
       "minParticipants": 10,
       "isConfirmed": true,
@@ -2433,26 +2453,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-15T13:22:40.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-limpeza-de-pele-personalizada-protocolos-para-peles-young-old/3557069"
-    },
-    {
-      "id": "ord-3D18NBQJ1C6",
-      "unitId": "belo-horizonte",
-      "unitName": "Belo Horizonte",
-      "state": "MG",
-      "courseId": "mobilizacao-articular-mmss-bh",
-      "courseTitle": "Mobilização Articular MMSS (Membros Superiores)",
-      "instructor": "",
-      "attendeeName": "Semana D.",
-      "registeredCount": 18,
-      "capacity": 30,
-      "minParticipants": 15,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-15T13:13:05.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-mobilizacao-articular-mmss-membros-superiores/3573015"
     }
   ]
 };
