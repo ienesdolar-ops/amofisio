@@ -135,7 +135,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-disfuncoes-urinarias-do-diagnostico-funcional-ao-plano-de-tratamento/3562962",
           "status": "available",
           "description": "Avaliação do assoalho pélvico, diagnóstico funcional das incontinências e elaboração de planos terapêuticos personalizados.",
-          "registered": 8,
+          "registered": 9,
           "capacity": 40,
           "minParticipants": 10
         }
@@ -1254,6 +1254,26 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3CNEYBR7RS5",
+      "unitId": "belem",
+      "unitName": "Belém",
+      "state": "PA",
+      "courseId": "disfuncoes-urinarias-belem",
+      "courseTitle": "Disfunções Urinárias - do Diagnóstico Funcional ao Plano de Tratamento",
+      "instructor": "",
+      "attendeeName": "Ana C.",
+      "registeredCount": 9,
+      "capacity": 40,
+      "minParticipants": 10,
+      "isConfirmed": false,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-19T01:57:37.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-disfuncoes-urinarias-do-diagnostico-funcional-ao-plano-de-tratamento/3562962"
+    },
     {
       "id": "ord-3CHLLBR7K4N",
       "unitId": "vitoria",
@@ -2433,26 +2453,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-15T14:38:04.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-lesoes-musculares-em-atletas-diagnostico-e-tratamento-baseado-em-evidencias/3555322"
-    },
-    {
-      "id": "ord-3CHMDBQJEG2",
-      "unitId": "vitoria",
-      "unitName": "Vitória",
-      "state": "ES",
-      "courseId": "limpeza-de-pele",
-      "courseTitle": "Limpeza de Pele Personalizada - Protocolos para Peles Young & Old",
-      "instructor": "",
-      "attendeeName": "laysa R.",
-      "registeredCount": 14,
-      "capacity": 20,
-      "minParticipants": 7,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-15T14:26:04.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-limpeza-de-pele-personalizada-protocolos-para-peles-young-old/3557069"
     }
   ]
 };
