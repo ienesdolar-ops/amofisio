@@ -1220,7 +1220,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-manipulacao-das-fascias-da-avaliacao-ao-tratamento/3557045",
           "status": "available",
           "description": "Avaliação fascial e técnicas práticas de manipulação miofascial para reabilitação.",
-          "registered": 9,
+          "registered": 10,
           "capacity": 25,
           "minParticipants": 8
         },
@@ -1254,6 +1254,26 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3CHLLBR7K4N",
+      "unitId": "vitoria",
+      "unitName": "Vitória",
+      "state": "ES",
+      "courseId": "manipulacao-fascias",
+      "courseTitle": "Manipulação das Fáscias: Da Avaliação ao Tratamento",
+      "instructor": "",
+      "attendeeName": "Sofia P.",
+      "registeredCount": 10,
+      "capacity": 25,
+      "minParticipants": 8,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-19T00:16:25.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-manipulacao-das-fascias-da-avaliacao-ao-tratamento/3557045"
+    },
     {
       "id": "ord-3DCM9BR7DR6",
       "unitId": "porto-velho",
@@ -2433,26 +2453,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-15T14:26:04.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-limpeza-de-pele-personalizada-protocolos-para-peles-young-old/3557069"
-    },
-    {
-      "id": "ord-3CHM0BQJGF3",
-      "unitId": "vitoria",
-      "unitName": "Vitória",
-      "state": "ES",
-      "courseId": "lipedema-vitoria",
-      "courseTitle": "Atuação do Fisioterapeuta no Tratamento do Lipedema – Do diagnóstico ao Tratamento",
-      "instructor": "",
-      "attendeeName": "Talita S.",
-      "registeredCount": 9,
-      "capacity": 25,
-      "minParticipants": 7,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-15T14:25:10.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-fisioterapeuta-no-tratamento-do-lipedema-do-diagnostico-ao-tratamento/3557056"
     }
   ]
 };
