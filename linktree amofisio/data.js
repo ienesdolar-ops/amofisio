@@ -189,16 +189,18 @@ const AMO_FISIO_DATA = {
           "id": "quiropraxia-atencao-saude-blumenau",
           "title": "Quiropraxia na atenção à saúde",
           "category": "Quiropraxia & Terapia Manual",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-quiropraxia-na-atencao-a-saude/3583906",
-          "status": "available",
+          "status": "cancelled",
           "description": "Princípios dos ajustes quiropráticos, avaliação vertebral e aplicação clínica integrada aos cuidados em saúde.",
           "registered": 0,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "cancelledByFranchisee": true
         }
-      ]
+      ],
+      "cancelledByFranchisee": true
     },
     {
       "id": "campinas",
@@ -225,14 +227,15 @@ const AMO_FISIO_DATA = {
           "id": "sarcopenia-fragilidade-campinas",
           "title": "Atuação do fisioterapeuta na sarcopenia e síndrome da fragilidade",
           "category": "Gerontologia & Saúde do Idoso",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-fisioterapeuta-na-sarcopenia-e-sindrome-da-fragilidade/3589956",
-          "status": "available",
+          "status": "cancelled",
           "description": "Estratégias de avaliação e intervenção no manejo da sarcopenia e fragilidade.",
           "registered": 3,
           "capacity": 35,
-          "minParticipants": 15
+          "minParticipants": 15,
+          "cancelledByFranchisee": true
         },
         {
           "id": "fisioterapia-manipulativa-campinas",
@@ -474,16 +477,18 @@ const AMO_FISIO_DATA = {
           "id": "anatomia-palpatoria-florianopolis",
           "title": "A importância da Anatomia Palpatória no raciocínio clínico",
           "category": "Terapia Manual & Anatomia",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-a-importancia-da-anatomia-palpatoria-no-raciocinio-clinico/3583921",
-          "status": "available",
+          "status": "cancelled",
           "description": "Palpação precisa de estruturas musculoesqueléticas, referências anatômicas de segurança e construção do raciocínio clínico assertivo.",
           "registered": 3,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "cancelledByFranchisee": true
         }
-      ]
+      ],
+      "cancelledByFranchisee": true
     },
     {
       "id": "fortaleza",
@@ -504,7 +509,8 @@ const AMO_FISIO_DATA = {
           "description": "Consolidação óssea, fases de reabilitação pós-fratura, controle de carga e condutas fisioterapêuticas para retorno funcional.",
           "registered": 12,
           "capacity": 30,
-          "minParticipants": 15
+          "minParticipants": 15,
+          "confirmedByFranchisee": true
         }
       ]
     },
@@ -837,7 +843,8 @@ const AMO_FISIO_DATA = {
           "description": "Fundamentos, diferenciais e raciocínio clínico da Quiropraxia como especialidade para potencializar resultados na prática fisioterapêutica.",
           "registered": 9,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "confirmedByFranchisee": true
         },
         {
           "id": "pele-pos-emagrecimento-rio",
@@ -850,7 +857,8 @@ const AMO_FISIO_DATA = {
           "description": "Abordagem estética da flacidez e remodelamento tecidual em pacientes pós-emagrecimento, incluindo o uso de medicamentos como GLP-1.",
           "registered": 9,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "confirmedByFranchisee": true
         },
         {
           "id": "abordagens-terapeuticas-parkinson-rio",
@@ -864,7 +872,8 @@ const AMO_FISIO_DATA = {
           "description": "Patologia, manifestações clínicas, treino de marcha, equilíbrio e condutas fisioterapêuticas baseadas em evidências na Doença de Parkinson.",
           "registered": 4,
           "capacity": 20,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "confirmedByFranchisee": true
         },
         {
           "id": "criterios-alta-reconstrucao-lca-rio",
@@ -1067,20 +1076,22 @@ const AMO_FISIO_DATA = {
           "description": "Protocolos baseados em evidência para avaliação, descompressão tecidual e tratamento do lipedema.",
           "registered": 7,
           "capacity": 20,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "confirmedByFranchisee": true
         },
         {
           "id": "fisiotech-tcar-ondas-choque",
           "title": "FisioTech Experience: TCAR e Ondas de Choque na Prática Clínica",
           "category": "Tecnologias Avançadas & Ortopedia",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisiotech-experience-tcar-e-ondas-de-choque-na-pratica-clinica/3555369",
-          "status": "available",
+          "status": "cancelled",
           "description": "Experiência prática de alta tecnologia com Tecarterapia e Ondas de Choque na recuperação musculoesquelética.",
           "registered": 0,
           "capacity": 20,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "cancelledByFranchisee": true
         }
       ]
     },
@@ -1132,14 +1143,15 @@ const AMO_FISIO_DATA = {
           "id": "neurodegenerativas-sorocaba",
           "title": "Atuação do Fisioterapeuta nas Doenças Neurodegenerativas e Demências na Pessoa Idosa",
           "category": "Neurofuncional & Gerontologia",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-atuacao-do-fisioterapeuta-nas-doencas-neurodegenerativas-e-demencias-na-pessoa-idosa/3555397",
-          "status": "available",
+          "status": "cancelled",
           "description": "Estratégias de intervenção fisioterapêutica e reabilitação em demências e doenças neurodegenerativas.",
           "registered": 2,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "cancelledByFranchisee": true
         },
         {
           "id": "raciocinio-pelvica-sorocaba",

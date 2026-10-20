@@ -261,7 +261,7 @@ async function run() {
             registeredCount: course.registered,
             capacity: course.capacity,
             minParticipants: course.minParticipants,
-            isConfirmed: course.registered >= (course.minParticipants || 10),
+            isConfirmed: course.registered >= (course.minParticipants || 10) || Boolean(course.confirmedByFranchisee),
             isSoldOut: course.status === 'sold_out',
             isUrgent: course.status === 'last_spots',
             statusBadge: course.status === 'sold_out' ? 'Turma Esgotada' : (course.badge || 'Confirmado'),

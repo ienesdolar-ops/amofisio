@@ -666,7 +666,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const isSoldOut = !isCancelled && (course.status === 'sold_out' || (course.badge && course.badge.toLowerCase().includes('esgotad')));
         const isUrgent = !isCancelled && !isSoldOut && (rem <= 5 || (course.badge && (course.badge.toLowerCase().includes('última') || course.badge.toLowerCase().includes('ultima'))));
-        const isConfirmed = !isCancelled && (reg >= min);
+        const isConfirmed = !isCancelled && (reg >= min || Boolean(course.confirmedByFranchisee));
         const confirmPct = isCancelled ? 0 : (isConfirmed ? 100 : Math.min(100, Math.round((reg / min) * 100)));
 
         if (!isCancelled) {
@@ -969,7 +969,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const min = c.minParticipants || 10;
             const reg = c.registered || 0;
             const cap = c.capacity || 40;
-            const isConf = reg >= min;
+            const isConf = reg >= min || Boolean(c.confirmedByFranchisee);
             const statusTxt = isConf ? `✅ CONFIRMADO (${reg}/${min} mín.)` : `⏳ AGUARDANDO (Faltam ${min - reg} para ${min} mín.)`;
             reportText += `• ${c.title}\n  Inscritos: ${reg}/${cap} vagas | ${statusTxt}\n\n`;
           });
