@@ -670,14 +670,15 @@ const AMO_FISIO_DATA = {
           "id": "estrategias-nutricionais-londrina",
           "title": "Estratégias Nutricionais na Prevenção e Tratamento de Lesões no Esporte",
           "category": "Nutrição Esportiva & Fisioterapia",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-estrategias-nutricionais-na-prevencao-e-tratamento-de-lesoes-no-esporte/3555278",
-          "status": "available",
+          "status": "cancelled",
           "description": "Abordagem interdisciplinar entre suporte nutricional e fisioterapia na recuperação e prevenção de lesões.",
           "registered": 0,
           "capacity": 15,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "cancelledByFranchisee": true
         },
         {
           "id": "lesoes-musculares-londrina",
@@ -696,14 +697,15 @@ const AMO_FISIO_DATA = {
           "id": "introducao-quiropraxia-londrina",
           "title": "Introdução à Quiropraxia",
           "category": "Quiropraxia & Terapia Manual",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-introducao-a-quiropraxia/3555299",
-          "status": "available",
+          "status": "cancelled",
           "description": "Fundamentos teóricos e princípios dos ajustes articulares quiropráticos para alinhamento vertebral.",
           "registered": 0,
           "capacity": 15,
-          "minParticipants": 8
+          "minParticipants": 8,
+          "cancelledByFranchisee": true
         }
       ]
     },
@@ -1019,14 +1021,15 @@ const AMO_FISIO_DATA = {
           "id": "reabilitacao-cancer-mama-sao-luis",
           "title": "Reabilitação funcional no câncer de mama",
           "category": "Fisioterapia Oncológica",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-reabilitacao-funcional-no-cancer-de-mama/3557073",
-          "status": "available",
+          "status": "cancelled",
           "description": "Do pós-operatório imediato ao manejo do linfedema e retorno às atividades de vida diária.",
           "registered": 0,
           "capacity": 20,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "cancelledByFranchisee": true
         },
         {
           "id": "neonatologia-critica-sao-luis",

@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         unit.state.toLowerCase().includes(query) ||
                         unit.fullName.toLowerCase().includes(query);
       
-      const matchCourse = unit.courses.some(course => 
+      const matchCourse = unit.courses.filter(c => !c.cancelledByFranchisee).some(course => 
         course.title.toLowerCase().includes(query) || 
         course.category.toLowerCase().includes(query) ||
         (course.instructor && course.instructor.toLowerCase().includes(query))
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.setAttribute('tabindex', '0');
       card.setAttribute('aria-label', `Ver cursos da unidade ${unit.name}`);
 
-      const totalCourses = unit.courses ? unit.courses.length : 0;
+      const totalCourses = unit.courses ? unit.courses.filter(c => !c.cancelledByFranchisee).length : 0;
       let countLabel = totalCourses === 1 ? '1 Aula' : `${totalCourses} Aulas`;
       
       if (unit.id === 'campo-grande') {
@@ -163,6 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const filteredCourses = unit.courses.filter(course => {
+      // Cursos cancelados pelo franqueado não aparecem no site público (só no admin)
+      if (course.cancelledByFranchisee) return false;
       if (!query) return true;
       return course.title.toLowerCase().includes(query) || 
              course.category.toLowerCase().includes(query) ||
