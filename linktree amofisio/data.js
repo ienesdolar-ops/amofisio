@@ -889,19 +889,21 @@ const AMO_FISIO_DATA = {
       "fullName": "Faculdade Inspirar Salvador",
       "address": "Salvador - BA",
       "featured": false,
+      "cancelledByFranchisee": true,
       "courses": [
         {
           "id": "injetaveis-dermato-salvador",
           "title": "Do raciocínio clínico à prática com injetáveis na Fisioterapia Dermatofuncional",
           "category": "Dermatofuncional & Injetáveis",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento-online/amofisio-do-raciocinio-clinico-a-pratica-com-injetaveis-na-fisioterapia-dermatofuncional/3617940",
-          "status": "available",
+          "status": "cancelled",
           "description": "Fundamentos, segurança, indicações e técnicas injetáveis na estética e reabilitação tegumentar.",
           "registered": 1,
           "capacity": 15,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "cancelledByFranchisee": true
         }
       ]
     },
