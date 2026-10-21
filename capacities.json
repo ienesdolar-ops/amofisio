@@ -462,6 +462,36 @@
       "city": "Salvador",
       "capacity": 15,
       "minParticipants": 10
+    },
+    "3625938": {
+      "name": "AmoFisio On - Laserterapia em Neonatologia",
+      "city": "Online",
+      "capacity": 200,
+      "minParticipants": 10
+    },
+    "3625947": {
+      "name": "AmoFisio On - O Fisioterapeuta e o Método Canguru",
+      "city": "Online",
+      "capacity": 200,
+      "minParticipants": 10
+    },
+    "3625954": {
+      "name": "AmoFisio On - Fisioterapia no Paciente com Fibrose Cística",
+      "city": "Online",
+      "capacity": 200,
+      "minParticipants": 10
+    },
+    "3625960": {
+      "name": "AmoFisio On - Ventilação Mecânica Protetora em Neonatologia",
+      "city": "Online",
+      "capacity": 200,
+      "minParticipants": 10
+    },
+    "3627202": {
+      "name": "AmoFisio On - Caderneta da Criança: instrumento de acompanhamento do desenvolvimento infantil",
+      "city": "Online",
+      "capacity": 200,
+      "minParticipants": 10
     }
   }
 }

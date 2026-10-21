@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filteredUnits = AMO_FISIO_DATA.units.filter(unit => {
       // REGRA OBRIGATÓRIA: Unidades canceladas pelo franqueado (ex: São José dos Campos)
       // NÃO devem aparecer na listagem pública para os alunos
-      if (unit.cancelledByFranchisee) return false;
+      if (unit.cancelledByFranchisee || unit.adminOnly) return false;
 
       if (!query) return true;
       const matchUnit = unit.name.toLowerCase().includes(query) || 
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const targetUnitId = paramUnit || hash;
 
-    if (targetUnitId && AMO_FISIO_DATA.units.some(u => u.id.toLowerCase() === targetUnitId.toLowerCase())) {
+    if (targetUnitId && AMO_FISIO_DATA.units.some(u => !u.adminOnly && u.id.toLowerCase() === targetUnitId.toLowerCase())) {
       selectUnit(targetUnitId.toLowerCase(), false);
     } else {
       showUnitsView(false);

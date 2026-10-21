@@ -18,6 +18,87 @@ const AMO_FISIO_DATA = {
   },
   "units": [
     {
+      "id": "amofisio-on",
+      "name": "AmoFisio On",
+      "state": "Online",
+      "fullName": "AmoFisio On · Aulas online ao vivo",
+      "address": "Online · ao vivo",
+      "featured": false,
+      "adminOnly": true,
+      "courses": [
+        {
+          "id": "on-laserterapia-neonatologia",
+          "title": "Laserterapia em Neonatologia",
+          "category": "Neonatologia & Fotobiomodulação",
+          "badge": "Online",
+          "priceInfo": "R$ 30,00",
+          "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-laserterapia-neonatologia/3625938",
+          "status": "available",
+          "description": "Aula online ao vivo · 28/10 · 20h (Brasília)",
+          "instructor": "Dra. Carla Oliveira",
+          "registered": 0,
+          "capacity": 200,
+          "minParticipants": 10
+        },
+        {
+          "id": "on-metodo-canguru",
+          "title": "O Fisioterapeuta e o Método Canguru",
+          "category": "Neonatologia & Cuidado Humanizado",
+          "badge": "Online",
+          "priceInfo": "R$ 30,00",
+          "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-metodo-canguru/3625947",
+          "status": "available",
+          "description": "Aula online ao vivo · 29/10 · 19h (Brasília)",
+          "instructor": "Dra. Priscila Dutra",
+          "registered": 0,
+          "capacity": 200,
+          "minParticipants": 10
+        },
+        {
+          "id": "on-fibrose-cistica",
+          "title": "Fisioterapia no Paciente com Fibrose Cística",
+          "category": "Fisioterapia Respiratória",
+          "badge": "Online",
+          "priceInfo": "R$ 30,00",
+          "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-fibrose-cistica/3625954",
+          "status": "available",
+          "description": "Aula online ao vivo · 30/10 · 19h (Brasília)",
+          "instructor": "Dra. Vanessa Godoy",
+          "registered": 0,
+          "capacity": 200,
+          "minParticipants": 10
+        },
+        {
+          "id": "on-vm-protetora-neonatologia",
+          "title": "Ventilação Mecânica Protetora em Neonatologia",
+          "category": "Neonatologia & Ventilação Mecânica",
+          "badge": "Online",
+          "priceInfo": "R$ 30,00",
+          "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-vm-protetora-neonatologia/3625960",
+          "status": "available",
+          "description": "Aula online ao vivo · 04/11 · 19h (Brasília)",
+          "instructor": "Dra. Cintia Johnston",
+          "registered": 0,
+          "capacity": 200,
+          "minParticipants": 10
+        },
+        {
+          "id": "on-caderneta-da-crianca",
+          "title": "Caderneta da Criança: instrumento de acompanhamento do desenvolvimento infantil",
+          "category": "Pediatria & Desenvolvimento Infantil",
+          "badge": "Online",
+          "priceInfo": "R$ 30,00",
+          "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-caderneta-da-crianca/3627202",
+          "status": "available",
+          "description": "Aula online ao vivo · 26/10 · 20h (Brasília)",
+          "instructor": "Dra. Sabrine Cortiana",
+          "registered": 0,
+          "capacity": 200,
+          "minParticipants": 10
+        }
+      ]
+    },
+    {
       "id": "bauru",
       "name": "Bauru",
       "state": "SP",
