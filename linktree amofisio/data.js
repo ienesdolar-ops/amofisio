@@ -727,16 +727,18 @@ const AMO_FISIO_DATA = {
           "id": "lideranca-nao-espera-cargo-maceio",
           "title": "Liderança não espera cargo",
           "category": "Carreira & Gestão",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-lideranca-nao-espera-cargo/3589911",
-          "status": "available",
+          "status": "cancelled",
           "description": "Desenvolvimento de habilidades de liderança e gestão de carreira para fisioterapeutas.",
           "registered": 0,
           "capacity": 35,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "cancelledByFranchisee": true
         }
-      ]
+      ],
+      "cancelledByFranchisee": true
     },
     {
       "id": "porto-velho",
