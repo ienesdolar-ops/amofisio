@@ -1276,14 +1276,15 @@ const AMO_FISIO_DATA = {
           "id": "somatotopias-reflexologias-mtc",
           "title": "Somatotopias e Reflexologias na MTC - Mapas do corpo para o cuidado integral",
           "category": "Medicina Tradicional Chinesa & Acupuntura",
-          "badge": "Presencial",
+          "badge": "Cancelado pelo franqueado",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-somatotopias-e-reflexologias-na-mtc-mapas-do-corpo-para-o-cuidado-integral/3556990",
-          "status": "available",
+          "status": "cancelled",
           "description": "Mapas corporais, somatotopias e técnicas de reflexologia para o cuidado integral.",
           "registered": 2,
           "capacity": 20,
-          "minParticipants": 7
+          "minParticipants": 7,
+          "cancelledByFranchisee": true
         },
         {
           "id": "ventosoterapia",

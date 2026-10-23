@@ -209,7 +209,8 @@
       "name": "Somatotopias e Reflexologias na MTC - Mapas do corpo para o cuidado integral",
       "city": "Vitória",
       "capacity": 20,
-      "minParticipants": 7
+      "minParticipants": 7,
+      "cancelledByFranchisee": true
     },
     "3556996": {
       "name": "Como avaliar e aplicar a técnica de Ventosoterapia",
