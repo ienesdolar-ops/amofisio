@@ -1081,7 +1081,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-exercicios-funcionais-em-grupo-para-idosos/3557081",
           "status": "available",
           "description": "Dinâmicas de treinamento funcional coletivo para melhora do equilíbrio, força e autonomia na terceira idade.",
-          "registered": 10,
+          "registered": 11,
           "capacity": 20,
           "minParticipants": 10
         },
@@ -1355,6 +1355,26 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3CHMPBS6RP6",
+      "unitId": "sao-luis",
+      "unitName": "São Luís",
+      "state": "MA",
+      "courseId": "exercicios-funcionais-idosos-sao-luis",
+      "courseTitle": "Exercícios Funcionais em Grupo para Idosos",
+      "instructor": "",
+      "attendeeName": "Raiane O.",
+      "registeredCount": 11,
+      "capacity": 20,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-24T08:59:45.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-exercicios-funcionais-em-grupo-para-idosos/3557081"
+    },
     {
       "id": "ord-3EKV8BS5U42",
       "unitId": "amofisio-on",
@@ -2164,7 +2184,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Exercícios Funcionais em Grupo para Idosos",
       "instructor": "",
       "attendeeName": "Thays A.",
-      "registeredCount": 10,
+      "registeredCount": 11,
       "capacity": 20,
       "minParticipants": 10,
       "isConfirmed": true,
@@ -2532,26 +2552,6 @@ const AMO_FISIO_DATA = {
       "isUrgent": true,
       "statusBadge": "Últimas vagas",
       "timestamp": "2026-10-21T22:43:45.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-saude-mental-e-acupuntura-fundamentos-e-ferramentas-da-mtc-para-o-cuidado-da-mente/3556987"
-    },
-    {
-      "id": "ord-3CHJRBRZZUP",
-      "unitId": "vitoria",
-      "unitName": "Vitória",
-      "state": "ES",
-      "courseId": "saude-mental-acupuntura",
-      "courseTitle": "Saúde Mental e Acupuntura - Fundamentos e ferramentas da MTC para o cuidado da mente",
-      "instructor": "",
-      "attendeeName": "Maryanna V.",
-      "registeredCount": 11,
-      "capacity": 15,
-      "minParticipants": 7,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": true,
-      "statusBadge": "Últimas vagas",
-      "timestamp": "2026-10-21T22:43:12.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-saude-mental-e-acupuntura-fundamentos-e-ferramentas-da-mtc-para-o-cuidado-da-mente/3556987"
     }
