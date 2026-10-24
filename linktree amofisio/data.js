@@ -687,7 +687,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-terapia-de-alto-fluxo---novas-tecnologias-e-inovacao-no-suporte-respiratorio/3610611",
           "status": "available",
           "description": "Fundamentos, inovações tecnológicas, indicações clínicas, ajustes e monitorização da TAF ministrado por Joice Pazos Fernandes.",
-          "registered": 12,
+          "registered": 13,
           "capacity": 40,
           "minParticipants": 10
         },
@@ -1355,6 +1355,26 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3E5VJBS8SJQ",
+      "unitId": "guarulhos",
+      "unitName": "Guarulhos",
+      "state": "SP",
+      "courseId": "terapia-alto-fluxo-guarulhos",
+      "courseTitle": "Terapia de Alto Fluxo - Novas Tecnologias e Inovação no Suporte Respiratório",
+      "instructor": "",
+      "attendeeName": "Juliana D.",
+      "registeredCount": 13,
+      "capacity": 40,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-24T19:14:10.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-terapia-de-alto-fluxo---novas-tecnologias-e-inovacao-no-suporte-respiratorio/3610611"
+    },
     {
       "id": "ord-3D194BS7PFE",
       "unitId": "belo-horizonte",
@@ -2534,26 +2554,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-21T23:03:42.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-quiropraxia-uma-especialidade-do-fisioterapeuta-como-ampliar-seus-resultados-clinicos/3568100"
-    },
-    {
-      "id": "ord-3EKV8BRZQ6U",
-      "unitId": "amofisio-on",
-      "unitName": "AmoFisio On",
-      "state": "Online",
-      "courseId": "on-vm-protetora-neonatologia",
-      "courseTitle": "Ventilação Mecânica Protetora em Neonatologia",
-      "instructor": "Dra. Cintia Johnston",
-      "attendeeName": "Marcos C.",
-      "registeredCount": 11,
-      "capacity": 200,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Online",
-      "timestamp": "2026-10-21T22:49:07.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-vm-protetora-neonatologia/3625960"
     }
   ]
 };
