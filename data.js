@@ -661,7 +661,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-harmonizacao-labial-conhecimento-pratica-e-excelencia/3564711",
           "status": "available",
           "description": "Conhecimento aprofundado, técnicas práticas e critérios de excelência e segurança na harmonização labial.",
-          "registered": 22,
+          "registered": 23,
           "capacity": 30,
           "minParticipants": 10
         },
@@ -1355,6 +1355,26 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3CP57BSCG3K",
+      "unitId": "guarulhos",
+      "unitName": "Guarulhos",
+      "state": "SP",
+      "courseId": "harmonizacao-labial-guarulhos",
+      "courseTitle": "Harmonização Labial — conhecimento, prática e excelência",
+      "instructor": "",
+      "attendeeName": "Vanessa L.",
+      "registeredCount": 23,
+      "capacity": 30,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-26T00:44:40.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-harmonizacao-labial-conhecimento-pratica-e-excelencia/3564711"
+    },
     {
       "id": "ord-3EKURBSBTSB",
       "unitId": "amofisio-on",
@@ -2534,26 +2554,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-22T11:39:25.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-como-tratar-lipedema/3555339"
-    },
-    {
-      "id": "ord-3CNEDBRQ5EY",
-      "unitId": "belem",
-      "unitName": "Belém",
-      "state": "PA",
-      "courseId": "ventilacao-mecanica-belem",
-      "courseTitle": "Imersão prática em ventilação mecânica invasiva e não invasiva",
-      "instructor": "",
-      "attendeeName": "Maria D.",
-      "registeredCount": 22,
-      "capacity": 40,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-22T09:54:00.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-imersao-pratica-em-ventilacao-mecanica-invasiva-e-nao-invasiva/3562957"
     }
   ]
 };
