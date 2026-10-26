@@ -497,6 +497,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentAdminFilterStatus = 'all';
   let currentAdminSearch = '';
+  let currentAdminTimeFilter = 'upcoming';
+
+  // Aula já aconteceu = data da aula anterior ao início do dia de hoje (aulas de hoje continuam visíveis).
+  // Cursos sem classDate são tratados como futuros.
+  function isPastCourse(course) {
+    if (!course.classDate) return false;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return new Date(course.classDate) < today;
+  }
 
   const ADMIN_PWD_CORRECT = '41';
   const ADMIN_PWD_LEGACY = 'CampeãoInspirar';
@@ -626,12 +636,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Pílulas de filtro
-  const filterPillBtns = document.querySelectorAll('.admin-filter-pills .admin-pill');
+  const filterPillBtns = document.querySelectorAll('.admin-filter-pills .admin-pill[data-filter]');
   filterPillBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterPillBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentAdminFilterStatus = btn.getAttribute('data-filter') || 'all';
+      renderAdminDashboard();
+    });
+  });
+
+  // Pílulas de período (próximas / realizadas / todas)
+  const timePillBtns = document.querySelectorAll('.admin-time-pills .admin-pill');
+  timePillBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      timePillBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentAdminTimeFilter = btn.getAttribute('data-time') || 'all';
       renderAdminDashboard();
     });
   });
@@ -658,7 +679,11 @@ document.addEventListener('DOMContentLoaded', () => {
       let unitActiveCoursesCount = 0;
       const isUnitCancelled = Boolean(unit.cancelledByFranchisee);
 
-      const coursesWithStats = unit.courses.map(course => {
+      const coursesWithStats = unit.courses.filter(course => {
+        if (currentAdminTimeFilter === 'upcoming') return !isPastCourse(course);
+        if (currentAdminTimeFilter === 'past') return isPastCourse(course);
+        return true;
+      }).map(course => {
         const isCancelled = Boolean(isUnitCancelled || course.cancelledByFranchisee);
         const reg = typeof course.registered === 'number' ? course.registered : 0;
         const cap = typeof course.capacity === 'number' ? course.capacity : 40;
@@ -793,7 +818,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   Total da Unidade: <strong>${unit.unitReg} / ${unit.unitCap}</strong> inscritos
                 </span>
                 <span class="admin-unit-confirmed-summary" title="${unit.unitConfirmedCount} turmas atingiram o mínimo para confirmação">
-                  <span class="dot-green"></span> ${unit.unitConfirmedCount}/${unit.courses.length} confirmadas
+                  <span class="dot-green"></span> ${unit.unitConfirmedCount}/${unit.coursesStats.length} confirmadas
                 </span>
                 <span class="admin-unit-percent-badge ${pctClass}">${unit.unitPct}%</span>
               </div>

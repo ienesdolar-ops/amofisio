@@ -2378,3 +2378,12 @@ body {
 .admin-recent-feed-view.active {
   display: block;
 }
+
+/* Filtro de período no painel admin (próximas / realizadas / todas) */
+.admin-controls-bar {
+  flex-wrap: wrap;
+}
+
+.admin-time-pills {
+  flex-basis: 100%;
+}

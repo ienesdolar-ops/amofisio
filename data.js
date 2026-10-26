@@ -38,7 +38,8 @@ const AMO_FISIO_DATA = {
           "instructor": "Dra. Carla Oliveira",
           "registered": 2,
           "capacity": 200,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-28T20:00:00-03:00"
         },
         {
           "id": "on-metodo-canguru",
@@ -52,7 +53,8 @@ const AMO_FISIO_DATA = {
           "instructor": "Dra. Priscila Dutra",
           "registered": 6,
           "capacity": 200,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-29T19:00:00-03:00"
         },
         {
           "id": "on-fibrose-cistica",
@@ -66,7 +68,8 @@ const AMO_FISIO_DATA = {
           "instructor": "Dra. Vanessa Godoy",
           "registered": 4,
           "capacity": 200,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-30T19:00:00-03:00"
         },
         {
           "id": "on-vm-protetora-neonatologia",
@@ -80,7 +83,8 @@ const AMO_FISIO_DATA = {
           "instructor": "Dra. Cintia Johnston",
           "registered": 13,
           "capacity": 200,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-11-04T19:00:00-03:00"
         },
         {
           "id": "on-caderneta-da-crianca",
@@ -94,7 +98,8 @@ const AMO_FISIO_DATA = {
           "instructor": "Dra. Sabrine Cortiana",
           "registered": 2,
           "capacity": 200,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-26T20:00:00-03:00"
         }
       ]
     },
@@ -117,7 +122,8 @@ const AMO_FISIO_DATA = {
           "description": "Manejo da flacidez tissular e protocolos estéticos adaptados aos efeitos do emagrecimento rápido.",
           "registered": 1,
           "capacity": 25,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T14:00:00-03:00"
         },
         {
           "id": "neuropediatria-cif-bauru",
@@ -130,7 +136,8 @@ const AMO_FISIO_DATA = {
           "description": "Utilização prática da Classificação Internacional de Funcionalidade para mensuração de metas clínicas.",
           "registered": 25,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T08:00:00-03:00"
         },
         {
           "id": "pbe-esportiva-bauru",
@@ -143,7 +150,8 @@ const AMO_FISIO_DATA = {
           "description": "Como aplicar artigos científicos de alta qualidade para fundamentar tratamentos e condutas no esporte.",
           "registered": 2,
           "capacity": 25,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T08:00:00-03:00"
         },
         {
           "id": "gestacao-puerperio-bauru",
@@ -156,7 +164,8 @@ const AMO_FISIO_DATA = {
           "description": "Avaliação biomecânica, intervenções fisioterapêuticas no pré-natal, parto e condutas essenciais no pós-parto imediato e tardio.",
           "registered": 5,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T08:00:00-03:00"
         },
         {
           "id": "sindrome-fragilidade-bauru",
@@ -169,7 +178,8 @@ const AMO_FISIO_DATA = {
           "description": "Estratégias clínicas e exercícios preventivos para conter o avanço da fragilidade, sarcopenia e risco de quedas na pessoa idosa.",
           "registered": 21,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T14:00:00-03:00"
         }
       ]
     },
@@ -192,7 +202,8 @@ const AMO_FISIO_DATA = {
           "description": "Diagnóstico, fases de cicatrização tecidual, dosagem de carga e critérios clínicos para o Return to Play em lesões de isquiotibiais.",
           "registered": 9,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-11-07T08:00:00-03:00"
         },
         {
           "id": "ventilacao-mecanica-belem",
@@ -205,7 +216,8 @@ const AMO_FISIO_DATA = {
           "description": "Manejo prático dos modos ventilatórios invasivos e VNI, ajustes de parâmetros, assincronias e condutas na terapia intensiva.",
           "registered": 22,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-11-07T08:00:00-03:00"
         },
         {
           "id": "disfuncoes-urinarias-belem",
@@ -218,7 +230,8 @@ const AMO_FISIO_DATA = {
           "description": "Avaliação do assoalho pélvico, diagnóstico funcional das incontinências e elaboração de planos terapêuticos personalizados.",
           "registered": 10,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-11-07T08:00:00-03:00"
         }
       ]
     },
@@ -241,7 +254,8 @@ const AMO_FISIO_DATA = {
           "description": "Técnicas manuais de avaliação e mobilização articular aplicadas às disfunções e alívio da dor nos membros superiores.",
           "registered": 23,
           "capacity": 30,
-          "minParticipants": 15
+          "minParticipants": 15,
+          "classDate": "2026-10-24T08:30:00-03:00"
         },
         {
           "id": "mobilizacao-articular-mmii-bh",
@@ -254,7 +268,8 @@ const AMO_FISIO_DATA = {
           "description": "Prática clínica de mobilização articular direcionada às articulações de quadril, joelho e tornozelo para ganho de amplitude de movimento e função.",
           "registered": 22,
           "capacity": 30,
-          "minParticipants": 15
+          "minParticipants": 15,
+          "classDate": "2026-10-24T13:00:00-03:00"
         }
       ]
     },
@@ -302,7 +317,8 @@ const AMO_FISIO_DATA = {
           "description": "Técnicas, tecnologias e abordagens clínicas para indução e estímulo de colágeno nos tratamentos estéticos.",
           "registered": 20,
           "capacity": 35,
-          "minParticipants": 15
+          "minParticipants": 15,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "sarcopenia-fragilidade-campinas",
@@ -329,7 +345,8 @@ const AMO_FISIO_DATA = {
           "description": "Raciocínio clínico avançado e técnicas de manipulação baseadas em evidências para disfunções neuromusculoesqueléticas.",
           "registered": 51,
           "capacity": 50,
-          "minParticipants": 12
+          "minParticipants": 12,
+          "classDate": "2026-10-23T18:00:00-03:00"
         }
       ]
     },
@@ -353,7 +370,8 @@ const AMO_FISIO_DATA = {
           "description": "Inscrição com valor único de R$ 30,00 que dá acesso completo aos 4 cursos diferentes da unidade Campo Grande.",
           "registered": 46,
           "capacity": 50,
-          "minParticipants": 20
+          "minParticipants": 20,
+          "classDate": "2026-10-24T08:00:00-03:00"
         }
       ]
     },
@@ -376,7 +394,8 @@ const AMO_FISIO_DATA = {
           "description": "Estratégias de reabilitação e desmame ventilatório na UTI Pediátrica para preservação funcional da criança.",
           "registered": 4,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T14:00:00-03:00"
         },
         {
           "id": "corrida-inteligente-cuiaba",
@@ -389,7 +408,8 @@ const AMO_FISIO_DATA = {
           "description": "Análise biomecânica do padrão de corrida, calçados e prevenção de lesões comuns em corredores.",
           "registered": 5,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T09:00:00-03:00"
         },
         {
           "id": "harmonizacao-facial-cuiaba",
@@ -402,7 +422,8 @@ const AMO_FISIO_DATA = {
           "description": "Abordagem anatômica global da face para tratamentos estéticos e regenerativos integrados.",
           "registered": 5,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T14:00:00-03:00"
         },
         {
           "id": "gestacao-parto-cuiaba",
@@ -415,7 +436,8 @@ const AMO_FISIO_DATA = {
           "description": "Preparação corporal no pré-natal, alívio não farmacológico da dor e condução biomecânica no trabalho de parto.",
           "registered": 8,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T09:00:00-03:00"
         },
         {
           "id": "neurofuncional-pediatrica-cuiaba",
@@ -428,7 +450,8 @@ const AMO_FISIO_DATA = {
           "description": "Conceitos neurológicos, escalas de desenvolvimento e estimulação precoce na neuropediatria.",
           "registered": 12,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T09:00:00-03:00"
         },
         {
           "id": "biomecanica-cinesioterapia-cuiaba",
@@ -441,7 +464,8 @@ const AMO_FISIO_DATA = {
           "description": "Braço de momento, linhas de ação muscular e prescrição precisa de exercícios terapêuticos.",
           "registered": 41,
           "capacity": 50,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T14:00:00-03:00"
         }
       ]
     },
@@ -464,7 +488,8 @@ const AMO_FISIO_DATA = {
           "description": "Abordagem fisioterapêutica, avaliação e condutas nas disfunções miccionais e do assoalho pélvico em crianças e adolescentes.",
           "registered": 3,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "liberacao-miofascial-piriforme-curitiba",
@@ -477,7 +502,8 @@ const AMO_FISIO_DATA = {
           "description": "Técnicas manuais integradas e descompressão miofascial no manejo da dor e disfunção do músculo piriforme.",
           "registered": 7,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "reabilitacao-ombro-curitiba",
@@ -490,7 +516,8 @@ const AMO_FISIO_DATA = {
           "description": "Avaliação biomecânica, raciocínio clínico e protocolos avançados de reabilitação para o complexo articular do ombro.",
           "registered": 12,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "introducao-dtm-curitiba",
@@ -503,7 +530,8 @@ const AMO_FISIO_DATA = {
           "description": "Fundamentos clínicos, diagnóstico diferencial e intervenção fisioterapêutica nas desordens da articulação temporomandibular.",
           "registered": 6,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-23T18:00:00-03:00"
         },
         {
           "id": "correntes-diadinamicas-curitiba",
@@ -516,7 +544,8 @@ const AMO_FISIO_DATA = {
           "description": "Aplicações clínicas das correntes diadinâmicas para analgesia rápida, modulação inflamatória e reabilitação musculoesquelética.",
           "registered": 2,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-26T18:00:00-03:00"
         },
         {
           "id": "exames-laboratoriais-dermato-curitiba",
@@ -529,7 +558,8 @@ const AMO_FISIO_DATA = {
           "description": "Raciocínio clínico laboratorial: leitura e interpretação de biomarcadores para potencializar e personalizar condutas em dermatofuncional.",
           "registered": 4,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-26T18:00:00-03:00"
         },
         {
           "id": "biomecanica-pe-alteracoes-funcionais-curitiba",
@@ -542,7 +572,8 @@ const AMO_FISIO_DATA = {
           "description": "Avaliação criteriosa do pé, tornozelo e padrão da marcha, com raciocínio clínico e tomada de decisão nas disfunções biomecânicas.",
           "registered": 5,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-26T19:00:00-03:00"
         }
       ]
     },
@@ -591,7 +622,8 @@ const AMO_FISIO_DATA = {
           "registered": 14,
           "capacity": 30,
           "minParticipants": 15,
-          "confirmedByFranchisee": true
+          "confirmedByFranchisee": true,
+          "classDate": "2026-10-23T18:00:00-03:00"
         }
       ]
     },
@@ -614,7 +646,8 @@ const AMO_FISIO_DATA = {
           "description": "Fundamentos, avaliação do puerpério e aplicação prática do método Pilates na recuperação funcional pós-parto.",
           "registered": 38,
           "capacity": 50,
-          "minParticipants": 50
+          "minParticipants": 50,
+          "classDate": "2026-10-24T13:00:00-03:00"
         }
       ]
     },
@@ -637,7 +670,8 @@ const AMO_FISIO_DATA = {
           "description": "Manejo fisioterapêutico de vaginismo, dispareunia, disfunção erétil e dores pélvicas crônicas.",
           "registered": 36,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T14:30:00-03:00"
         },
         {
           "id": "esporte-performance-guarulhos",
@@ -650,7 +684,8 @@ const AMO_FISIO_DATA = {
           "description": "Avaliação funcional do movimento, controle de sobrecarga e estratégias de ganho de rendimento atlético.",
           "registered": 36,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T12:30:00-03:00"
         },
         {
           "id": "harmonizacao-labial-guarulhos",
@@ -663,7 +698,8 @@ const AMO_FISIO_DATA = {
           "description": "Conhecimento aprofundado, técnicas práticas e critérios de excelência e segurança na harmonização labial.",
           "registered": 23,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-26T19:30:00-03:00"
         },
         {
           "id": "cosmify-cosmetologia-guarulhos",
@@ -676,7 +712,8 @@ const AMO_FISIO_DATA = {
           "description": "Aplicação avançada de cosmetologia e dermocosméticos para potencializar protocolos e resultados em fisioterapia dermatofuncional.",
           "registered": 24,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-28T19:00:00-03:00"
         },
         {
           "id": "terapia-alto-fluxo-guarulhos",
@@ -689,7 +726,8 @@ const AMO_FISIO_DATA = {
           "description": "Fundamentos, inovações tecnológicas, indicações clínicas, ajustes e monitorização da TAF ministrado por Joice Pazos Fernandes.",
           "registered": 17,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-28T19:00:00-03:00"
         },
         {
           "id": "microagulhamento-guarulhos",
@@ -702,7 +740,8 @@ const AMO_FISIO_DATA = {
           "description": "Técnica de indução percutânea de colágeno, drug delivery e protocolos para rejuvenescimento e cicatrizes.",
           "registered": 40,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T09:00:00-03:00"
         },
         {
           "id": "traumato-esportiva-quiro-guarulhos",
@@ -715,7 +754,8 @@ const AMO_FISIO_DATA = {
           "description": "Integração prática da reabilitação ortopédica com ajustes de quiropraxia para rápida recuperação funcional.",
           "registered": 40,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T10:30:00-03:00"
         },
         {
           "id": "respiratoria-guarulhos",
@@ -728,7 +768,8 @@ const AMO_FISIO_DATA = {
           "description": "Manobras de desobstrução brônquica e reexpansão pulmonar em pacientes adultos e pediátricos.",
           "registered": 50,
           "capacity": 50,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T10:00:00-03:00"
         },
         {
           "id": "urgencia-emergencia-guarulhos",
@@ -741,7 +782,8 @@ const AMO_FISIO_DATA = {
           "description": "Atuação ágil e segura em pronto-socorro, paradas cardiorrespiratórias e suporte ventilatório avançado.",
           "registered": 40,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T15:30:00-03:00"
         }
       ]
     },
@@ -765,7 +807,8 @@ const AMO_FISIO_DATA = {
           "registered": 0,
           "capacity": 15,
           "minParticipants": 10,
-          "cancelledByFranchisee": true
+          "cancelledByFranchisee": true,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "lesoes-musculares-londrina",
@@ -778,7 +821,8 @@ const AMO_FISIO_DATA = {
           "description": "Classificação ecográfica/clínica, dosagem de carga e reabilitação baseada nas melhores evidências mundiais.",
           "registered": 9,
           "capacity": 15,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "introducao-quiropraxia-londrina",
@@ -792,7 +836,8 @@ const AMO_FISIO_DATA = {
           "registered": 0,
           "capacity": 15,
           "minParticipants": 8,
-          "cancelledByFranchisee": true
+          "cancelledByFranchisee": true,
+          "classDate": "2026-10-24T13:00:00-03:00"
         }
       ]
     },
@@ -841,7 +886,8 @@ const AMO_FISIO_DATA = {
           "description": "Inscrição especial que permite selecionar e participar de 2 aulas de imersão prática na unidade Porto Velho.",
           "registered": 22,
           "capacity": 40,
-          "minParticipants": 20
+          "minParticipants": 20,
+          "classDate": "2026-10-31T08:00:00-03:00"
         }
       ]
     },
@@ -864,7 +910,8 @@ const AMO_FISIO_DATA = {
           "description": "Avaliação cinemática e cinética das transferências posturais de sentar e levantar, com intervenções para ganho de mobilidade e controle motor.",
           "registered": 12,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T14:00:00-03:00"
         },
         {
           "id": "avaliacao-funcional-membros-inferiores-rp",
@@ -877,7 +924,8 @@ const AMO_FISIO_DATA = {
           "description": "Bateria de testes funcionais, raciocínio clínico e aplicação prática na avaliação de membros inferiores em atletas e pacientes ortopédicos.",
           "registered": 19,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T08:00:00-03:00"
         },
         {
           "id": "mecanica-ventilatoria-rp",
@@ -890,7 +938,8 @@ const AMO_FISIO_DATA = {
           "description": "Interpretação gráfica, mecânica respiratória avançada, análise de curvas e monitorização ventilatória na prática clínica.",
           "registered": 4,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T14:00:00-03:00"
         },
         {
           "id": "consultorio-maternidade-gestante-rp",
@@ -903,7 +952,8 @@ const AMO_FISIO_DATA = {
           "description": "Abordagem fisioterapêutica completa na gestação, parto e puerpério, integrando cuidados ambulatoriais e atuação hospitalar.",
           "registered": 2,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-31T08:00:00-03:00"
         }
       ]
     },
@@ -927,7 +977,8 @@ const AMO_FISIO_DATA = {
           "registered": 13,
           "capacity": 30,
           "minParticipants": 10,
-          "confirmedByFranchisee": true
+          "confirmedByFranchisee": true,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "pele-pos-emagrecimento-rio",
@@ -941,7 +992,8 @@ const AMO_FISIO_DATA = {
           "registered": 10,
           "capacity": 30,
           "minParticipants": 10,
-          "confirmedByFranchisee": true
+          "confirmedByFranchisee": true,
+          "classDate": "2026-10-24T13:00:00-03:00"
         },
         {
           "id": "abordagens-terapeuticas-parkinson-rio",
@@ -956,7 +1008,8 @@ const AMO_FISIO_DATA = {
           "registered": 4,
           "capacity": 20,
           "minParticipants": 10,
-          "confirmedByFranchisee": true
+          "confirmedByFranchisee": true,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "criterios-alta-reconstrucao-lca-rio",
@@ -970,7 +1023,8 @@ const AMO_FISIO_DATA = {
           "description": "Testes funcionais, controle de carga, marcadores de segurança e critérios baseados em evidência para a progressão de fases e Return to Play no pós-LCA.",
           "registered": 40,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T08:00:00-03:00"
         }
       ]
     },
@@ -1020,7 +1074,8 @@ const AMO_FISIO_DATA = {
           "registered": 0,
           "capacity": 30,
           "minParticipants": 10,
-          "cancelledByFranchisee": true
+          "cancelledByFranchisee": true,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "atm-repercussoes-sjc",
@@ -1034,7 +1089,8 @@ const AMO_FISIO_DATA = {
           "registered": 0,
           "capacity": 30,
           "minParticipants": 10,
-          "cancelledByFranchisee": true
+          "cancelledByFranchisee": true,
+          "classDate": "2026-10-24T10:00:00-03:00"
         }
       ]
     },
@@ -1057,7 +1113,8 @@ const AMO_FISIO_DATA = {
           "description": "Reabilitação completa de Ligamento Cruzado Anterior: critérios de progressão e testes de Return to Play.",
           "registered": 9,
           "capacity": 20,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T09:00:00-03:00"
         },
         {
           "id": "injetaveis-dermato-sao-luis",
@@ -1070,7 +1127,8 @@ const AMO_FISIO_DATA = {
           "description": "Fundamentos, segurança, indicações e técnicas injetáveis na estética e reabilitação tegumentar.",
           "registered": 9,
           "capacity": 20,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T14:00:00-03:00"
         },
         {
           "id": "exercicios-funcionais-idosos-sao-luis",
@@ -1083,7 +1141,8 @@ const AMO_FISIO_DATA = {
           "description": "Dinâmicas de treinamento funcional coletivo para melhora do equilíbrio, força e autonomia na terceira idade.",
           "registered": 10,
           "capacity": 20,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T14:00:00-03:00"
         },
         {
           "id": "mobilizacao-paciente-critico-sao-luis",
@@ -1096,7 +1155,8 @@ const AMO_FISIO_DATA = {
           "description": "Critérios de segurança, monitorização hemodinâmica e mobilização precoce em Unidade de Terapia Intensiva.",
           "registered": 7,
           "capacity": 20,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T09:00:00-03:00"
         },
         {
           "id": "tea-pediatria-sao-luis",
@@ -1109,7 +1169,8 @@ const AMO_FISIO_DATA = {
           "description": "Avaliação motora, integração sensorial e condutas terapêuticas lúdicas no Transtorno do Espectro Autista.",
           "registered": 19,
           "capacity": 20,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T09:00:00-03:00"
         },
         {
           "id": "reabilitacao-cancer-mama-sao-luis",
@@ -1136,7 +1197,8 @@ const AMO_FISIO_DATA = {
           "description": "Posicionamento terapêutico, ventilação mecânica neonatal e assistência integral ao recém-nascido crítico.",
           "registered": 11,
           "capacity": 20,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T14:00:00-03:00"
         }
       ]
     },
@@ -1160,7 +1222,8 @@ const AMO_FISIO_DATA = {
           "registered": 12,
           "capacity": 20,
           "minParticipants": 10,
-          "confirmedByFranchisee": true
+          "confirmedByFranchisee": true,
+          "classDate": "2026-10-24T09:00:00-03:00"
         },
         {
           "id": "fisiotech-tcar-ondas-choque",
@@ -1197,7 +1260,8 @@ const AMO_FISIO_DATA = {
           "description": "Laserterapia e fotobiomodulação aplicada com evidências para acelerar a regeneração e modular a dor.",
           "registered": 18,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-29T20:30:00-03:00"
         },
         {
           "id": "fisioterapia-domiciliar-vila-mariana",
@@ -1210,7 +1274,8 @@ const AMO_FISIO_DATA = {
           "description": "Tomada de decisão clínica, biossegurança, adaptação de ambiente e condutas no atendimento domiciliar.",
           "registered": 7,
           "capacity": 40,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-29T18:30:00-03:00"
         }
       ]
     },
@@ -1247,7 +1312,8 @@ const AMO_FISIO_DATA = {
           "description": "Metodologia prática para diagnóstico assertivo e estruturação de condutas em fisioterapia pélvica.",
           "registered": 15,
           "capacity": 30,
-          "minParticipants": 10
+          "minParticipants": 10,
+          "classDate": "2026-10-24T08:00:00-03:00"
         }
       ]
     },
@@ -1270,7 +1336,8 @@ const AMO_FISIO_DATA = {
           "description": "Protocolos avançados e personalizados para diferentes faixas etárias e tipos de pele.",
           "registered": 16,
           "capacity": 20,
-          "minParticipants": 7
+          "minParticipants": 7,
+          "classDate": "2026-10-23T18:00:00-03:00"
         },
         {
           "id": "somatotopias-reflexologias-mtc",
@@ -1284,7 +1351,8 @@ const AMO_FISIO_DATA = {
           "registered": 1,
           "capacity": 20,
           "minParticipants": 7,
-          "cancelledByFranchisee": true
+          "cancelledByFranchisee": true,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "ventosoterapia",
@@ -1297,7 +1365,8 @@ const AMO_FISIO_DATA = {
           "description": "Fundamentos práticos de avaliação e aplicação clínica da ventosoterapia.",
           "registered": 10,
           "capacity": 25,
-          "minParticipants": 7
+          "minParticipants": 7,
+          "classDate": "2026-10-23T18:00:00-03:00"
         },
         {
           "id": "saude-mental-acupuntura",
@@ -1310,7 +1379,8 @@ const AMO_FISIO_DATA = {
           "description": "Fundamentos e ferramentas práticas da MTC para o cuidado da mente e saúde emocional.",
           "registered": 11,
           "capacity": 15,
-          "minParticipants": 7
+          "minParticipants": 7,
+          "classDate": "2026-10-23T18:00:00-03:00"
         },
         {
           "id": "manipulacao-fascias",
@@ -1323,7 +1393,8 @@ const AMO_FISIO_DATA = {
           "description": "Avaliação fascial e técnicas práticas de manipulação miofascial para reabilitação.",
           "registered": 13,
           "capacity": 25,
-          "minParticipants": 8
+          "minParticipants": 8,
+          "classDate": "2026-10-24T08:00:00-03:00"
         },
         {
           "id": "tuina-atletas",
@@ -1336,7 +1407,8 @@ const AMO_FISIO_DATA = {
           "description": "Aplicação das técnicas milenares do Tuiná na recuperação e alta performance de atletas.",
           "registered": 10,
           "capacity": 20,
-          "minParticipants": 7
+          "minParticipants": 7,
+          "classDate": "2026-10-24T13:00:00-03:00"
         },
         {
           "id": "lipedema-vitoria",
@@ -1349,7 +1421,8 @@ const AMO_FISIO_DATA = {
           "description": "Condutas terapêuticas completas para diagnóstico, manejo clínico e tratamento do Lipedema.",
           "registered": 11,
           "capacity": 25,
-          "minParticipants": 7
+          "minParticipants": 7,
+          "classDate": "2026-10-24T08:00:00-03:00"
         }
       ]
     }
