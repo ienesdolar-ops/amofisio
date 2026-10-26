@@ -115,16 +115,15 @@ const AMO_FISIO_DATA = {
           "id": "canetas-emagrecedoras-bauru",
           "title": "Abordagem Estética e Cosmetológica ao Paciente em Uso de Canetas Emagrecedoras",
           "category": "Dermatofuncional & Cosmetologia",
-          "badge": "Cancelado pelo franqueado",
+          "badge": "Presencial",
           "priceInfo": "",
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-abordagem-estetica-e-cosmetologica-ao-paciente-em-uso-de-canetas-emagrecedoras/3552261",
-          "status": "cancelled",
+          "status": "available",
           "description": "Manejo da flacidez tissular e protocolos estéticos adaptados aos efeitos do emagrecimento rápido.",
           "registered": 1,
           "capacity": 25,
           "minParticipants": 10,
-          "classDate": "2026-10-31T14:00:00-03:00",
-          "cancelledByFranchisee": true
+          "classDate": "2026-10-31T14:00:00-03:00"
         },
         {
           "id": "neuropediatria-cif-bauru",
