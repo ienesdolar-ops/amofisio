@@ -462,7 +462,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-biomecanica-e-cinesioterapia-aplicacao-perfeita-de-exercicios/3552076",
           "status": "available",
           "description": "Braço de momento, linhas de ação muscular e prescrição precisa de exercícios terapêuticos.",
-          "registered": 41,
+          "registered": 42,
           "capacity": 50,
           "minParticipants": 10,
           "classDate": "2026-10-31T14:00:00-03:00"
@@ -1428,6 +1428,26 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3CCQCBSHQQF",
+      "unitId": "cuiaba",
+      "unitName": "Cuiabá",
+      "state": "MT",
+      "courseId": "biomecanica-cinesioterapia-cuiaba",
+      "courseTitle": "Biomecânica e Cinesioterapia - Aplicação Perfeita de Exercícios",
+      "instructor": "",
+      "attendeeName": "Marcos P.",
+      "registeredCount": 42,
+      "capacity": 50,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-27T02:19:40.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-biomecanica-e-cinesioterapia-aplicacao-perfeita-de-exercicios/3552076"
+    },
     {
       "id": "ord-3EM62BSGNBJ",
       "unitId": "amofisio-on",
@@ -2607,26 +2627,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-23T22:50:24.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-avaliacao-da-mecanica-ventilatoria-fundamentos-parametros-e-curvas/3567342"
-    },
-    {
-      "id": "ord-3CPC0BS5CKF",
-      "unitId": "ribeirao-preto",
-      "unitName": "Ribeirão Preto",
-      "state": "SP",
-      "courseId": "avaliacao-funcional-membros-inferiores-rp",
-      "courseTitle": "Avaliação Funcional de Membros Inferiores - Testes e Aplicação Clínica",
-      "instructor": "",
-      "attendeeName": "Talita K.",
-      "registeredCount": 19,
-      "capacity": 30,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-23T22:44:01.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-avaliacao-funcional-de-membros-inferiores---testes-e-aplicacao-clinica/3564928"
     }
   ]
 };
