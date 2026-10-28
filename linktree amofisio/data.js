@@ -884,7 +884,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-escolha-2-aulas-e-amplie-seus-conhecimentos-em-fisioterapia/3584713",
           "status": "available",
           "description": "Inscrição especial que permite selecionar e participar de 2 aulas de imersão prática na unidade Porto Velho.",
-          "registered": 24,
+          "registered": 25,
           "capacity": 40,
           "minParticipants": 20,
           "classDate": "2026-10-31T08:00:00-03:00"
@@ -1429,6 +1429,26 @@ const AMO_FISIO_DATA = {
   ],
   "recentRegistrations": [
     {
+      "id": "ord-3DCM9BSNJUK",
+      "unitId": "porto-velho",
+      "unitName": "Porto Velho",
+      "state": "RO",
+      "courseId": "escolha-2-aulas-porto-velho",
+      "courseTitle": "Escolha 2 aulas e amplie seus conhecimentos em Fisioterapia",
+      "instructor": "",
+      "attendeeName": "Liz L.",
+      "registeredCount": 25,
+      "capacity": 40,
+      "minParticipants": 20,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Passaporte 2 Aulas",
+      "timestamp": "2026-10-28T01:27:00.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-escolha-2-aulas-e-amplie-seus-conhecimentos-em-fisioterapia/3584713"
+    },
+    {
       "id": "ord-3EKURBSMKTS",
       "unitId": "amofisio-on",
       "unitName": "AmoFisio On",
@@ -1957,7 +1977,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Escolha 2 aulas e amplie seus conhecimentos em Fisioterapia",
       "instructor": "",
       "attendeeName": "Katrina G.",
-      "registeredCount": 24,
+      "registeredCount": 25,
       "capacity": 40,
       "minParticipants": 20,
       "isConfirmed": true,
@@ -2217,7 +2237,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Escolha 2 aulas e amplie seus conhecimentos em Fisioterapia",
       "instructor": "",
       "attendeeName": "Guilherme L.",
-      "registeredCount": 24,
+      "registeredCount": 25,
       "capacity": 40,
       "minParticipants": 20,
       "isConfirmed": true,
@@ -2607,26 +2627,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-26T16:08:02.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-fibrose-cistica/3625954"
-    },
-    {
-      "id": "ord-3EM62BSE9B8",
-      "unitId": "amofisio-on",
-      "unitName": "AmoFisio On",
-      "state": "Online",
-      "courseId": "on-caderneta-da-crianca",
-      "courseTitle": "Caderneta da Criança: instrumento de acompanhamento do desenvolvimento infantil",
-      "instructor": "Dra. Sabrine Cortiana",
-      "attendeeName": "Beatriz Z.",
-      "registeredCount": 11,
-      "capacity": 200,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Online",
-      "timestamp": "2026-10-26T16:07:28.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-caderneta-da-crianca/3627202"
     }
   ]
 };
