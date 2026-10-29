@@ -148,7 +148,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-da-gestacao-ao-puerperio-avaliacao-e-condutas-fisioterapeuticas/3564737",
           "status": "available",
           "description": "Avaliação biomecânica, intervenções fisioterapêuticas no pré-natal, parto e condutas essenciais no pós-parto imediato e tardio.",
-          "registered": 6,
+          "registered": 7,
           "capacity": 30,
           "minParticipants": 10,
           "classDate": "2026-10-31T08:00:00-03:00"
@@ -1429,6 +1429,26 @@ const AMO_FISIO_DATA = {
   ],
   "recentRegistrations": [
     {
+      "id": "ord-3CP61BSV0TS",
+      "unitId": "bauru",
+      "unitName": "Bauru",
+      "state": "SP",
+      "courseId": "gestacao-puerperio-bauru",
+      "courseTitle": "Da Gestação ao Puerpério - Avaliação e Condutas Fisioterapêuticas",
+      "instructor": "",
+      "attendeeName": "Kathelyn X.",
+      "registeredCount": 7,
+      "capacity": 30,
+      "minParticipants": 10,
+      "isConfirmed": false,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-29T12:45:47.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-da-gestacao-ao-puerperio-avaliacao-e-condutas-fisioterapeuticas/3564737"
+    },
+    {
       "id": "ord-3CNE9BST3U8",
       "unitId": "belem",
       "unitName": "Belém",
@@ -1657,7 +1677,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Da Gestação ao Puerpério - Avaliação e Condutas Fisioterapêuticas",
       "instructor": "",
       "attendeeName": "Anna J.",
-      "registeredCount": 6,
+      "registeredCount": 7,
       "capacity": 30,
       "minParticipants": 10,
       "isConfirmed": false,
@@ -2607,26 +2627,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-26T18:40:09.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-laserterapia-neonatologia/3625938"
-    },
-    {
-      "id": "ord-3EKV2BSF5F2",
-      "unitId": "amofisio-on",
-      "unitName": "AmoFisio On",
-      "state": "Online",
-      "courseId": "on-fibrose-cistica",
-      "courseTitle": "Fisioterapia no Paciente com Fibrose Cística",
-      "instructor": "Dra. Vanessa Godoy",
-      "attendeeName": "YESICA P.",
-      "registeredCount": 16,
-      "capacity": 200,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Online",
-      "timestamp": "2026-10-26T18:40:01.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-fibrose-cistica/3625954"
     }
   ]
 };
