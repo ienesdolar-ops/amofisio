@@ -200,7 +200,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-lesao-dos-isquiotibiais-do-consultorio-ao-retorno-ao-esporte/3562953",
           "status": "available",
           "description": "Diagnóstico, fases de cicatrização tecidual, dosagem de carga e critérios clínicos para o Return to Play em lesões de isquiotibiais.",
-          "registered": 10,
+          "registered": 11,
           "capacity": 40,
           "minParticipants": 10,
           "classDate": "2026-11-07T08:00:00-03:00"
@@ -1897,7 +1897,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Lesão dos Isquiotibiais - Do consultório ao retorno ao esporte",
       "instructor": "",
       "attendeeName": "Fernando F.",
-      "registeredCount": 10,
+      "registeredCount": 11,
       "capacity": 40,
       "minParticipants": 10,
       "isConfirmed": true,
