@@ -81,7 +81,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Aula online ao vivo · 04/11 · 19h (Brasília)",
           "instructor": "Dra. Cintia Johnston",
-          "registered": 29,
+          "registered": 30,
           "capacity": 200,
           "minParticipants": 10,
           "classDate": "2026-11-04T19:00:00-03:00"
@@ -1429,6 +1429,26 @@ const AMO_FISIO_DATA = {
   ],
   "recentRegistrations": [
     {
+      "id": "ord-3EKV8BTF2KD",
+      "unitId": "amofisio-on",
+      "unitName": "AmoFisio On",
+      "state": "Online",
+      "courseId": "on-vm-protetora-neonatologia",
+      "courseTitle": "Ventilação Mecânica Protetora em Neonatologia",
+      "instructor": "Dra. Cintia Johnston",
+      "attendeeName": "Isabela K.",
+      "registeredCount": 30,
+      "capacity": 200,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Online",
+      "timestamp": "2026-10-31T19:45:29.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-vm-protetora-neonatologia/3625960"
+    },
+    {
       "id": "ord-3CCQCBTDEG3",
       "unitId": "cuiaba",
       "unitName": "Cuiabá",
@@ -2357,7 +2377,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Ventilação Mecânica Protetora em Neonatologia",
       "instructor": "Dra. Cintia Johnston",
       "attendeeName": "ANNE R.",
-      "registeredCount": 29,
+      "registeredCount": 30,
       "capacity": 200,
       "minParticipants": 10,
       "isConfirmed": true,
@@ -2607,26 +2627,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-28T15:44:18.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-neurofuncional-pediatrica-e-seu-campo-de-atuacao/3552098"
-    },
-    {
-      "id": "ord-3CP61BSP4HL",
-      "unitId": "bauru",
-      "unitName": "Bauru",
-      "state": "SP",
-      "courseId": "gestacao-puerperio-bauru",
-      "courseTitle": "Da Gestação ao Puerpério - Avaliação e Condutas Fisioterapêuticas",
-      "instructor": "",
-      "attendeeName": "Anna J.",
-      "registeredCount": 12,
-      "capacity": 30,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-28T13:35:29.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-da-gestacao-ao-puerperio-avaliacao-e-condutas-fisioterapeuticas/3564737"
     }
   ]
 };
