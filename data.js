@@ -462,7 +462,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-biomecanica-e-cinesioterapia-aplicacao-perfeita-de-exercicios/3552076",
           "status": "available",
           "description": "Braço de momento, linhas de ação muscular e prescrição precisa de exercícios terapêuticos.",
-          "registered": 42,
+          "registered": 43,
           "capacity": 50,
           "minParticipants": 10,
           "classDate": "2026-10-31T14:00:00-03:00"
@@ -1428,6 +1428,26 @@ const AMO_FISIO_DATA = {
     }
   ],
   "recentRegistrations": [
+    {
+      "id": "ord-3CCQCBTDEG3",
+      "unitId": "cuiaba",
+      "unitName": "Cuiabá",
+      "state": "MT",
+      "courseId": "biomecanica-cinesioterapia-cuiaba",
+      "courseTitle": "Biomecânica e Cinesioterapia - Aplicação Perfeita de Exercícios",
+      "instructor": "",
+      "attendeeName": "Karoline M.",
+      "registeredCount": 43,
+      "capacity": 50,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-31T15:40:39.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-biomecanica-e-cinesioterapia-aplicacao-perfeita-de-exercicios/3552076"
+    },
     {
       "id": "ord-3DQKPBTBA4S",
       "unitId": "ribeirao-preto",
@@ -2607,26 +2627,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-28T13:35:29.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-da-gestacao-ao-puerperio-avaliacao-e-condutas-fisioterapeuticas/3564737"
-    },
-    {
-      "id": "ord-3CP5LBSP492",
-      "unitId": "bauru",
-      "unitName": "Bauru",
-      "state": "SP",
-      "courseId": "sindrome-fragilidade-bauru",
-      "courseTitle": "A Fisioterapia como protagonista na prevenção da Síndrome da Fragilidade",
-      "instructor": "",
-      "attendeeName": "Ana C.",
-      "registeredCount": 23,
-      "capacity": 30,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-28T13:24:00.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-a-fisioterapia-como-protagonista-na-prevencao-da-sindrome-da-fragilidade/3564725"
     }
   ]
 };
