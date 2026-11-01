@@ -214,7 +214,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-imersao-pratica-em-ventilacao-mecanica-invasiva-e-nao-invasiva/3562957",
           "status": "available",
           "description": "Manejo prático dos modos ventilatórios invasivos e VNI, ajustes de parâmetros, assincronias e condutas na terapia intensiva.",
-          "registered": 23,
+          "registered": 24,
           "capacity": 40,
           "minParticipants": 10,
           "classDate": "2026-11-07T08:00:00-03:00"
@@ -1429,6 +1429,26 @@ const AMO_FISIO_DATA = {
   ],
   "recentRegistrations": [
     {
+      "id": "ord-3CNEDBTGB3B",
+      "unitId": "belem",
+      "unitName": "Belém",
+      "state": "PA",
+      "courseId": "ventilacao-mecanica-belem",
+      "courseTitle": "Imersão prática em ventilação mecânica invasiva e não invasiva",
+      "instructor": "",
+      "attendeeName": "Keyse N.",
+      "registeredCount": 24,
+      "capacity": 40,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-10-31T22:46:09.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-imersao-pratica-em-ventilacao-mecanica-invasiva-e-nao-invasiva/3562957"
+    },
+    {
       "id": "ord-3EKV8BTF2KD",
       "unitId": "amofisio-on",
       "unitName": "AmoFisio On",
@@ -2607,26 +2627,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-28T15:46:52.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-o-paciente-esta-em-casa-e-agora-desafios-e-decisoes-da-fisioterapia-domiciliar/3555399"
-    },
-    {
-      "id": "ord-3CCR2BSQ221",
-      "unitId": "cuiaba",
-      "unitName": "Cuiabá",
-      "state": "MT",
-      "courseId": "neurofuncional-pediatrica-cuiaba",
-      "courseTitle": "Fisioterapia Neurofuncional Pediátrica e seu Campo de Atuação",
-      "instructor": "",
-      "attendeeName": "MARCELLY V.",
-      "registeredCount": 14,
-      "capacity": 30,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-28T15:44:18.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-fisioterapia-neurofuncional-pediatrica-e-seu-campo-de-atuacao/3552098"
     }
   ]
 };
