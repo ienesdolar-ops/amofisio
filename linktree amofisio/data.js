@@ -81,7 +81,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Aula online ao vivo · 04/11 · 19h (Brasília)",
           "instructor": "Dra. Cintia Johnston",
-          "registered": 30,
+          "registered": 31,
           "capacity": 200,
           "minParticipants": 10,
           "classDate": "2026-11-04T19:00:00-03:00"
@@ -1429,6 +1429,26 @@ const AMO_FISIO_DATA = {
   ],
   "recentRegistrations": [
     {
+      "id": "ord-3EKV8BTJ21B",
+      "unitId": "amofisio-on",
+      "unitName": "AmoFisio On",
+      "state": "Online",
+      "courseId": "on-vm-protetora-neonatologia",
+      "courseTitle": "Ventilação Mecânica Protetora em Neonatologia",
+      "instructor": "Dra. Cintia Johnston",
+      "attendeeName": "Beatriz L.",
+      "registeredCount": 31,
+      "capacity": 200,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Online",
+      "timestamp": "2026-11-01T16:00:22.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-vm-protetora-neonatologia/3625960"
+    },
+    {
       "id": "ord-3CNEDBTGB3B",
       "unitId": "belem",
       "unitName": "Belém",
@@ -1457,7 +1477,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Ventilação Mecânica Protetora em Neonatologia",
       "instructor": "Dra. Cintia Johnston",
       "attendeeName": "Isabela K.",
-      "registeredCount": 30,
+      "registeredCount": 31,
       "capacity": 200,
       "minParticipants": 10,
       "isConfirmed": true,
@@ -2397,7 +2417,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Ventilação Mecânica Protetora em Neonatologia",
       "instructor": "Dra. Cintia Johnston",
       "attendeeName": "ANNE R.",
-      "registeredCount": 30,
+      "registeredCount": 31,
       "capacity": 200,
       "minParticipants": 10,
       "isConfirmed": true,
@@ -2607,26 +2627,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-28T15:58:08.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-laserterapia-neonatologia/3625938"
-    },
-    {
-      "id": "ord-3CG27BSQ1J3",
-      "unitId": "sp-vila-mariana",
-      "unitName": "São Paulo - Vila Mariana",
-      "state": "SP",
-      "courseId": "fisioterapia-domiciliar-vila-mariana",
-      "courseTitle": "O Paciente Está em Casa. E Agora? Desafios e Decisões da Fisioterapia Domiciliar",
-      "instructor": "",
-      "attendeeName": "Luana S.",
-      "registeredCount": 8,
-      "capacity": 40,
-      "minParticipants": 10,
-      "isConfirmed": false,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-28T15:46:52.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-o-paciente-esta-em-casa-e-agora-desafios-e-decisoes-da-fisioterapia-domiciliar/3555399"
     }
   ]
 };
