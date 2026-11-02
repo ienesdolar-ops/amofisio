@@ -214,7 +214,7 @@ const AMO_FISIO_DATA = {
           "symplaUrl": "https://www.sympla.com.br/evento/amofisio-imersao-pratica-em-ventilacao-mecanica-invasiva-e-nao-invasiva/3562957",
           "status": "available",
           "description": "Manejo prático dos modos ventilatórios invasivos e VNI, ajustes de parâmetros, assincronias e condutas na terapia intensiva.",
-          "registered": 24,
+          "registered": 25,
           "capacity": 40,
           "minParticipants": 10,
           "classDate": "2026-11-07T08:00:00-03:00"
@@ -1429,6 +1429,26 @@ const AMO_FISIO_DATA = {
   ],
   "recentRegistrations": [
     {
+      "id": "ord-3CNEDBTNL61",
+      "unitId": "belem",
+      "unitName": "Belém",
+      "state": "PA",
+      "courseId": "ventilacao-mecanica-belem",
+      "courseTitle": "Imersão prática em ventilação mecânica invasiva e não invasiva",
+      "instructor": "",
+      "attendeeName": "Karla P.",
+      "registeredCount": 25,
+      "capacity": 40,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Presencial",
+      "timestamp": "2026-11-02T18:14:52.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-imersao-pratica-em-ventilacao-mecanica-invasiva-e-nao-invasiva/3562957"
+    },
+    {
       "id": "ord-3EKV8BTM6G2",
       "unitId": "amofisio-on",
       "unitName": "AmoFisio On",
@@ -1497,7 +1517,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Imersão prática em ventilação mecânica invasiva e não invasiva",
       "instructor": "",
       "attendeeName": "Keyse N.",
-      "registeredCount": 24,
+      "registeredCount": 25,
       "capacity": 40,
       "minParticipants": 10,
       "isConfirmed": true,
@@ -2607,26 +2627,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-28T18:30:25.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-como-a-pbe-pode-auxiliar-o-fisioterapeuta-esportivo/3552282"
-    },
-    {
-      "id": "ord-3DBSNBSQRZN",
-      "unitId": "guarulhos",
-      "unitName": "Guarulhos",
-      "state": "SP",
-      "courseId": "cosmify-cosmetologia-guarulhos",
-      "courseTitle": "CosmiFY - Entendendo como fazer da cosmetologia um potencializador dos seus resultados",
-      "instructor": "",
-      "attendeeName": "silvana A.",
-      "registeredCount": 30,
-      "capacity": 30,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": true,
-      "isUrgent": false,
-      "statusBadge": "Turma Esgotada",
-      "timestamp": "2026-10-28T17:37:20.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-cosmify-entendendo-como-fazer-da-cosmetologia-um-potencializador-dos-seus-resultados/3583895"
     }
   ]
 };
