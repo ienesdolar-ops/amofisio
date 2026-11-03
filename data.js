@@ -36,7 +36,7 @@ const AMO_FISIO_DATA = {
           "status": "available",
           "description": "Aula online ao vivo · 28/10 · 20h (Brasília)",
           "instructor": "Dra. Carla Oliveira",
-          "registered": 16,
+          "registered": 17,
           "capacity": 200,
           "minParticipants": 10,
           "classDate": "2026-10-28T20:00:00-03:00"
@@ -1429,6 +1429,26 @@ const AMO_FISIO_DATA = {
   ],
   "recentRegistrations": [
     {
+      "id": "ord-3EKUYBTPGK4",
+      "unitId": "amofisio-on",
+      "unitName": "AmoFisio On",
+      "state": "Online",
+      "courseId": "on-laserterapia-neonatologia",
+      "courseTitle": "Laserterapia em Neonatologia",
+      "instructor": "Dra. Carla Oliveira",
+      "attendeeName": "TIAGO B.",
+      "registeredCount": 17,
+      "capacity": 200,
+      "minParticipants": 10,
+      "isConfirmed": true,
+      "isSoldOut": false,
+      "isUrgent": false,
+      "statusBadge": "Online",
+      "timestamp": "2026-11-03T01:55:27.000Z",
+      "timeAgoText": "",
+      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-on-laserterapia-neonatologia/3625938"
+    },
+    {
       "id": "ord-3CNEDBTNL61",
       "unitId": "belem",
       "unitName": "Belém",
@@ -1477,7 +1497,7 @@ const AMO_FISIO_DATA = {
       "courseTitle": "Laserterapia em Neonatologia",
       "instructor": "Dra. Carla Oliveira",
       "attendeeName": "Helena N.",
-      "registeredCount": 16,
+      "registeredCount": 17,
       "capacity": 200,
       "minParticipants": 10,
       "isConfirmed": true,
@@ -2607,26 +2627,6 @@ const AMO_FISIO_DATA = {
       "timestamp": "2026-10-28T20:16:58.000Z",
       "timeAgoText": "",
       "symplaUrl": "https://www.sympla.com.br/evento/amofisio-escolha-2-aulas-e-amplie-seus-conhecimentos-em-fisioterapia/3584713"
-    },
-    {
-      "id": "ord-3CD0QBSR6Y5",
-      "unitId": "bauru",
-      "unitName": "Bauru",
-      "state": "SP",
-      "courseId": "pbe-esportiva-bauru",
-      "courseTitle": "Como a PBE pode auxiliar o fisioterapeuta esportivo?",
-      "instructor": "",
-      "attendeeName": "Thiago W.",
-      "registeredCount": 12,
-      "capacity": 25,
-      "minParticipants": 10,
-      "isConfirmed": true,
-      "isSoldOut": false,
-      "isUrgent": false,
-      "statusBadge": "Presencial",
-      "timestamp": "2026-10-28T18:30:25.000Z",
-      "timeAgoText": "",
-      "symplaUrl": "https://www.sympla.com.br/evento/amofisio-como-a-pbe-pode-auxiliar-o-fisioterapeuta-esportivo/3552282"
     }
   ]
 };
