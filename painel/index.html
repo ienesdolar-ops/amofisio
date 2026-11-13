@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel Sympla Inspirar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: barra de filtros fixa → resumo → ranking de unidades → lista de eventos por unidade */
+:root{
+  --bg:#f4f6f8; --panel:#ffffff; --ink:#14202b; --muted:#5d6b78; --line:#dde3e9;
+  --accent:#0b7a75; --accent-soft:#d9efed; --warn:#b26a00; --off:#9aa6b1; --bad:#b3261e;
+  --sans:"Figtree",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0f161c; --panel:#17212a; --ink:#e7edf2; --muted:#98a6b3; --line:#26333e;
+  --accent:#3cc2b9; --accent-soft:#16302f; --warn:#e8a33d; --off:#5d6b78; --bad:#f2786f; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 var(--sans)}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 60px}
+header{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between}
+h1{font-size:26px;margin:0;font-weight:800;letter-spacing:-.01em}
+.upd{color:var(--muted);font-size:13px}
+.filters{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 0;display:flex;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--line)}
+.filters select,.filters input{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
+.filters input{flex:1;min-width:180px}
+.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{font:inherit;border:0;background:var(--panel);color:var(--muted);padding:8px 12px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--accent);color:#fff;font-weight:600}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:20px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.kpi b{display:block;font:500 28px var(--mono);font-variant-numeric:tabular-nums}
+.kpi span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:28px 0 10px}
+.rank{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 0}
+.row{display:grid;grid-template-columns:minmax(110px,190px) 1fr 64px 56px;gap:12px;align-items:center;padding:6px 16px;cursor:pointer;border:0;background:none;width:100%;font:inherit;color:inherit;text-align:left}
+.row:hover{background:var(--accent-soft)}
+.row .bar{height:12px;background:var(--line);border-radius:3px;overflow:hidden}
+.row .bar i{display:block;height:100%;background:var(--accent)}
+.num{font:500 14px var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.sub{color:var(--muted);font-size:12px}
+.unit{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.unit summary{padding:12px 16px;cursor:pointer;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;font-weight:700;font-size:17px}
+.unit summary .sub{font-weight:400}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:620px}
+th,td{padding:9px 16px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+td a{color:var(--ink);text-decoration:none;font-weight:600}td a:hover{text-decoration:underline}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.p-futuro{background:var(--accent-soft);color:var(--accent)}
+.p-breve{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.p-passado{background:var(--line);color:var(--muted)}
+.p-cancel{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+@media (max-width:560px){.row{grid-template-columns:100px 1fr 52px}.row .sub{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Eventos Sympla por unidade</h1>
+    <div class="upd" id="upd">Carregando…</div>
+  </header>
+
+  <div class="filters">
+    <div class="seg" id="periodo" role="group" aria-label="Período">
+      <button data-v="futuros" aria-pressed="true">Próximos</button>
+      <button data-v="passados" aria-pressed="false">Realizados</button>
+      <button data-v="todos" aria-pressed="false">Todos</button>
+    </div>
+    <select id="fUnidade" aria-label="Unidade"><option value="">Todas as unidades</option></select>
+    <select id="fTipo" aria-label="Tipo"><option value="">Todos os tipos</option></select>
+    <select id="fAno" aria-label="Ano"><option value="">Qualquer ano</option></select>
+    <label class="sub" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="fCanc" style="flex:0;min-width:0"> mostrar cancelados</label>
+    <input id="fBusca" type="search" placeholder="Buscar evento…" aria-label="Buscar evento">
+  </div>
+
+  <section class="kpis" id="kpis"></section>
+  <h2>Inscritos por unidade</h2>
+  <div class="rank" id="rank"></div>
+  <h2>Eventos</h2>
+  <div id="lista"></div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const fmt = n => n == null ? '—' : n.toLocaleString('pt-BR');
+const fdata = d => d ? new Date(d).toLocaleDateString('pt-BR',{day:'2-digit',month:'short',year:'numeric'}) : '—';
+const st = {periodo:'futuros', unidade:'', tipo:'', ano:'', canc:false, busca:''};
+let EV = [];
+
+function situacao(e){
+  if (e.cancelado) return ['Cancelado','p-cancel'];
+  const now = Date.now(), ini = new Date(e.inicio).getTime(), fim = new Date(e.fim||e.inicio).getTime();
+  if (fim < now) return ['Realizado','p-passado'];
+  if (ini - now < 7*864e5) return ['Esta semana','p-breve'];
+  return ['Em breve','p-futuro'];
+}
+const unitLabel = e => e.uf ? `${e.unidade} · ${e.uf}` : e.unidade;
+
+function filtrados(){
+  const now = Date.now(), q = st.busca.trim().toLowerCase();
+  return EV.filter(e => {
+    const fim = new Date(e.fim||e.inicio).getTime();
+    if (st.periodo==='futuros' && fim < now) return false;
+    if (st.periodo==='passados' && fim >= now) return false;
+    if (!st.canc && e.cancelado) return false;
+    if (st.unidade && unitLabel(e)!==st.unidade) return false;
+    if (st.tipo && e.tipo!==st.tipo) return false;
+    if (st.ano && String(new Date(e.inicio).getFullYear())!==st.ano) return false;
+    if (q && !e.nome.toLowerCase().includes(q)) return false;
+    return true;
+  });
+}
+
+function render(){
+  const list = filtrados();
+  const total = list.reduce((s,e)=>s+(e.inscritos||0),0);
+  const unidades = new Map();
+  list.forEach(e => { const k=unitLabel(e); if(!unidades.has(k)) unidades.set(k,[]); unidades.get(k).push(e); });
+  const prox30 = list.filter(e => { const t=new Date(e.inicio).getTime()-Date.now(); return t>0 && t<30*864e5 && !e.cancelado; }).length;
+  $('#kpis').innerHTML = [
+    [fmt(list.length),'eventos'],[fmt(total),'inscritos'],[fmt(unidades.size),'unidades'],
+    [list.length?fmt(Math.round(total/list.length)):'—','média por evento'],[fmt(prox30),'começam em 30 dias']
+  ].map(([v,l])=>`<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join('');
+
+  const ranked = [...unidades].map(([k,evs])=>[k,evs,evs.reduce((s,e)=>s+(e.inscritos||0),0)]).sort((a,b)=>b[2]-a[2]);
+  const max = Math.max(1,...ranked.map(r=>r[2]));
+  $('#rank').innerHTML = ranked.length ? ranked.map(([k,evs,n])=>
+    `<button class="row" data-u="${k}" title="Ver só ${k}"><span>${k}</span><span class="bar"><i style="width:${n/max*100}%"></i></span><span class="num">${fmt(n)}</span><span class="sub num">${evs.length} ev.</span></button>`).join('')
+    : '<div class="empty">Nenhum evento com esses filtros.</div>';
+
+  const asc = st.periodo==='futuros';
+  $('#lista').innerHTML = ranked.map(([k,evs,n])=>{
+    evs.sort((a,b)=> asc ? a.inicio.localeCompare(b.inicio) : b.inicio.localeCompare(a.inicio));
+    return `<details class="unit" ${ranked.length<=6?'open':''}><summary>${k}<span class="sub">${evs.length} eventos · ${fmt(n)} inscritos</span></summary>
+      <div class="tbl"><table><thead><tr><th>Data</th><th>Evento</th><th>Tipo</th><th>Situação</th><th style="text-align:right">Inscritos</th></tr></thead><tbody>
+      ${evs.map(e=>{const [s,c]=situacao(e);return `<tr><td class="num" style="text-align:left;white-space:nowrap">${fdata(e.inicio)}</td>
+      <td><a href="${e.url}" target="_blank" rel="noopener">${e.nome}</a>${e.local?`<div class="sub">${e.local}</div>`:''}</td>
+      <td class="sub">${e.tipo}</td><td><span class="pill ${c}">${s}</span></td><td class="num">${fmt(e.inscritos)}</td></tr>`}).join('')}
+      </tbody></table></div></details>`;
+  }).join('');
+}
+
+function opts(sel, vals){ $(sel).insertAdjacentHTML('beforeend', vals.map(v=>`<option>${v}</option>`).join('')); }
+
+fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+  EV = d.events.filter(e=>e.inicio);
+  $('#upd').textContent = 'Atualizado em ' + new Date(d.atualizadoEm).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'}) + ' · atualiza todo dia às 6h';
+  opts('#fUnidade',[...new Set(EV.map(unitLabel))].sort((a,b)=>a.localeCompare(b,'pt')));
+  opts('#fTipo',[...new Set(EV.map(e=>e.tipo))].sort());
+  opts('#fAno',[...new Set(EV.map(e=>String(new Date(e.inicio).getFullYear())))].sort().reverse());
+  render();
+}).catch(()=>{ $('#upd').textContent='Os dados ainda não foram gerados. Rode a action "Painel Sympla" no GitHub.'; });
+
+$('#periodo').onclick = e => { const b=e.target.closest('button'); if(!b) return;
+  st.periodo=b.dataset.v; $('#periodo').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b)); render(); };
+$('#fUnidade').onchange = e => { st.unidade=e.target.value; render(); };
+$('#fTipo').onchange = e => { st.tipo=e.target.value; render(); };
+$('#fAno').onchange = e => { st.ano=e.target.value; render(); };
+$('#fCanc').onchange = e => { st.canc=e.target.checked; render(); };
+$('#fBusca').oninput = e => { st.busca=e.target.value; render(); };
+$('#rank').onclick = e => { const r=e.target.closest('.row'); if(!r) return; st.unidade=r.dataset.u; $('#fUnidade').value=r.dataset.u; render(); };
+</script>
+</body>
+</html>
