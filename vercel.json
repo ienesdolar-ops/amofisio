@@ -4,5 +4,10 @@
       "includeFiles": "{data.js,capacities.json}",
       "maxDuration": 30
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/", "has": [{ "type": "host", "value": "eventosinspirar.vercel.app" }], "destination": "/painel/index.html" },
+    { "source": "/data.json", "has": [{ "type": "host", "value": "eventosinspirar.vercel.app" }], "destination": "/painel/data.json" },
+    { "source": "/fonts/:f", "has": [{ "type": "host", "value": "eventosinspirar.vercel.app" }], "destination": "/painel/fonts/:f" }
+  ]
 }
