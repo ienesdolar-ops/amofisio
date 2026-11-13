@@ -96,7 +96,7 @@ function home(){
     q = slug(q||'');
     document.getElementById('units').innerHTML = UNITS.filter(u=>!q||u.slug.includes(q)).map(u =>
       `<a class="u" href="#${u.slug}"><b>${esc(u.nome)}</b><span>${u.prox ? `${u.prox} ${u.prox>1?'eventos':'evento'} pela frente · ${fmt(u.inscProx)} inscritos` : 'Nenhum evento marcado'}</span></a>`
-    ).join('') || '<div class="vazio">Nenhuma unidade com esse nome.</div>';
+    ).join('') || '<div class="vazio">Nenhuma cidade com evento marcado tem esse nome.</div>';
   };
   draw();
   document.getElementById('busca').oninput = e => draw(e.target.value);
@@ -148,7 +148,7 @@ fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
   const m = new Map();
   EV.forEach(e => { const k=label(e); if(!m.has(k)) m.set(k,{nome:k,slug:slug(k),prox:0,inscProx:0});
     if (futuro(e)&&!e.cancelado){ const u=m.get(k); u.prox++; u.inscProx+=e.inscritos||0; } });
-  UNITS = [...m.values()].sort((a,b)=>(b.prox>0)-(a.prox>0)||a.nome.localeCompare(b.nome,'pt'));
+  UNITS = [...m.values()].filter(u=>u.prox>0).sort((a,b)=>a.nome.localeCompare(b.nome,"pt"));
   route();
 }).catch(()=>{ app.innerHTML='<h1>Inscrições dos eventos</h1><div class="vazio">Os números ainda não foram gerados. Volte em alguns minutos.</div>'; });
 addEventListener('hashchange', route);
