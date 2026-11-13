@@ -1,0 +1,34 @@
+name: Painel Sympla (diário)
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # 06:00 em Brasília
+  workflow_dispatch:
+
+concurrency:
+  group: sync-sympla
+  cancel-in-progress: false
+
+jobs:
+  painel:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Coletar eventos do Sympla
+        env:
+          SYMPLA_TOKEN: ${{ secrets.SYMPLA_TOKEN }}
+        run: node scripts/painel-sympla.mjs
+      - name: Publicar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add painel/data.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Painel: atualizar eventos Sympla"
+          git pull --rebase -X theirs || true
+          git push
