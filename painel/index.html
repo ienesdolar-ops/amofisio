@@ -5,65 +5,93 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Painel Sympla Inspirar</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
 <style>
-/* Layout: escolha da unidade → página da unidade (próximos eventos em cartões, realizados abaixo) */
+@font-face{font-family:"Ample Soft";src:url(fonts/AmpleSoftPro-Regular.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Ample Soft";src:url(fonts/AmpleSoftPro-Medium.ttf) format("truetype");font-weight:500;font-display:swap}
+@font-face{font-family:"Ample Soft";src:url(fonts/AmpleSoftPro-Bold.ttf) format("truetype");font-weight:700;font-display:swap}
+/* Layout: faixa-herói colorida com o título → conteúdo sobe sobre ela em cartões; data em bloco de calendário */
 :root{
-  --bg:#f4f6f8; --panel:#fff; --ink:#14202b; --muted:#5d6b78; --line:#dde3e9;
-  --accent:#0b7a75; --accent-soft:#d9efed; --warn:#a35f00; --warn-soft:#fbecd5; --bad:#b3261e; --bad-soft:#f8dedb;
-  --sans:"Figtree",system-ui,sans-serif;
+  --bg:#eef3f4; --panel:#ffffff; --ink:#10242b; --muted:#5b707a; --line:#dbe5e8;
+  --hero1:#063f47; --hero2:#0b7a75; --on-hero:#ffffff; --on-hero-2:#bfe7e3;
+  --accent:#0b7a75; --accent-soft:#dcf1ef; --sun:#f3a712; --sun-soft:#fdf0d4; --sun-ink:#8a5a00;
+  --bad:#b3261e; --bad-soft:#f8dedb; --shadow:0 1px 2px rgba(6,63,71,.06),0 8px 24px rgba(6,63,71,.07);
+  --font:"Ample Soft",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#0f161c; --panel:#17212a; --ink:#e7edf2; --muted:#98a6b3; --line:#26333e;
-  --accent:#3cc2b9; --accent-soft:#16302f; --warn:#e8a33d; --warn-soft:#33270f; --bad:#f2786f; --bad-soft:#3a1d1b; color-scheme:dark}}
+  --bg:#0b1619; --panel:#132328; --ink:#e6f0f1; --muted:#93a9b0; --line:#21363c;
+  --hero1:#062a30; --hero2:#0a5a57; --on-hero-2:#9fd6d1;
+  --accent:#43c7bd; --accent-soft:#143433; --sun:#f3b440; --sun-soft:#352a12; --sun-ink:#f3c56b;
+  --bad:#f2786f; --bad-soft:#3a1d1b; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 var(--sans)}
-.wrap{max-width:1000px;margin:0 auto;padding:28px 16px 60px}
-h1{font-size:28px;margin:0 0 4px;font-weight:800;text-wrap:balance}
-h2{font-size:20px;margin:32px 0 12px}
-.muted{color:var(--muted)}
-.upd{color:var(--muted);font-size:13px;margin-top:6px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 var(--font);-webkit-font-smoothing:antialiased}
 a{color:inherit}
-button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
 
-/* escolha de unidade */
-.busca{width:100%;font:inherit;font-size:18px;padding:14px 16px;border:2px solid var(--line);border-radius:12px;background:var(--panel);color:var(--ink);margin:20px 0}
-.units{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
-.u{display:flex;flex-direction:column;gap:4px;padding:18px;border-radius:12px;background:var(--panel);border:2px solid var(--line);text-decoration:none;transition:border-color .15s}
-.u:hover{border-color:var(--accent)}
-.u b{font-size:19px}
-.u span{color:var(--muted);font-size:14px}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:var(--on-hero);padding:36px 16px 88px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;border:40px solid rgba(255,255,255,.06)}
+.hero .in,.main{max-width:1040px;margin:0 auto}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-hero-2);font-weight:500}
+.hero h1{font-size:clamp(30px,5vw,46px);line-height:1.05;margin:8px 0 10px;font-weight:700;text-wrap:balance}
+.hero p{margin:0;color:var(--on-hero-2);max-width:56ch}
+.voltar{display:inline-flex;gap:8px;align-items:center;color:var(--on-hero);text-decoration:none;font-weight:500;font-size:15px;background:rgba(255,255,255,.12);padding:7px 14px;border-radius:99px;margin-bottom:18px}
+.voltar:hover{background:rgba(255,255,255,.2)}
+.upd{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:13px;color:var(--on-hero-2)}
+.upd::before{content:"";width:8px;height:8px;border-radius:50%;background:#5fe0a8;box-shadow:0 0 0 4px rgba(95,224,168,.2)}
 
-/* página da unidade */
-.voltar{display:inline-flex;gap:6px;align-items:center;font-weight:600;text-decoration:none;color:var(--accent);margin-bottom:16px}
-.resumo{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
-.resumo div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;flex:1;min-width:140px}
-.resumo b{display:block;font-size:30px;font-weight:800;font-variant-numeric:tabular-nums}
+.main{padding:0 16px 64px;margin-top:-56px;position:relative}
+.busca{width:100%;font:inherit;font-size:18px;padding:18px 20px 18px 52px;border:0;border-radius:16px;background:var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='none' stroke='%235b707a' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='9.5' cy='9.5' r='6.5'/%3E%3Cpath d='m14.5 14.5 5 5'/%3E%3C/svg%3E") no-repeat 18px center;color:var(--ink);box-shadow:var(--shadow);margin-bottom:22px}
+.units{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.u{display:flex;flex-direction:column;gap:14px;padding:20px;border-radius:16px;background:var(--panel);box-shadow:var(--shadow);text-decoration:none;transition:transform .15s,box-shadow .15s;border:1px solid transparent}
+.u:hover{transform:translateY(-2px);border-color:var(--accent)}
+.u .nome{font-size:21px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.u .nome::after{content:"→";color:var(--accent);font-weight:500}
+.u .stats{display:flex;gap:18px}
+.u .stats div{display:flex;flex-direction:column}
+.u .stats b{font-size:26px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.1}
+.u .stats span{font-size:13px;color:var(--muted)}
+
+.resumo{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.resumo div{background:var(--panel);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+.resumo b{display:block;font-size:34px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1;color:var(--accent)}
 .resumo span{color:var(--muted);font-size:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px}
-.card .quando{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
-.data{font-weight:700}
-.pill{font-size:13px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
-.pill.breve{background:var(--warn-soft);color:var(--warn)}
-.pill.cancel{background:var(--bad-soft);color:var(--bad)}
-.card h3{margin:0;font-size:17px;line-height:1.3;text-wrap:balance}
-.card .local{font-size:14px;color:var(--muted)}
-.insc{display:flex;align-items:baseline;gap:8px;margin-top:auto;padding-top:10px;border-top:1px solid var(--line)}
-.insc b{font-size:36px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
-.insc span{color:var(--muted)}
-.btn{display:block;text-align:center;padding:10px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
-.passados{background:var(--panel);border:1px solid var(--line);border-radius:12px}
-.passados summary{padding:14px 18px;cursor:pointer;font-weight:700}
-.prow{display:flex;justify-content:space-between;gap:16px;padding:10px 18px;border-top:1px solid var(--line)}
+h2{font-size:22px;margin:40px 0 14px;font-weight:700;display:flex;align-items:center;gap:10px}
+h2 small{font-size:14px;font-weight:500;color:var(--muted)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--panel);border-radius:18px;padding:20px;box-shadow:var(--shadow);display:grid;grid-template-columns:auto 1fr;gap:14px 16px;align-content:start}
+.cal{width:62px;border-radius:12px;overflow:hidden;text-align:center;background:var(--accent-soft);align-self:start}
+.cal .m{background:var(--accent);color:#fff;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:3px 0;font-weight:500}
+.cal .d{font-size:28px;font-weight:700;color:var(--accent);padding:4px 0 0;line-height:1}
+.cal .w{font-size:11px;color:var(--muted);padding:2px 0 6px;text-transform:uppercase;letter-spacing:.06em}
+.card.breve .cal{background:var(--sun-soft)} .card.breve .cal .m{background:var(--sun);color:#3a2600} .card.breve .cal .d{color:var(--sun-ink)}
+.card.cancel{opacity:.75} .card.cancel .cal{background:var(--bad-soft)} .card.cancel .cal .m{background:var(--bad)} .card.cancel .cal .d{color:var(--bad)}
+.info{min-width:0;display:flex;flex-direction:column;gap:6px}
+.pill{align-self:start;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent)}
+.breve .pill{background:var(--sun-soft);color:var(--sun-ink)} .cancel .pill{background:var(--bad-soft);color:var(--bad)}
+.card h3{margin:0;font-size:17px;line-height:1.3;font-weight:700;text-wrap:balance}
+.local{font-size:14px;color:var(--muted)}
+.base{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px dashed var(--line)}
+.insc b{font-size:34px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1;margin-right:6px}
+.insc span{color:var(--muted);font-size:14px}
+.btn{padding:10px 16px;border-radius:12px;background:var(--accent);color:#fff;font-weight:500;text-decoration:none;font-size:14px;white-space:nowrap}
+.btn:hover{filter:brightness(1.08)}
+
+.passados{background:var(--panel);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.passados summary{padding:16px 20px;cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between}
+.passados summary::after{content:"+";color:var(--accent);font-size:20px;line-height:1}
+.passados[open] summary::after{content:"–"}
+.prow{display:flex;justify-content:space-between;gap:16px;padding:12px 20px;border-top:1px solid var(--line)}
 .prow div{min-width:0}
-.prow b{font-variant-numeric:tabular-nums;white-space:nowrap}
-.vazio{background:var(--panel);border:1px dashed var(--line);border-radius:12px;padding:28px;text-align:center;color:var(--muted)}
-.copiar{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:8px 12px;cursor:pointer;margin-top:12px}
+.prow b{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--accent)}
+.vazio{background:var(--panel);border-radius:16px;padding:32px;text-align:center;color:var(--muted);box-shadow:var(--shadow)}
+.copiar{font:inherit;font-size:14px;border:1px solid rgba(255,255,255,.35);background:transparent;color:var(--on-hero);border-radius:99px;padding:7px 14px;cursor:pointer;margin-top:16px;margin-left:10px}
+.copiar:hover{background:rgba(255,255,255,.12)}
+@media (max-width:600px){.resumo{grid-template-columns:1fr 1fr}.resumo div:last-child{grid-column:1/-1}.base{flex-wrap:wrap}.btn{flex:1;text-align:center}}
+@media (prefers-reduced-motion:reduce){.u{transition:none}.u:hover{transform:none}}
 </style>
 </head>
 <body>
-<div class="wrap" id="app"><p class="muted">Carregando…</p></div>
+<div id="app"><div class="hero"><div class="in"><div class="eyebrow">Faculdade Inspirar</div><h1>Carregando…</h1></div></div></div>
 <script>
 const app = document.getElementById('app');
 const fmt = n => n == null ? '—' : n.toLocaleString('pt-BR');
@@ -71,33 +99,34 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;
 const slug = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const DIA = 864e5;
 let EV = [], UNITS = [], UPD = '';
-
 const label = e => e.unidade;
-const dataLonga = d => new Date(d).toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'long'});
-const dataCurta = d => new Date(d).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'numeric'});
+const dataCurta = d => new Date(d).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});
+const mes = d => new Date(d).toLocaleDateString('pt-BR',{month:'short'}).replace('.','');
+const sem = d => new Date(d).toLocaleDateString('pt-BR',{weekday:'short'}).replace('.','');
+const futuro = e => new Date(e.fim||e.inicio).getTime() >= Date.now();
 function falta(e){
   if (e.cancelado) return ['Cancelado','cancel'];
   const dias = Math.ceil((new Date(e.inicio) - Date.now())/DIA);
-  if (dias <= 0) return ['Acontecendo','breve'];
+  if (dias <= 0) return ['Acontecendo agora','breve'];
   if (dias === 1) return ['É amanhã','breve'];
   if (dias <= 7) return [`Faltam ${dias} dias`,'breve'];
   return [`Faltam ${dias} dias`,''];
 }
-const futuro = e => new Date(e.fim||e.inicio).getTime() >= Date.now();
+const hero = (inner) => `<header class="hero"><div class="in">${inner}<div class="upd">${UPD}</div></div></header>`;
 
 function home(){
-  app.innerHTML = `
-    <h1>Inscrições dos eventos</h1>
-    <div class="muted">Escolha a sua unidade para ver quantas pessoas já se inscreveram.</div>
-    <div class="upd">${UPD}</div>
-    <input class="busca" id="busca" type="search" placeholder="Digite o nome da sua cidade…" aria-label="Buscar unidade">
-    <div class="units" id="units"></div>`;
-  const draw = q => {
-    q = slug(q||'');
+  app.innerHTML = hero(`<div class="eyebrow">Faculdade Inspirar · Sympla</div>
+      <h1>Inscrições dos eventos</h1>
+      <p>Escolha a sua cidade para ver quantas pessoas já se inscreveram em cada evento.</p>`) + `
+    <main class="main">
+      <input class="busca" id="busca" type="search" placeholder="Digite o nome da sua cidade" aria-label="Buscar cidade">
+      <div class="units" id="units"></div>
+    </main>`;
+  const draw = q => { q = slug(q||'');
     document.getElementById('units').innerHTML = UNITS.filter(u=>!q||u.slug.includes(q)).map(u =>
-      `<a class="u" href="#${u.slug}"><b>${esc(u.nome)}</b><span>${u.prox ? `${u.prox} ${u.prox>1?'eventos':'evento'} pela frente · ${fmt(u.inscProx)} inscritos` : 'Nenhum evento marcado'}</span></a>`
-    ).join('') || '<div class="vazio">Nenhuma cidade com evento marcado tem esse nome.</div>';
-  };
+      `<a class="u" href="#${u.slug}"><span class="nome">${esc(u.nome)}</span>
+        <span class="stats"><div><b>${u.prox}</b><span>${u.prox>1?'eventos':'evento'}</span></div><div><b>${fmt(u.inscProx)}</b><span>inscritos</span></div></span></a>`
+    ).join('') || '<div class="vazio">Nenhuma cidade com evento marcado tem esse nome.</div>'; };
   draw();
   document.getElementById('busca').oninput = e => draw(e.target.value);
 }
@@ -108,49 +137,47 @@ function unidade(u){
   const canc = evs.filter(e=>futuro(e) && e.cancelado);
   const pass = evs.filter(e=>!futuro(e) && !e.cancelado).sort((a,b)=>b.inicio.localeCompare(a.inicio));
   const totProx = prox.reduce((s,e)=>s+(e.inscritos||0),0);
-  const card = e => { const [t,c] = falta(e); return `
-    <article class="card">
-      <div class="quando"><span class="data">${dataLonga(e.inicio)}</span><span class="pill ${c}">${t}</span></div>
-      <h3>${esc(e.nome)}</h3>
-      ${e.local?`<div class="local">${esc(e.local)}</div>`:''}
-      <div class="insc"><b>${fmt(e.inscritos)}</b><span>${e.inscritos===1?'inscrito':'inscritos'}</span></div>
-      ${e.url&&!e.cancelado?`<a class="btn" href="${esc(e.url)}" target="_blank" rel="noopener">Abrir página de inscrição</a>`:''}
+  const card = e => { const [t,c] = falta(e); const d = new Date(e.inicio); return `
+    <article class="card ${c}">
+      <div class="cal" aria-hidden="true"><div class="m">${mes(d)}</div><div class="d">${d.getDate()}</div><div class="w">${sem(d)}</div></div>
+      <div class="info"><span class="pill">${t}</span><h3>${esc(e.nome)}</h3>${e.local?`<div class="local">${esc(e.local)}</div>`:''}</div>
+      <div class="base"><div class="insc"><b>${fmt(e.inscritos)}</b><span>${e.inscritos===1?'inscrito':'inscritos'}</span></div>
+        ${e.url&&!e.cancelado?`<a class="btn" href="${esc(e.url)}" target="_blank" rel="noopener">Ver no Sympla</a>`:''}</div>
     </article>`; };
-  app.innerHTML = `
-    <a class="voltar" href="#">← Todas as unidades</a>
-    <h1>${esc(u.nome)}</h1>
-    <div class="upd">${UPD}</div>
-    <button class="copiar" id="copiar">Copiar link desta unidade</button>
-    <div class="resumo">
-      <div><b>${prox.length}</b><span>eventos pela frente</span></div>
-      <div><b>${fmt(totProx)}</b><span>pessoas inscritas neles</span></div>
-      <div><b>${prox[0]?dataCurta(prox[0].inicio):'—'}</b><span>próximo evento</span></div>
-    </div>
-    <h2>Próximos eventos</h2>
-    ${prox.length ? `<div class="cards">${prox.map(card).join('')}</div>` : '<div class="vazio">Nenhum evento marcado para esta unidade no momento.</div>'}
-    ${canc.length ? `<h2>Cancelados</h2><div class="cards">${canc.map(card).join('')}</div>` : ''}
-    ${pass.length ? `<h2>Já realizados</h2><details class="passados"><summary>Ver ${pass.length} eventos realizados</summary>
-      ${pass.map(e=>`<div class="prow"><div>${esc(e.nome)}<div class="muted" style="font-size:14px">${dataCurta(e.inicio)}</div></div><b>${fmt(e.inscritos)} inscritos</b></div>`).join('')}</details>` : ''}`;
+  app.innerHTML = hero(`<a class="voltar" href="#">← Todas as cidades</a>
+      <div class="eyebrow">Eventos da unidade</div><h1>${esc(u.nome)}</h1>
+      <p>Inscrições confirmadas no Sympla em cada evento marcado.<button class="copiar" id="copiar">Copiar link</button></p>`) + `
+    <main class="main">
+      <div class="resumo">
+        <div><b>${prox.length}</b><span>${prox.length===1?'evento pela frente':'eventos pela frente'}</span></div>
+        <div><b>${fmt(totProx)}</b><span>pessoas inscritas</span></div>
+        <div><b>${prox[0]?dataCurta(prox[0].inicio):'—'}</b><span>próximo evento</span></div>
+      </div>
+      <h2>Próximos eventos</h2>
+      ${prox.length ? `<div class="cards">${prox.map(card).join('')}</div>` : '<div class="vazio">Nenhum evento marcado para esta cidade no momento.</div>'}
+      ${canc.length ? `<h2>Cancelados</h2><div class="cards">${canc.map(card).join('')}</div>` : ''}
+      ${pass.length ? `<h2>Já realizados <small>${pass.length}</small></h2><details class="passados"><summary>Ver eventos realizados</summary>
+        ${pass.map(e=>`<div class="prow"><div>${esc(e.nome)}<div class="local">${new Date(e.inicio).toLocaleDateString('pt-BR')}</div></div><b>${fmt(e.inscritos)}</b></div>`).join('')}</details>` : ''}
+    </main>`;
   const b = document.getElementById('copiar');
   b.onclick = () => navigator.clipboard.writeText(location.href).then(()=>b.textContent='Link copiado ✓').catch(()=>b.textContent=location.href);
   scrollTo(0,0);
 }
 
 function route(){
-  const h = decodeURIComponent(location.hash.slice(1));
-  const u = UNITS.find(x=>x.slug===h);
+  const u = UNITS.find(x=>x.slug===decodeURIComponent(location.hash.slice(1)));
   u ? unidade(u) : home();
 }
 
 fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
   EV = d.events.filter(e=>e.inicio);
-  UPD = 'Atualizado em ' + new Date(d.atualizadoEm).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'}) + ' · os números são atualizados todo dia às 6h';
+  UPD = 'Atualizado em ' + new Date(d.atualizadoEm).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'}) + ' · todo dia às 6h';
   const m = new Map();
   EV.forEach(e => { const k=label(e); if(!m.has(k)) m.set(k,{nome:k,slug:slug(k),prox:0,inscProx:0});
     if (futuro(e)&&!e.cancelado){ const u=m.get(k); u.prox++; u.inscProx+=e.inscritos||0; } });
-  UNITS = [...m.values()].filter(u=>u.prox>0).sort((a,b)=>a.nome.localeCompare(b.nome,"pt"));
+  UNITS = [...m.values()].filter(u=>u.prox>0).sort((a,b)=>a.nome.localeCompare(b.nome,'pt'));
   route();
-}).catch(()=>{ app.innerHTML='<h1>Inscrições dos eventos</h1><div class="vazio">Os números ainda não foram gerados. Volte em alguns minutos.</div>'; });
+}).catch(()=>{ UPD='Sem dados ainda'; app.innerHTML = hero('<h1>Inscrições dos eventos</h1><p>Os números ainda não foram gerados. Volte em alguns minutos.</p>'); });
 addEventListener('hashchange', route);
 </script>
 </body>
