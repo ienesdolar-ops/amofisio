@@ -32,6 +32,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(-
 .topo{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:28px}
 .logo{height:44px;width:auto;display:block}
 .topo .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-hero-2);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:99px;white-space:nowrap}
+.hero h1.big{font-size:clamp(34px,6.2vw,62px);max-width:16ch;letter-spacing:-.01em}
 .hero h1 em{font-style:normal;color:#4cc3f0}
 .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-hero-2);font-weight:500}
 .hero h1{font-size:clamp(30px,5vw,46px);line-height:1.05;margin:8px 0 10px;font-weight:700;text-wrap:balance}
@@ -43,15 +44,22 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(-
 
 .main{padding:0 16px 64px;margin-top:-56px;position:relative}
 .busca{width:100%;font:inherit;font-size:18px;padding:18px 20px 18px 52px;border:0;border-radius:16px;background:var(--panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='none' stroke='%235b707a' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='9.5' cy='9.5' r='6.5'/%3E%3Cpath d='m14.5 14.5 5 5'/%3E%3C/svg%3E") no-repeat 18px center;color:var(--ink);box-shadow:var(--shadow);margin-bottom:22px}
-.units{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
-.u{display:flex;flex-direction:column;gap:14px;padding:20px;border-radius:16px;background:var(--panel);box-shadow:var(--shadow);text-decoration:none;transition:transform .15s,box-shadow .15s;border:1px solid transparent}
-.u:hover{transform:translateY(-2px);border-color:var(--accent)}
-.u .nome{font-size:21px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:8px}
-.u .nome::after{content:"→";color:var(--accent);font-weight:500}
-.u .stats{display:flex;gap:18px}
-.u .stats div{display:flex;flex-direction:column}
-.u .stats b{font-size:26px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.1}
-.u .stats span{font-size:13px;color:var(--muted)}
+.menu-tit{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:6px 4px 14px;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.units{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.u{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:18px;padding:24px 22px 20px;border-radius:22px;background:linear-gradient(150deg,#0b2f4c,#06233a 70%);color:#fff;text-decoration:none;box-shadow:0 12px 30px rgba(6,35,58,.22);transition:transform .2s,box-shadow .2s}
+.u::before{content:"";position:absolute;right:-46px;top:-46px;width:170px;height:170px;background:url(img/simbolo-branco.png) center/contain no-repeat;opacity:.07;transition:opacity .2s,transform .4s}
+.u:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(18,149,201,.35)}
+.u:hover::before{opacity:.14;transform:rotate(-12deg)}
+.u .topo-u{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.u .nome{font-size:26px;font-weight:700;line-height:1.1;text-wrap:balance}
+.u .seta{flex:none;width:42px;height:42px;border-radius:50%;background:#4cc3f0;color:#06233a;display:grid;place-items:center;font-size:20px;font-weight:700;transition:transform .2s}
+.u:hover .seta{transform:translateX(4px)}
+.u .prox{font-size:14px;color:#a9d9ef;line-height:1.35;min-height:2.7em}
+.u .prox b{color:#fff;font-weight:500}
+.u .stats{display:flex;gap:10px}
+.u .stats div{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column}
+.u .stats b{font-size:28px;font-weight:700;color:#4cc3f0;font-variant-numeric:tabular-nums;line-height:1.05}
+.u .stats span{font-size:12px;color:#a9d9ef;text-transform:uppercase;letter-spacing:.08em}
 
 .resumo{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .resumo div{background:var(--panel);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
@@ -119,18 +127,21 @@ const hero = (inner) => `<header class="hero"><div class="in"><div class="topo">
 
 function home(){
   app.innerHTML = hero(`<div class="eyebrow">Painel das unidades</div>
-      <h1>Inscrições dos <em>eventos</em></h1>
-      <p>Escolha a sua cidade para ver quantas pessoas já se inscreveram em cada evento.</p>`) + `
+      <h1 class="big">Veja como está <em>seu evento</em> no Sympla</h1>
+      <p>Escolha a sua cidade e acompanhe quantas pessoas já se inscreveram.</p>`) + `
     <main class="main">
       <input class="busca" id="busca" type="search" placeholder="Digite o nome da sua cidade" aria-label="Buscar cidade">
+      <div class="menu-tit"><span>Escolha sua cidade</span><span id="qtd"></span></div>
       <div class="units" id="units"></div>
     </main>`;
   const draw = q => { q = slug(q||'');
     document.getElementById('units').innerHTML = UNITS.filter(u=>!q||u.slug.includes(q)).map(u =>
-      `<a class="u" href="#${u.slug}"><span class="nome">${esc(u.nome)}</span>
+      `<a class="u" href="#${u.slug}"><span class="topo-u"><span class="nome">${esc(u.nome)}</span><span class="seta" aria-hidden="true">→</span></span>
+        <span class="prox">Próximo: <b>${esc(u.next.nome)}</b> · ${dataCurta(u.next.inicio)}</span>
         <span class="stats"><div><b>${u.prox}</b><span>${u.prox>1?'eventos':'evento'}</span></div><div><b>${fmt(u.inscProx)}</b><span>inscritos</span></div></span></a>`
     ).join('') || '<div class="vazio">Nenhuma cidade com evento marcado tem esse nome.</div>'; };
   draw();
+  document.getElementById('qtd').textContent = UNITS.length + (UNITS.length===1?' cidade':' cidades');
   document.getElementById('busca').oninput = e => draw(e.target.value);
 }
 
@@ -177,7 +188,7 @@ fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
   UPD = 'Atualizado em ' + new Date(d.atualizadoEm).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'}) + ' · todo dia às 6h';
   const m = new Map();
   EV.forEach(e => { const k=label(e); if(!m.has(k)) m.set(k,{nome:k,slug:slug(k),prox:0,inscProx:0});
-    if (futuro(e)&&!e.cancelado){ const u=m.get(k); u.prox++; u.inscProx+=e.inscritos||0; } });
+    if (futuro(e)&&!e.cancelado){ const u=m.get(k); u.prox++; u.inscProx+=e.inscritos||0; if(!u.next||e.inicio<u.next.inicio) u.next=e; } });
   UNITS = [...m.values()].filter(u=>u.prox>0).sort((a,b)=>a.nome.localeCompare(b.nome,'pt'));
   route();
 }).catch(()=>{ UPD='Sem dados ainda'; app.innerHTML = hero('<h1>Inscrições dos eventos</h1><p>Os números ainda não foram gerados. Volte em alguns minutos.</p>'); });
