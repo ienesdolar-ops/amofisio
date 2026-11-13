@@ -4,32 +4,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Painel Sympla Inspirar</title>
+<title>Eventos Inspirar</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<link rel="icon" href="img/simbolo-branco.png">
 <style>
-@font-face{font-family:"Ample Soft";src:url(fonts/AmpleSoftPro-Regular.ttf) format("truetype");font-weight:400;font-display:swap}
-@font-face{font-family:"Ample Soft";src:url(fonts/AmpleSoftPro-Medium.ttf) format("truetype");font-weight:500;font-display:swap}
-@font-face{font-family:"Ample Soft";src:url(fonts/AmpleSoftPro-Bold.ttf) format("truetype");font-weight:700;font-display:swap}
-/* Layout: faixa-herói colorida com o título → conteúdo sobe sobre ela em cartões; data em bloco de calendário */
+/* Layout: faixa-herói marinho com logo e foto da rede → conteúdo sobe em cartões; data em bloco de calendário */
 :root{
-  --bg:#eef3f4; --panel:#ffffff; --ink:#10242b; --muted:#5b707a; --line:#dbe5e8;
-  --hero1:#063f47; --hero2:#0b7a75; --on-hero:#ffffff; --on-hero-2:#bfe7e3;
-  --accent:#0b7a75; --accent-soft:#dcf1ef; --sun:#f3a712; --sun-soft:#fdf0d4; --sun-ink:#8a5a00;
-  --bad:#b3261e; --bad-soft:#f8dedb; --shadow:0 1px 2px rgba(6,63,71,.06),0 8px 24px rgba(6,63,71,.07);
-  --font:"Ample Soft",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --bg:#eef4f8; --panel:#ffffff; --ink:#06233a; --muted:#4a5a68; --line:#d9e4ec;
+  --hero1:#06233a; --hero2:#0b2f4c; --on-hero:#ffffff; --on-hero-2:#a9d9ef;
+  --accent:#1295c9; --accent-soft:#d9f1fb; --sun:#4cc3f0; --sun-soft:#06233a; --sun-ink:#7fd3f3;
+  --bad:#b3261e; --bad-soft:#f8dedb; --shadow:0 1px 2px rgba(6,35,58,.06),0 10px 28px rgba(6,35,58,.08);
+  --font:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#0b1619; --panel:#132328; --ink:#e6f0f1; --muted:#93a9b0; --line:#21363c;
-  --hero1:#062a30; --hero2:#0a5a57; --on-hero-2:#9fd6d1;
-  --accent:#43c7bd; --accent-soft:#143433; --sun:#f3b440; --sun-soft:#352a12; --sun-ink:#f3c56b;
-  --bad:#f2786f; --bad-soft:#3a1d1b; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+  --bg:#08192a; --panel:#0d2a3c; --ink:#eaf2f6; --muted:#9fb2c0; --line:#173a52;
+  --hero1:#041726; --hero2:#0b2f4c; --on-hero-2:#7fd3f3;
+  --accent:#4cc3f0; --accent-soft:#0f3550; --sun:#4cc3f0; --sun-soft:#4cc3f0; --sun-ink:#06233a;
+  --bad:#f2786f; --bad-soft:#3a1d1b; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 28px rgba(0,0,0,.3); color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 var(--font);-webkit-font-smoothing:antialiased}
 a{color:inherit}
 button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
 
-.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:var(--on-hero);padding:36px 16px 88px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;border:40px solid rgba(255,255,255,.06)}
-.hero .in,.main{max-width:1040px;margin:0 auto}
+.hero{background:linear-gradient(100deg,var(--hero1) 35%,rgba(6,35,58,.82) 70%,rgba(6,35,58,.55)),url(img/equipe.jpg) center 30%/cover,var(--hero1);color:var(--on-hero);padding:28px 16px 92px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;bottom:-120px;width:380px;height:380px;background:url(img/simbolo-branco.png) center/contain no-repeat;opacity:.08;pointer-events:none}
+.hero .in,.main{max-width:1040px;margin:0 auto;position:relative;z-index:1}
+.topo{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:28px}
+.logo{height:44px;width:auto;display:block}
+.topo .tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-hero-2);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:99px;white-space:nowrap}
+.hero h1 em{font-style:normal;color:#4cc3f0}
 .eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-hero-2);font-weight:500}
 .hero h1{font-size:clamp(30px,5vw,46px);line-height:1.05;margin:8px 0 10px;font-weight:700;text-wrap:balance}
 .hero p{margin:0;color:var(--on-hero-2);max-width:56ch}
@@ -63,7 +66,7 @@ h2 small{font-size:14px;font-weight:500;color:var(--muted)}
 .cal .m{background:var(--accent);color:#fff;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:3px 0;font-weight:500}
 .cal .d{font-size:28px;font-weight:700;color:var(--accent);padding:4px 0 0;line-height:1}
 .cal .w{font-size:11px;color:var(--muted);padding:2px 0 6px;text-transform:uppercase;letter-spacing:.06em}
-.card.breve .cal{background:var(--sun-soft)} .card.breve .cal .m{background:var(--sun);color:#3a2600} .card.breve .cal .d{color:var(--sun-ink)}
+.card.breve .cal{background:var(--sun-soft)} .card.breve .cal .m{background:var(--sun);color:#06233a} .card.breve .cal .d{color:var(--sun-ink)}
 .card.cancel{opacity:.75} .card.cancel .cal{background:var(--bad-soft)} .card.cancel .cal .m{background:var(--bad)} .card.cancel .cal .d{color:var(--bad)}
 .info{min-width:0;display:flex;flex-direction:column;gap:6px}
 .pill{align-self:start;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent)}
@@ -73,7 +76,7 @@ h2 small{font-size:14px;font-weight:500;color:var(--muted)}
 .base{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px dashed var(--line)}
 .insc b{font-size:34px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1;margin-right:6px}
 .insc span{color:var(--muted);font-size:14px}
-.btn{padding:10px 16px;border-radius:12px;background:var(--accent);color:#fff;font-weight:500;text-decoration:none;font-size:14px;white-space:nowrap}
+.btn{padding:10px 16px;border-radius:99px;background:var(--hero1);color:#fff;font-weight:500;text-decoration:none;font-size:14px;white-space:nowrap}
 .btn:hover{filter:brightness(1.08)}
 
 .passados{background:var(--panel);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
@@ -91,7 +94,7 @@ h2 small{font-size:14px;font-weight:500;color:var(--muted)}
 </style>
 </head>
 <body>
-<div id="app"><div class="hero"><div class="in"><div class="eyebrow">Faculdade Inspirar</div><h1>Carregando…</h1></div></div></div>
+<div id="app"><div class="hero"><div class="in"><img class="logo" src="img/logo-branco.png" alt="Faculdade Inspirar"><h1 style="margin-top:28px">Carregando…</h1></div></div></div>
 <script>
 const app = document.getElementById('app');
 const fmt = n => n == null ? '—' : n.toLocaleString('pt-BR');
@@ -112,11 +115,11 @@ function falta(e){
   if (dias <= 7) return [`Faltam ${dias} dias`,'breve'];
   return [`Faltam ${dias} dias`,''];
 }
-const hero = (inner) => `<header class="hero"><div class="in">${inner}<div class="upd">${UPD}</div></div></header>`;
+const hero = (inner) => `<header class="hero"><div class="in"><div class="topo"><a href="#" aria-label="Início"><img class="logo" src="img/logo-branco.png" alt="Faculdade Inspirar"></a><span class="tag">Eventos</span></div>${inner}<div class="upd">${UPD}</div></div></header>`;
 
 function home(){
-  app.innerHTML = hero(`<div class="eyebrow">Faculdade Inspirar · Sympla</div>
-      <h1>Inscrições dos eventos</h1>
+  app.innerHTML = hero(`<div class="eyebrow">Painel das unidades</div>
+      <h1>Inscrições dos <em>eventos</em></h1>
       <p>Escolha a sua cidade para ver quantas pessoas já se inscreveram em cada evento.</p>`) + `
     <main class="main">
       <input class="busca" id="busca" type="search" placeholder="Digite o nome da sua cidade" aria-label="Buscar cidade">
