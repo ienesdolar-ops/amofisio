@@ -136,7 +136,7 @@ function home(){
     </main>`;
   const draw = q => { q = slug(q||'');
     document.getElementById('units').innerHTML = UNITS.filter(u=>!q||u.slug.includes(q)).map(u =>
-      `<a class="u" href="#${u.slug}"><span class="topo-u"><span class="nome">${esc(u.nome)}</span><span class="seta" aria-hidden="true">→</span></span>
+      `<a class="u" href="#${u.slug}"><span class="topo-u"><span class="nome">${esc(u.nome)}</span></span>
         <span class="prox">Próximo: <b>${esc(u.next.nome)}</b> · ${dataCurta(u.next.inicio)}</span>
         <span class="stats"><div><b>${u.prox}</b><span>${u.prox>1?'eventos':'evento'}</span></div><div><b>${fmt(u.inscProx)}</b><span>inscritos</span></div></span></a>`
     ).join('') || '<div class="vazio">Nenhuma cidade com evento marcado tem esse nome.</div>'; };
