@@ -1,5 +1,5 @@
 {
- "atualizadoEm": "2026-11-13T13:09:12.159Z",
+ "atualizadoEm": "2026-11-14T15:45:30.227Z",
  "events": [
   {
    "id": 3013926,
@@ -125,7 +125,7 @@
    "tipo": "Outros",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 12
+   "inscritos": 14
   },
   {
    "id": 3650502,
@@ -139,7 +139,7 @@
    "tipo": "Curso",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 8
+   "inscritos": 9
   },
   {
    "id": 3618666,
