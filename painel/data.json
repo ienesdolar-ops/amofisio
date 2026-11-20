@@ -1,5 +1,5 @@
 {
- "atualizadoEm": "2026-11-19T18:11:12.593Z",
+ "atualizadoEm": "2026-11-20T17:43:59.542Z",
  "events": [
   {
    "id": 3013926,
@@ -112,6 +112,20 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 3
+  },
+  {
+   "id": 3661347,
+   "nome": "Evolução Intensiva | Taquipneia Transitória do Recém-Nascido",
+   "url": "https://www.sympla.com.br/evoluo-intensiva--taquipneia-transitria-do-recm-nascido__3661347",
+   "inicio": "2026-11-25T22:00:00.000Z",
+   "fim": "2026-11-26T00:00:00.000Z",
+   "unidade": "Online",
+   "uf": "",
+   "local": "",
+   "tipo": "Outros",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 1
   },
   {
    "id": 3637114,
