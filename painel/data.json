@@ -1,5 +1,5 @@
 {
- "atualizadoEm": "2026-11-20T17:43:59.542Z",
+ "atualizadoEm": "2026-11-21T16:45:29.161Z",
  "events": [
   {
    "id": 3013926,
@@ -41,7 +41,7 @@
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 65
+   "inscritos": 68
   },
   {
    "id": 3586470,
@@ -55,7 +55,21 @@
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 21
+   "inscritos": 23
+  },
+  {
+   "id": 3637114,
+   "nome": "Eletrotermofototerapia na prática clínica: dos mecanismos fisiológicos à dosimetria",
+   "url": "https://www.sympla.com.br/eletrotermofototerapia-na-prtica-clnica-dos-mecanismos-fisiolgicos--dosimetria__3637114",
+   "inicio": "2027-02-22T21:00:00.000Z",
+   "fim": "2027-03-05T01:30:00.000Z",
+   "unidade": "Curitiba",
+   "uf": "PR",
+   "local": "Faculdade Inspirar",
+   "tipo": "Outros",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 15
   },
   {
    "id": 3578577,
@@ -126,20 +140,6 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 1
-  },
-  {
-   "id": 3637114,
-   "nome": "Eletrotermofototerapia na prática clínica: dos mecanismos fisiológicos à dosimetria",
-   "url": "https://www.sympla.com.br/eletrotermofototerapia-na-prtica-clnica-dos-mecanismos-fisiolgicos--dosimetria__3637114",
-   "inicio": "2026-11-23T21:00:00.000Z",
-   "fim": "2027-01-15T01:30:00.000Z",
-   "unidade": "Curitiba",
-   "uf": "PR",
-   "local": "Faculdade Inspirar",
-   "tipo": "Outros",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 15
   },
   {
    "id": 3650502,
