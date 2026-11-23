@@ -1,5 +1,5 @@
 {
- "atualizadoEm": "2026-11-22T17:04:23.177Z",
+ "atualizadoEm": "2026-11-23T21:11:01.255Z",
  "events": [
   {
    "id": 3013926,
@@ -55,7 +55,7 @@
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 23
+   "inscritos": 24
   },
   {
    "id": 3637114,
@@ -83,7 +83,7 @@
    "tipo": "Outros",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 23
+   "inscritos": 24
   },
   {
    "id": 3565985,
@@ -97,7 +97,7 @@
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 7
+   "inscritos": 8
   },
   {
    "id": 3582004,
@@ -112,20 +112,6 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 4
-  },
-  {
-   "id": 3604208,
-   "nome": "+ UMA OPORTUNIDADE - Da agenda cheia ao Negócio Sustentável - Faculdade Inspirar + Instituto Movenz",
-   "url": "https://www.sympla.com.br/-uma-oportunidade---da-agenda-cheia-ao-negcio-sustentvel---faculdade-inspirar--instituto-movenz__3604208",
-   "inicio": "2026-11-28T11:00:00.000Z",
-   "fim": "2026-11-28T15:00:00.000Z",
-   "unidade": "Londrina",
-   "uf": "PR",
-   "local": "Faculdade Inspirar Londrina",
-   "tipo": "Outros",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 3
   },
   {
    "id": 3661347,
@@ -198,20 +184,6 @@
    "inscritos": 40
   },
   {
-   "id": 3562962,
-   "nome": "Amofisio: Disfunções Urinárias - do Diagnóstico Funcional ao Plano de Tratamento",
-   "url": "https://www.sympla.com.br/amofisio-disfunes-urinrias---do-diagnstico-funcional-ao-plano-de-tratamento__3562962",
-   "inicio": "2026-11-07T11:00:00.000Z",
-   "fim": "2026-11-07T15:00:00.000Z",
-   "unidade": "Belém",
-   "uf": "PA",
-   "local": "Faculdade Inspirar Belém — Pós-graduação, MBA, Extensão e EaD",
-   "tipo": "AmoFisio",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 13
-  },
-  {
    "id": 3562957,
    "nome": "Amofisio: Imersão prática em ventilação mecânica invasiva e não invasiva",
    "url": "https://www.sympla.com.br/amofisio-imerso-prtica-em-ventilao-mecnica-invasiva-e-no-invasiva__3562957",
@@ -224,6 +196,20 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 27
+  },
+  {
+   "id": 3562962,
+   "nome": "Amofisio: Disfunções Urinárias - do Diagnóstico Funcional ao Plano de Tratamento",
+   "url": "https://www.sympla.com.br/amofisio-disfunes-urinrias---do-diagnstico-funcional-ao-plano-de-tratamento__3562962",
+   "inicio": "2026-11-07T11:00:00.000Z",
+   "fim": "2026-11-07T15:00:00.000Z",
+   "unidade": "Belém",
+   "uf": "PA",
+   "local": "Faculdade Inspirar Belém — Pós-graduação, MBA, Extensão e EaD",
+   "tipo": "AmoFisio",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 13
   },
   {
    "id": 3562953,
@@ -478,20 +464,6 @@
    "inscritos": 12
   },
   {
-   "id": 3599001,
-   "nome": "Amofisio: Do consultório à maternidade - como a fisioterapia transforma a jornada da gestante",
-   "url": "https://www.sympla.com.br/amofisio-do-consultrio--maternidade---como-a-fisioterapia-transforma-a-jornada-da-gestante__3599001",
-   "inicio": "2026-10-31T11:00:00.000Z",
-   "fim": "2026-10-31T15:00:00.000Z",
-   "unidade": "Ribeirão Preto",
-   "uf": "SP",
-   "local": "Faculdade Inspirar Ribeirão Preto",
-   "tipo": "AmoFisio",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 10
-  },
-  {
    "id": 3564928,
    "nome": "Amofisio: Avaliação Funcional de Membros Inferiores - Testes e Aplicação Clínica",
    "url": "https://www.sympla.com.br/amofisio-avaliao-funcional-de-membros-inferiores---testes-e-aplicao-clnica__3564928",
@@ -504,6 +476,20 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 19
+  },
+  {
+   "id": 3584713,
+   "nome": "Amofisio: Escolha 2 aulas e amplie seus conhecimentos em Fisioterapia",
+   "url": "https://www.sympla.com.br/amofisio-escolha-2-aulas-e-amplie-seus-conhecimentos-em-fisioterapia__3584713",
+   "inicio": "2026-10-31T11:00:00.000Z",
+   "fim": "2026-10-31T21:00:00.000Z",
+   "unidade": "Porto Velho",
+   "uf": "RO",
+   "local": "Faculdade Inspirar Porto Velho",
+   "tipo": "AmoFisio",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 31
   },
   {
    "id": 3564737,
@@ -520,18 +506,18 @@
    "inscritos": 12
   },
   {
-   "id": 3584713,
-   "nome": "Amofisio: Escolha 2 aulas e amplie seus conhecimentos em Fisioterapia",
-   "url": "https://www.sympla.com.br/amofisio-escolha-2-aulas-e-amplie-seus-conhecimentos-em-fisioterapia__3584713",
+   "id": 3599001,
+   "nome": "Amofisio: Do consultório à maternidade - como a fisioterapia transforma a jornada da gestante",
+   "url": "https://www.sympla.com.br/amofisio-do-consultrio--maternidade---como-a-fisioterapia-transforma-a-jornada-da-gestante__3599001",
    "inicio": "2026-10-31T11:00:00.000Z",
-   "fim": "2026-10-31T21:00:00.000Z",
-   "unidade": "Porto Velho",
-   "uf": "RO",
-   "local": "Faculdade Inspirar Porto Velho",
+   "fim": "2026-10-31T15:00:00.000Z",
+   "unidade": "Ribeirão Preto",
+   "uf": "SP",
+   "local": "Faculdade Inspirar Ribeirão Preto",
    "tipo": "AmoFisio",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 31
+   "inscritos": 10
   },
   {
    "id": 3560614,
@@ -604,20 +590,6 @@
    "inscritos": 8
   },
   {
-   "id": 3610611,
-   "nome": "Amofisio: Terapia de Alto Fluxo - Novas Tecnologias e Inovação no Suporte Respiratório",
-   "url": "https://www.sympla.com.br/amofisio-terapia-de-alto-fluxo---novas-tecnologias-e-inovao-no-suporte-respiratrio__3610611",
-   "inicio": "2026-10-28T22:00:00.000Z",
-   "fim": "2026-10-29T01:00:00.000Z",
-   "unidade": "Guarulhos",
-   "uf": "SP",
-   "local": "Faculdade Inspirar Guarulhos — Pós-graduação, MBA, Extensão e EaD",
-   "tipo": "AmoFisio",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 18
-  },
-  {
    "id": 3583895,
    "nome": "Amofisio: CosmiFY - Entendendo como fazer da cosmetologia um potencializador dos seus resultados",
    "url": "https://www.sympla.com.br/amofisio-cosmify---entendendo-como-fazer-da-cosmetologia-um-potencializador-dos-seus-resultados__3583895",
@@ -630,6 +602,20 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 30
+  },
+  {
+   "id": 3610611,
+   "nome": "Amofisio: Terapia de Alto Fluxo - Novas Tecnologias e Inovação no Suporte Respiratório",
+   "url": "https://www.sympla.com.br/amofisio-terapia-de-alto-fluxo---novas-tecnologias-e-inovao-no-suporte-respiratrio__3610611",
+   "inicio": "2026-10-28T22:00:00.000Z",
+   "fim": "2026-10-29T01:00:00.000Z",
+   "unidade": "Guarulhos",
+   "uf": "SP",
+   "local": "Faculdade Inspirar Guarulhos — Pós-graduação, MBA, Extensão e EaD",
+   "tipo": "AmoFisio",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 18
   },
   {
    "id": 3560590,
@@ -800,6 +786,20 @@
    "inscritos": 11
   },
   {
+   "id": 3589969,
+   "nome": "Amofisio: Pele Pós-Emagrecimento - GLP-1, Flacidez e Remodelamento Tecidual",
+   "url": "https://www.sympla.com.br/amofisio-pele-ps-emagrecimento---glp-1-flacidez-e-remodelamento-tecidual__3589969",
+   "inicio": "2026-10-24T16:00:00.000Z",
+   "fim": "2026-10-24T20:00:00.000Z",
+   "unidade": "Rio de Janeiro",
+   "uf": "RJ",
+   "local": "Faculdade Inspirar Rio de Janeiro — Pós-graduação, MBA, Extensão e EaD",
+   "tipo": "AmoFisio",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 10
+  },
+  {
    "id": 3573028,
    "nome": "AmoFisio: Mobilização Articular MMII (Membros Inferiores)",
    "url": "https://www.sympla.com.br/amofisio-mobilizao-articular-mmii-membros-inferiores__3573028",
@@ -826,20 +826,6 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 38
-  },
-  {
-   "id": 3589969,
-   "nome": "Amofisio: Pele Pós-Emagrecimento - GLP-1, Flacidez e Remodelamento Tecidual",
-   "url": "https://www.sympla.com.br/amofisio-pele-ps-emagrecimento---glp-1-flacidez-e-remodelamento-tecidual__3589969",
-   "inicio": "2026-10-24T16:00:00.000Z",
-   "fim": "2026-10-24T20:00:00.000Z",
-   "unidade": "Rio de Janeiro",
-   "uf": "RJ",
-   "local": "Faculdade Inspirar Rio de Janeiro — Pós-graduação, MBA, Extensão e EaD",
-   "tipo": "AmoFisio",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 10
   },
   {
    "id": 3556968,
@@ -968,6 +954,20 @@
    "inscritos": 23
   },
   {
+   "id": 3568100,
+   "nome": "Amofisio: Quiropraxia - Uma especialidade do fisioterapeuta. Como ampliar seus resultados clínicos",
+   "url": "https://www.sympla.com.br/amofisio-quiropraxia---uma-especialidade-do-fisioterapeuta-como-ampliar-seus-resultados-clnicos__3568100",
+   "inicio": "2026-10-24T11:00:00.000Z",
+   "fim": "2026-10-24T15:00:00.000Z",
+   "unidade": "Rio de Janeiro",
+   "uf": "RJ",
+   "local": "Faculdade Inspirar Rio de Janeiro — Pós-graduação, MBA, Extensão e EaD",
+   "tipo": "AmoFisio",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 13
+  },
+  {
    "id": 3568083,
    "nome": "Amofisio: Criterios de progressão e Alta na Reconstrução do LCA",
    "url": "https://www.sympla.com.br/amofisio-criterios-de-progresso-e-alta-na-reconstruo-do-lca__3568083",
@@ -980,6 +980,20 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 40
+  },
+  {
+   "id": 3602654,
+   "nome": "Amofisio: Abordagens Terapêuticas na Doença de Parkinson",
+   "url": "https://www.sympla.com.br/amofisio-abordagens-teraputicas-na-doena-de-parkinson__3602654",
+   "inicio": "2026-10-24T11:00:00.000Z",
+   "fim": "2026-10-24T15:00:00.000Z",
+   "unidade": "Rio de Janeiro",
+   "uf": "RJ",
+   "local": "Faculdade Inspirar Rio de Janeiro — Pós-graduação, MBA, Extensão e EaD",
+   "tipo": "AmoFisio",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 4
   },
   {
    "id": 3589946,
@@ -996,32 +1010,18 @@
    "inscritos": 20
   },
   {
-   "id": 3568100,
-   "nome": "Amofisio: Quiropraxia - Uma especialidade do fisioterapeuta. Como ampliar seus resultados clínicos",
-   "url": "https://www.sympla.com.br/amofisio-quiropraxia---uma-especialidade-do-fisioterapeuta-como-ampliar-seus-resultados-clnicos__3568100",
+   "id": 3556990,
+   "nome": "Amofisio: Somatotopias e Reflexologias na MTC - Mapas do corpo para o cuidado integral",
+   "url": "https://www.sympla.com.br/amofisio-somatotopias-e-reflexologias-na-mtc---mapas-do-corpo-para-o-cuidado-integral__3556990",
    "inicio": "2026-10-24T11:00:00.000Z",
    "fim": "2026-10-24T15:00:00.000Z",
-   "unidade": "Rio de Janeiro",
-   "uf": "RJ",
-   "local": "Faculdade Inspirar Rio de Janeiro — Pós-graduação, MBA, Extensão e EaD",
+   "unidade": "Vitória",
+   "uf": "ES",
+   "local": "Faculdade Inspirar Vitória — Pós-graduação, MBA, Extensão e EaD",
    "tipo": "AmoFisio",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 13
-  },
-  {
-   "id": 3602654,
-   "nome": "Amofisio: Abordagens Terapêuticas na Doença de Parkinson",
-   "url": "https://www.sympla.com.br/amofisio-abordagens-teraputicas-na-doena-de-parkinson__3602654",
-   "inicio": "2026-10-24T11:00:00.000Z",
-   "fim": "2026-10-24T15:00:00.000Z",
-   "unidade": "Rio de Janeiro",
-   "uf": "RJ",
-   "local": "Faculdade Inspirar Rio de Janeiro — Pós-graduação, MBA, Extensão e EaD",
-   "tipo": "AmoFisio",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 4
+   "inscritos": 1
   },
   {
    "id": 3557056,
@@ -1050,20 +1050,6 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 13
-  },
-  {
-   "id": 3556990,
-   "nome": "Amofisio: Somatotopias e Reflexologias na MTC - Mapas do corpo para o cuidado integral",
-   "url": "https://www.sympla.com.br/amofisio-somatotopias-e-reflexologias-na-mtc---mapas-do-corpo-para-o-cuidado-integral__3556990",
-   "inicio": "2026-10-24T11:00:00.000Z",
-   "fim": "2026-10-24T15:00:00.000Z",
-   "unidade": "Vitória",
-   "uf": "ES",
-   "local": "Faculdade Inspirar Vitória — Pós-graduação, MBA, Extensão e EaD",
-   "tipo": "AmoFisio",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 1
   },
   {
    "id": 3555390,
@@ -1108,18 +1094,18 @@
    "inscritos": 9
   },
   {
-   "id": 3589937,
-   "nome": "Amofisio: Fisioterapia Manipulativa na Prática - Da Evidência ao Raciocínio Clínico",
-   "url": "https://www.sympla.com.br/amofisio-fisioterapia-manipulativa-na-prtica---da-evidncia-ao-raciocnio-clnico__3589937",
+   "id": 3556987,
+   "nome": "Amofisio: Saúde Mental e Acupuntura - Fundamentos e ferramentas da MTC para o cuidado da mente",
+   "url": "https://www.sympla.com.br/amofisio-sade-mental-e-acupuntura---fundamentos-e-ferramentas-da-mtc-para-o-cuidado-da-mente__3556987",
    "inicio": "2026-10-23T21:00:00.000Z",
    "fim": "2026-10-24T01:00:00.000Z",
-   "unidade": "Campinas",
-   "uf": "SP",
-   "local": "Faculdade Inspirar Campinas — Pós-graduação, MBA, Extensão e EaD",
+   "unidade": "Vitória",
+   "uf": "ES",
+   "local": "Faculdade Inspirar Vitória — Pós-graduação, MBA, Extensão e EaD",
    "tipo": "AmoFisio",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 51
+   "inscritos": 11
   },
   {
    "id": 3574421,
@@ -1136,18 +1122,18 @@
    "inscritos": 14
   },
   {
-   "id": 3556987,
-   "nome": "Amofisio: Saúde Mental e Acupuntura - Fundamentos e ferramentas da MTC para o cuidado da mente",
-   "url": "https://www.sympla.com.br/amofisio-sade-mental-e-acupuntura---fundamentos-e-ferramentas-da-mtc-para-o-cuidado-da-mente__3556987",
+   "id": 3589937,
+   "nome": "Amofisio: Fisioterapia Manipulativa na Prática - Da Evidência ao Raciocínio Clínico",
+   "url": "https://www.sympla.com.br/amofisio-fisioterapia-manipulativa-na-prtica---da-evidncia-ao-raciocnio-clnico__3589937",
    "inicio": "2026-10-23T21:00:00.000Z",
    "fim": "2026-10-24T01:00:00.000Z",
-   "unidade": "Vitória",
-   "uf": "ES",
-   "local": "Faculdade Inspirar Vitória — Pós-graduação, MBA, Extensão e EaD",
+   "unidade": "Campinas",
+   "uf": "SP",
+   "local": "Faculdade Inspirar Campinas — Pós-graduação, MBA, Extensão e EaD",
    "tipo": "AmoFisio",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 11
+   "inscritos": 51
   },
   {
    "id": 3557069,
@@ -1416,9 +1402,9 @@
    "inscritos": 0
   },
   {
-   "id": 3566122,
-   "nome": "Psicologia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Prof. Célio Pinheiro",
-   "url": "https://www.sympla.com.br/psicologia---7-congresso-de-pesquisa-e-extenso---prof-clio-pinheiro__3566122",
+   "id": 3564433,
+   "nome": "Direito - 7° CONGRESSO DE PESQUISA E EXTENSÃO - PALESTRA",
+   "url": "https://www.sympla.com.br/direito---7-congresso-de-pesquisa-e-extenso---palestra__3564433",
    "inicio": "2026-09-10T22:00:00.000Z",
    "fim": "2026-09-11T01:40:00.000Z",
    "unidade": "Curitiba",
@@ -1427,7 +1413,7 @@
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 100
+   "inscritos": 70
   },
   {
    "id": 3564422,
@@ -1444,20 +1430,6 @@
    "inscritos": 69
   },
   {
-   "id": 3564433,
-   "nome": "Direito - 7° CONGRESSO DE PESQUISA E EXTENSÃO - PALESTRA",
-   "url": "https://www.sympla.com.br/direito---7-congresso-de-pesquisa-e-extenso---palestra__3564433",
-   "inicio": "2026-09-10T22:00:00.000Z",
-   "fim": "2026-09-11T01:40:00.000Z",
-   "unidade": "Curitiba",
-   "uf": "PR",
-   "local": "Faculdade Inspirar",
-   "tipo": "Evento científico",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 70
-  },
-  {
    "id": 3566098,
    "nome": "Psicologia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Prof. Pablo Kurlander - noite",
    "url": "https://www.sympla.com.br/psicologia---7-congresso-de-pesquisa-e-extenso---prof-pablo-kurlander---noite__3566098",
@@ -1470,6 +1442,20 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 78
+  },
+  {
+   "id": 3566122,
+   "nome": "Psicologia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Prof. Célio Pinheiro",
+   "url": "https://www.sympla.com.br/psicologia---7-congresso-de-pesquisa-e-extenso---prof-clio-pinheiro__3566122",
+   "inicio": "2026-09-10T22:00:00.000Z",
+   "fim": "2026-09-11T01:40:00.000Z",
+   "unidade": "Curitiba",
+   "uf": "PR",
+   "local": "Faculdade Inspirar",
+   "tipo": "Evento científico",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 100
   },
   {
    "id": 3563452,
@@ -1500,46 +1486,18 @@
    "inscritos": 18
   },
   {
-   "id": 3562842,
-   "nome": "Direito - 7° CONGRESSO DE PESQUISA E EXTENSÃO - PALESTRAS",
-   "url": "https://www.sympla.com.br/direito---7-congresso-de-pesquisa-e-extenso---palestras__3562842",
+   "id": 3572798,
+   "nome": "Fisioterapia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - O que é fáscia e como ela se conecta...",
+   "url": "https://www.sympla.com.br/fisioterapia---7-congresso-de-pesquisa-e-extenso---o-que--fscia-e-como-ela-se-conecta__3572798",
    "inicio": "2026-09-10T11:00:00.000Z",
-   "fim": "2026-09-10T14:40:00.000Z",
+   "fim": "2026-09-10T12:40:00.000Z",
    "unidade": "Curitiba",
    "uf": "PR",
    "local": "Faculdade Inspirar",
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 50
-  },
-  {
-   "id": 3566593,
-   "nome": "Psicologia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Profª. Fabiana Vieira",
-   "url": "https://www.sympla.com.br/psicologia---7-congresso-de-pesquisa-e-extenso---prof-fabiana-vieira__3566593",
-   "inicio": "2026-09-10T11:00:00.000Z",
-   "fim": "2026-09-10T14:40:00.000Z",
-   "unidade": "Curitiba",
-   "uf": "PR",
-   "local": "Faculdade Inspirar",
-   "tipo": "Evento científico",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 22
-  },
-  {
-   "id": 3566087,
-   "nome": "Psicologia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Prof. Célio Pinheiro",
-   "url": "https://www.sympla.com.br/psicologia---7-congresso-de-pesquisa-e-extenso---prof-clio-pinheiro__3566087",
-   "inicio": "2026-09-10T11:00:00.000Z",
-   "fim": "2026-09-10T14:40:00.000Z",
-   "unidade": "Curitiba",
-   "uf": "PR",
-   "local": "Faculdade Inspirar",
-   "tipo": "Evento científico",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 85
+   "inscritos": 2
   },
   {
    "id": 3566039,
@@ -1556,18 +1514,46 @@
    "inscritos": 34
   },
   {
-   "id": 3572798,
-   "nome": "Fisioterapia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - O que é fáscia e como ela se conecta...",
-   "url": "https://www.sympla.com.br/fisioterapia---7-congresso-de-pesquisa-e-extenso---o-que--fscia-e-como-ela-se-conecta__3572798",
+   "id": 3566087,
+   "nome": "Psicologia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Prof. Célio Pinheiro",
+   "url": "https://www.sympla.com.br/psicologia---7-congresso-de-pesquisa-e-extenso---prof-clio-pinheiro__3566087",
    "inicio": "2026-09-10T11:00:00.000Z",
-   "fim": "2026-09-10T12:40:00.000Z",
+   "fim": "2026-09-10T14:40:00.000Z",
    "unidade": "Curitiba",
    "uf": "PR",
    "local": "Faculdade Inspirar",
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 2
+   "inscritos": 85
+  },
+  {
+   "id": 3566593,
+   "nome": "Psicologia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Profª. Fabiana Vieira",
+   "url": "https://www.sympla.com.br/psicologia---7-congresso-de-pesquisa-e-extenso---prof-fabiana-vieira__3566593",
+   "inicio": "2026-09-10T11:00:00.000Z",
+   "fim": "2026-09-10T14:40:00.000Z",
+   "unidade": "Curitiba",
+   "uf": "PR",
+   "local": "Faculdade Inspirar",
+   "tipo": "Evento científico",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 22
+  },
+  {
+   "id": 3562842,
+   "nome": "Direito - 7° CONGRESSO DE PESQUISA E EXTENSÃO - PALESTRAS",
+   "url": "https://www.sympla.com.br/direito---7-congresso-de-pesquisa-e-extenso---palestras__3562842",
+   "inicio": "2026-09-10T11:00:00.000Z",
+   "fim": "2026-09-10T14:40:00.000Z",
+   "unidade": "Curitiba",
+   "uf": "PR",
+   "local": "Faculdade Inspirar",
+   "tipo": "Evento científico",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 50
   },
   {
    "id": 3564732,
@@ -1582,6 +1568,34 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 59
+  },
+  {
+   "id": 3562762,
+   "nome": "Direito - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Palestra: \"Carreira Jurídica, Direito Empresarial\"",
+   "url": "https://www.sympla.com.br/direito---7-congresso-de-pesquisa-e-extenso---palestra-carreira-jurdica-direito-empresarial__3562762",
+   "inicio": "2026-09-09T22:00:00.000Z",
+   "fim": "2026-09-10T01:40:00.000Z",
+   "unidade": "Curitiba",
+   "uf": "PR",
+   "local": "Faculdade Inspirar",
+   "tipo": "Evento científico",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 70
+  },
+  {
+   "id": 3562919,
+   "nome": "Direito - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Palestra:  \"Assédio no Ambiente de Trabalho\"",
+   "url": "https://www.sympla.com.br/direito---7-congresso-de-pesquisa-e-extenso---palestra--assdio-no-ambiente-de-trabalho__3562919",
+   "inicio": "2026-09-09T22:00:00.000Z",
+   "fim": "2026-09-10T01:40:00.000Z",
+   "unidade": "Curitiba",
+   "uf": "PR",
+   "local": "Faculdade Inspirar",
+   "tipo": "Evento científico",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 65
   },
   {
    "id": 3566026,
@@ -1610,34 +1624,6 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 42
-  },
-  {
-   "id": 3562919,
-   "nome": "Direito - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Palestra:  \"Assédio no Ambiente de Trabalho\"",
-   "url": "https://www.sympla.com.br/direito---7-congresso-de-pesquisa-e-extenso---palestra--assdio-no-ambiente-de-trabalho__3562919",
-   "inicio": "2026-09-09T22:00:00.000Z",
-   "fim": "2026-09-10T01:40:00.000Z",
-   "unidade": "Curitiba",
-   "uf": "PR",
-   "local": "Faculdade Inspirar",
-   "tipo": "Evento científico",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 65
-  },
-  {
-   "id": 3562762,
-   "nome": "Direito - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Palestra: \"Carreira Jurídica, Direito Empresarial\"",
-   "url": "https://www.sympla.com.br/direito---7-congresso-de-pesquisa-e-extenso---palestra-carreira-jurdica-direito-empresarial__3562762",
-   "inicio": "2026-09-09T22:00:00.000Z",
-   "fim": "2026-09-10T01:40:00.000Z",
-   "unidade": "Curitiba",
-   "uf": "PR",
-   "local": "Faculdade Inspirar",
-   "tipo": "Evento científico",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 70
   },
   {
    "id": 3566012,
@@ -1682,9 +1668,9 @@
    "inscritos": 21
   },
   {
-   "id": 3565976,
-   "nome": "Psicologia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Profª. Neusa - manhã",
-   "url": "https://www.sympla.com.br/psicologia---7-congresso-de-pesquisa-e-extenso---prof-neusa---manh__3565976",
+   "id": 3562591,
+   "nome": "Direito - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Grupo de Pesquisa em Tribunal do Júri e Palestra",
+   "url": "https://www.sympla.com.br/direito---7-congresso-de-pesquisa-e-extenso---grupo-de-pesquisa-em-tribunal-do-jri-e-palestra__3562591",
    "inicio": "2026-09-09T11:00:00.000Z",
    "fim": "2026-09-09T14:40:00.000Z",
    "unidade": "Curitiba",
@@ -1693,21 +1679,7 @@
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 95
-  },
-  {
-   "id": 3564915,
-   "nome": "Biomedicina - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Gestão e Empreendedorismo na Biomedicina",
-   "url": "https://www.sympla.com.br/biomedicina---7-congresso-de-pesquisa-e-extenso---gesto-e-empreendedorismo-na-biomedicina__3564915",
-   "inicio": "2026-09-09T11:00:00.000Z",
-   "fim": "2026-09-09T22:00:00.000Z",
-   "unidade": "Curitiba",
-   "uf": "PR",
-   "local": "Faculdade Inspirar",
-   "tipo": "Evento científico",
-   "publicado": true,
-   "cancelado": false,
-   "inscritos": 58
+   "inscritos": 63
   },
   {
    "id": 3566803,
@@ -1724,18 +1696,18 @@
    "inscritos": 25
   },
   {
-   "id": 3562591,
-   "nome": "Direito - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Grupo de Pesquisa em Tribunal do Júri e Palestra",
-   "url": "https://www.sympla.com.br/direito---7-congresso-de-pesquisa-e-extenso---grupo-de-pesquisa-em-tribunal-do-jri-e-palestra__3562591",
+   "id": 3564915,
+   "nome": "Biomedicina - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Gestão e Empreendedorismo na Biomedicina",
+   "url": "https://www.sympla.com.br/biomedicina---7-congresso-de-pesquisa-e-extenso---gesto-e-empreendedorismo-na-biomedicina__3564915",
    "inicio": "2026-09-09T11:00:00.000Z",
-   "fim": "2026-09-09T14:40:00.000Z",
+   "fim": "2026-09-09T22:00:00.000Z",
    "unidade": "Curitiba",
    "uf": "PR",
    "local": "Faculdade Inspirar",
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 63
+   "inscritos": 58
   },
   {
    "id": 3566003,
@@ -1750,6 +1722,20 @@
    "publicado": true,
    "cancelado": false,
    "inscritos": 30
+  },
+  {
+   "id": 3565976,
+   "nome": "Psicologia - 7° CONGRESSO DE PESQUISA E EXTENSÃO - Profª. Neusa - manhã",
+   "url": "https://www.sympla.com.br/psicologia---7-congresso-de-pesquisa-e-extenso---prof-neusa---manh__3565976",
+   "inicio": "2026-09-09T11:00:00.000Z",
+   "fim": "2026-09-09T14:40:00.000Z",
+   "unidade": "Curitiba",
+   "uf": "PR",
+   "local": "Faculdade Inspirar",
+   "tipo": "Evento científico",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 95
   },
   {
    "id": 3545562,
