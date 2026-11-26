@@ -1,5 +1,5 @@
 {
- "atualizadoEm": "2026-11-25T19:07:49.611Z",
+ "atualizadoEm": "2026-11-26T18:57:49.386Z",
  "events": [
   {
    "id": 3013926,
@@ -41,7 +41,7 @@
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 69
+   "inscritos": 70
   },
   {
    "id": 3586470,
@@ -55,7 +55,7 @@
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 26
+   "inscritos": 29
   },
   {
    "id": 3637114,
@@ -111,7 +111,7 @@
    "tipo": "Outros",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 23
+   "inscritos": 25
   },
   {
    "id": 3661347,
@@ -125,7 +125,7 @@
    "tipo": "Outros",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 10
+   "inscritos": 11
   },
   {
    "id": 3650502,
