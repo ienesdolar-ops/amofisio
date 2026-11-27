@@ -1,5 +1,5 @@
 {
- "atualizadoEm": "2026-11-26T18:57:49.386Z",
+ "atualizadoEm": "2026-11-27T18:50:02.184Z",
  "events": [
   {
    "id": 3013926,
@@ -83,7 +83,7 @@
    "tipo": "Outros",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 24
+   "inscritos": 25
   },
   {
    "id": 3565985,
@@ -97,7 +97,7 @@
    "tipo": "Evento científico",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 9
+   "inscritos": 10
   },
   {
    "id": 3582004,
@@ -111,7 +111,21 @@
    "tipo": "Outros",
    "publicado": true,
    "cancelado": false,
-   "inscritos": 25
+   "inscritos": 26
+  },
+  {
+   "id": 3667508,
+   "nome": "Evolução Intensiva | Apneia da Prematuridade",
+   "url": "https://www.sympla.com.br/evoluo-intensiva--apneia-da-prematuridade__3667508",
+   "inicio": "2026-12-02T22:00:00.000Z",
+   "fim": "2026-12-03T00:00:00.000Z",
+   "unidade": "Online",
+   "uf": "",
+   "local": "",
+   "tipo": "Outros",
+   "publicado": true,
+   "cancelado": false,
+   "inscritos": 0
   },
   {
    "id": 3661347,
